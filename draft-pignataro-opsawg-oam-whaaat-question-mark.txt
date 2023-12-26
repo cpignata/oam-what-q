@@ -78,8 +78,8 @@ Table of Contents
    6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
    7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      7.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   5
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   6
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction
 
@@ -98,14 +98,14 @@ Table of Contents
 
    Historically, the terms "in-band" and "out-of-band" appear (likely,
    citation?) in radio communications, where there actually was a "Band"
-   (i.e., a "Channel" of "Frequency".)
+   (i.e., a "Channel" of "Frequency".)  It was also used extensively in
+   telephony signaling.
 
-   While those terms, useful in their simplicity, continued to be
-   broadly used to mean "within something" and "outside said
-   soomething", a challenge is presented when IP communications does not
-   have a "band" per se, and in fact has multiple "somethings" that an
-   OAM can go within or outside.  A frequently encountered case is in-
-   band to mean either in-packet or in-path.
+
+
+
+
+
 
 
 
@@ -113,6 +113,13 @@ Pignataro                 Expires 28 June 2024                  [Page 2]
 
 Internet-Draft             Characterizing OAM              December 2023
 
+
+   While those terms, useful in their simplicity, continued to be
+   broadly used to mean "within something" and "outside said
+   soomething", a challenge is presented when IP communications does not
+   have a "band" per se, and in fact has multiple "somethings" that an
+   OAM can go within or outside.  A frequently encountered case is in-
+   band to mean either in-packet or in-path.
 
    The guideline on this document is to, first, attempt to avoid the
    terms "*-band" and instead find finer-granulary descriptive terms, as
@@ -152,15 +159,8 @@ Internet-Draft             Characterizing OAM              December 2023
          traffic.  This was sometimes refered to as "out-of-band".
 
       In Situ OAM [RFC9197] is an example of "In-Packet OAM", given that
-      it 'records OAM information within the packet while the packet
-      traverses a particular network domain.  The term "in situ" refers
-      to the fact that the OAM data is added to the data packets rather
-      than being sent within packets specifically dedicated to OAM.'
 
-   Packet Treatment:  OAM in relationship to the treatment of user data
-      packets, as for example QoS treatment.
 
-      Equal-QoS-Treatment OAM:
 
 
 
@@ -170,6 +170,24 @@ Pignataro                 Expires 28 June 2024                  [Page 3]
 Internet-Draft             Characterizing OAM              December 2023
 
 
+      it 'records OAM information within the packet while the packet
+      traverses a particular network domain.  The term "in situ" refers
+      to the fact that the OAM data is added to the data packets rather
+      than being sent within packets specifically dedicated to OAM.'
+
+      Initially "In Situ OAM" [IETF96-In-Band-OAM] was also referred to
+      as "In-band OAM", but was renamed due to the herein explained
+      meaning overload of "in-band OAM".  Further, [RFC9232] also
+      intertwines the terms "in-band" with "in situ", though
+      [I-D.song-opsawg-ifit-framework] settled on using "In Situ".
+      Other similar uses, including [P4-INT-2.1] and
+      [I-D.kumar-ippm-ifa], still use variations of "in-band", "in
+      band", or "inband".
+
+   Packet Treatment:  OAM in relationship to the treatment of user data
+      packets, as for example QoS treatment.
+
+      Equal-QoS-Treatment OAM:
          The OAM packets receive the same QoS treatment as user data
          packets.  This was sometimes refered to as "in-band".
 
@@ -200,6 +218,14 @@ Internet-Draft             Characterizing OAM              December 2023
    generally used and well understood:
 
    Active OAM:
+
+
+
+Pignataro                 Expires 28 June 2024                  [Page 4]
+
+Internet-Draft             Characterizing OAM              December 2023
+
+
       Depends on dedicated instrumentation OAM packet.
 
    Passive OAM:
@@ -212,19 +238,12 @@ Internet-Draft             Characterizing OAM              December 2023
       *  Uses either a combination of Active OAM and Passive OAM.
 
       *  Uses instrumentation or modification of data packets
-         themselves.
+         themselves.  [RFC8321] and [RFC9197] are examples labeled
+         "Hybrid OAM" under this definition.
 
    Unfortunately, [RFC7799] also describes "passive methods" as "out of
    band", adding to the confusion.  This document recommends removing
    that additional qualification.
-
-
-
-
-Pignataro                 Expires 28 June 2024                  [Page 4]
-
-Internet-Draft             Characterizing OAM              December 2023
-
 
 4.  Use of OAM-Modifying Acronyms
 
@@ -254,6 +273,15 @@ Internet-Draft             Characterizing OAM              December 2023
 
 7.1.  Normative References
 
+
+
+
+
+Pignataro                 Expires 28 June 2024                  [Page 5]
+
+Internet-Draft             Characterizing OAM              December 2023
+
+
    [RFC6291]  Andersson, L., van Helvoort, H., Bonica, R., Romascanu,
               D., and S. Mansfield, "Guidelines for the Use of the "OAM"
               Acronym in the IETF", BCP 161, RFC 6291,
@@ -273,11 +301,39 @@ Internet-Draft             Characterizing OAM              December 2023
               <https://datatracker.ietf.org/doc/html/draft-ietf-raw-
               architecture-16>.
 
+   [I-D.kumar-ippm-ifa]
+              Kumar, J., Anubolu, S., Lemon, J., Manur, R., Holbrook,
+              H., Ghanwani, A., Cai, D., Ou, H., Li, Y., and X. Wang,
+              "Inband Flow Analyzer", Work in Progress, Internet-Draft,
+              draft-kumar-ippm-ifa-07, 7 September 2023,
+              <https://datatracker.ietf.org/doc/html/draft-kumar-ippm-
+              ifa-07>.
+
+   [I-D.song-opsawg-ifit-framework]
+              Song, H., Qin, F., Chen, H., Jin, J., and J. Shin,
+              "Framework for In-situ Flow Information Telemetry", Work
+              in Progress, Internet-Draft, draft-song-opsawg-ifit-
+              framework-21, 23 October 2023,
+              <https://datatracker.ietf.org/doc/html/draft-song-opsawg-
+              ifit-framework-21>.
+
+   [IETF96-In-Band-OAM]
+              Brockners, F., Bhandari, S., Dara, S., Pignataro, C.,
+              Gedler, H., Youell, S., and J. Leddy, "IETF 96, OPSWG: In-
+              Band OAM", IETF-96 Proceedings, IETF-96 slides-96-opsawg-
+              8.pdf, 19 July 2016,
+              <https://www.ietf.org/proceedings/96/slides/slides-96-
+              opsawg-8.pdf>.
+
+   [P4-INT-2.1]
+              "In-band Network Telemetry (INT) Dataplane Specification,
+              Version 2.1", 11 November 2020,
+              <https://p4.org/p4-spec/docs/INT_v2_1.pdf>.
 
 
 
 
-Pignataro                 Expires 28 June 2024                  [Page 5]
+Pignataro                 Expires 28 June 2024                  [Page 6]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -292,10 +348,21 @@ Internet-Draft             Characterizing OAM              December 2023
               Based Transport Networks", RFC 6669, DOI 10.17487/RFC6669,
               July 2012, <https://www.rfc-editor.org/info/rfc6669>.
 
+   [RFC8321]  Fioccola, G., Ed., Capello, A., Cociglio, M., Castaldelli,
+              L., Chen, M., Zheng, L., Mirsky, G., and T. Mizrahi,
+              "Alternate-Marking Method for Passive and Hybrid
+              Performance Monitoring", RFC 8321, DOI 10.17487/RFC8321,
+              January 2018, <https://www.rfc-editor.org/info/rfc8321>.
+
    [RFC9197]  Brockners, F., Ed., Bhandari, S., Ed., and T. Mizrahi,
               Ed., "Data Fields for In Situ Operations, Administration,
               and Maintenance (IOAM)", RFC 9197, DOI 10.17487/RFC9197,
               May 2022, <https://www.rfc-editor.org/info/rfc9197>.
+
+   [RFC9232]  Song, H., Qin, F., Martinez-Julia, P., Ciavaglia, L., and
+              A. Wang, "Network Telemetry Framework", RFC 9232,
+              DOI 10.17487/RFC9232, May 2022,
+              <https://www.rfc-editor.org/info/rfc9232>.
 
 Author's Address
 
@@ -322,15 +389,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Pignataro                 Expires 28 June 2024                  [Page 6]
+Pignataro                 Expires 28 June 2024                  [Page 7]

@@ -6,9 +6,12 @@
 <!ENTITY RFC.6669 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6669.xml">
 <!ENTITY RFC.5085 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.5085.xml">
 <!ENTITY RFC.7799 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7799.xml">
+<!ENTITY RFC.9232 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9232.xml">
+<!ENTITY RFC.8321 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8321.xml">
 
 <!ENTITY I-D.ietf-raw-architecture SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-raw-architecture.xml">
-
+<!ENTITY I-D.song-opsawg-ifit-framework SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.song-opsawg-ifit-framework.xml">
+<!ENTITY I-D.kumar-ippm-ifa SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.kumar-ippm-ifa.xml">
 
 ]>
 <?rfc toc="yes"?>
@@ -72,7 +75,7 @@
 
 
         <t>
-          Historically, the terms "in-band" and "out-of-band" appear (likely, citation?) in radio communications, where there actually was a "Band" (i.e., a "Channel" of "Frequency".)
+          Historically, the terms "in-band" and "out-of-band" appear (likely, citation?) in radio communications, where there actually was a "Band" (i.e., a "Channel" of "Frequency".) It was also used extensively in telephony signaling.
         </t>
         <t>
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said soomething", a challenge is presented when IP communications does not have a "band" per se, and in fact has multiple "somethings" that an OAM can go within or outside. A frequently encountered case is in-band to mean either in-packet or in-path.
@@ -115,7 +118,10 @@
   within the packet while the packet traverses a particular network
   domain.  The term "in situ" refers to the fact that the OAM data is
   added to the data packets rather than being sent within packets
-  specifically dedicated to OAM.'
+  specifically dedicated to OAM.' 
+
+</t><t>
+  Initially "In Situ OAM" <xref target="IETF96-In-Band-OAM" /> was also referred to as "In-band OAM", but was renamed due to the herein explained meaning overload of "in-band OAM". Further, <xref target="RFC9232" /> also intertwines the terms "in-band" with "in situ", though <xref target="I-D.song-opsawg-ifit-framework" /> settled on using "In Situ". Other similar uses, including <xref target="P4-INT-2.1" /> and <xref target="I-D.kumar-ippm-ifa" />, still use variations of "in-band", "in band", or "inband".
 </t>
 
 
@@ -161,7 +167,7 @@
               <t hangText="Hybrid OAM:"><br /> Has two definitions:
               <list style="symbols">
               <t>Uses either a combination of Active OAM and Passive OAM.</t>
-              <t>Uses instrumentation or modification of data packets themselves.</t>
+              <t>Uses instrumentation or modification of data packets themselves. <xref target="RFC8321" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.</t>
             </list>
             </t>
             </list>
@@ -206,7 +212,37 @@
       &RFC.9197;
       &RFC.6669;
       &RFC.5085;
+      &RFC.9232;
+      &RFC.8321;
       &I-D.ietf-raw-architecture;
+      &I-D.song-opsawg-ifit-framework;
+      &I-D.kumar-ippm-ifa;
+
+      <reference anchor="IETF96-In-Band-OAM" target="https://www.ietf.org/proceedings/96/slides/slides-96-opsawg-8.pdf">
+        <front>
+            <title>IETF 96, OPSWG: In-Band OAM</title>
+            <author initials="F." surname="Brockners" fullname="Frank Brockners"></author>
+            <author initials="S." surname="Bhandari" fullname="Shwetha Bhandari"></author>
+            <author initials="S." surname="Dara" fullname="Sashank Dara"></author>
+            <author initials="C." surname="Pignataro" fullname="Carlos Pignataro"></author>
+            <author initials="H." surname="Gedler" fullname="Hannes Gedler"></author>
+            <author initials="S." surname="Youell" fullname="Steve Youell"></author>
+            <author initials="J." surname="Leddy" fullname="John Leddy"></author>
+
+            <date month="7" day="19" year="2016"/>
+        </front>
+        <refcontent>IETF-96 Proceedings</refcontent>
+        <seriesInfo name="IETF-96" value="slides-96-opsawg-8.pdf" />
+      </reference>
+
+      <reference anchor="P4-INT-2.1" target="https://p4.org/p4-spec/docs/INT_v2_1.pdf">
+        <front>
+            <title>In-band Network Telemetry (INT) Dataplane Specification, Version 2.1</title>
+            <author initials="" surname="" fullname="The P4.org Applications Working Group"></author>
+            <date month="11" day="11" year="2020"/>
+        </front>
+      </reference>
+
 
     </references>
 
