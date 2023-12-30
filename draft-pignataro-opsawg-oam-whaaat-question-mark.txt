@@ -4,8 +4,9 @@
 
 OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
-Intended status: Standards Track                        26 December 2023
-Expires: 28 June 2024
+Updates: 6291 (if approved)                                    A. Farrel
+Intended status: Best Current Practice                Old Dog Consulting
+Expires: 1 July 2024                                    29 December 2023
 
 
                    Guidelines for Charactering "OAM"
@@ -17,16 +18,17 @@ Abstract
    Operations, Administration, and Maintenance (OAM) protocols and
    technologies, various qualifiers and modifiers are prepended to the
    OAM acronym.  While, at first glance, the most used appear to be well
-   understood, experience has shown repeatedly that there is aliasing of
-   terms (i.e., the same qualifier is interpreted to have different
-   specific meaning.)  This is notorious with the qualifiers "in-band"
-   and "out-of-band", given that those are extrapolations from radio
-   lexicon into communication networks.
+   understood, the same qualifier may be interpreted differently in
+   different contexts.  A case in point is the qualifiers "in-band" and
+   "out-of-band" which have their origins in the radio lexicon and which
+   have been extrapolated into other communication networks.
 
-   This document explains the frequently-encountered problem, and lays
-   out guideliens for use of qualifying terms when characteriging OAM.
+   This document considers some common qualifiers and modifiers that are
+   prepended to the OAM acronym, and lays out guidelines for their use
+   in future IETF work.
 
-   This document maybe updates RFC 6291.
+   This document updates RFC 6291 by adding to the guidelines for the
+   use of the term "OAM".
 
 Status of This Memo
 
@@ -43,20 +45,23 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 June 2024.
+   This Internet-Draft will expire on 1 July 2024.
+
+
+
+
+
+
+
+Pignataro & Farrel         Expires 1 July 2024                  [Page 1]
+
+Internet-Draft             Characterizing OAM              December 2023
+
 
 Copyright Notice
 
    Copyright (c) 2023 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
-
-
-
-
-Pignataro                 Expires 28 June 2024                  [Page 1]
-
-Internet-Draft             Characterizing OAM              December 2023
-
 
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents (https://trustee.ietf.org/
@@ -70,196 +75,231 @@ Internet-Draft             Characterizing OAM              December 2023
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Aliasing of In-Band and Out-of-Band . . . . . . . . . . . . .   2
-     2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   4
-   3.  Active, Passive, and Hybrid OAM . . . . . . . . . . . . . . .   4
-   4.  Use of OAM-Modifying Acronyms . . . . . . . . . . . . . . . .   5
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   5
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   6
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   7
+   2.  In-Band and Out-of-Band OAM . . . . . . . . . . . . . . . . .   3
+     2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5
+   3.  Active, Passive, Hybrid, and Compound OAM . . . . . . . . . .   5
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   5.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   6
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
 
-   It is not uncoming for historical and popular terms to have
+   It is not uncommon for historical and popular terms to have
    fundamental nuances in how they are interpreted or understood.  This
-   was for example the case with the acronym "OAM", and [RFC6291]
+   was, for example, the case with the acronym "OAM", and [RFC6291]
    provided guidelines for its use as well as definitions of its
-   consitutive parts.
+   constituent parts.
 
-   Experience shows that trying to characterize or qualify "OAM" often
-   encounters similar problems.  Specifically, with the adjective
-   phrases "in-band" and "out-of-band".  This document explains the root
-   of the problem and proposes an unambiguous characterization.
+   Characterizations or qualifiers for "OAM" often encounter similar
+   problems, such as with the adjective phrases "in-band" and "out-of-
+   band".  This document considers some common qualifiers and modifiers
+   that are prepended to the OAM acronym, and lays out guidelines for
+   their use in future IETF work to achieve unambiguous
+   characterization.
 
-2.  Aliasing of In-Band and Out-of-Band
-
-   Historically, the terms "in-band" and "out-of-band" appear (likely,
-   citation?) in radio communications, where there actually was a "Band"
-   (i.e., a "Channel" of "Frequency".)  It was also used extensively in
-   telephony signaling.
-
-
+   Additionally, this document recommends avoiding the creation and use
+   of extended acronyms for the qualifiers of "OAM".  For example, the
+   first "O" in "OOAM" could mean out-of-band, overlay, or something
+   else.
 
 
 
 
 
-
-
-Pignataro                 Expires 28 June 2024                  [Page 2]
+Pignataro & Farrel         Expires 1 July 2024                  [Page 2]
 
 Internet-Draft             Characterizing OAM              December 2023
 
 
-   While those terms, useful in their simplicity, continued to be
-   broadly used to mean "within something" and "outside said
-   soomething", a challenge is presented when IP communications does not
-   have a "band" per se, and in fact has multiple "somethings" that an
-   OAM can go within or outside.  A frequently encountered case is in-
-   band to mean either in-packet or in-path.
+   This document updates [RFC6291] by adding to the guidelines for the
+   use of the term "OAM".
 
-   The guideline on this document is to, first, attempt to avoid the
-   terms "*-band" and instead find finer-granulary descriptive terms, as
-   for example.
+2.  In-Band and Out-of-Band OAM
+
+   Historically, the terms "in-band" and "out-of-band" appear in radio
+   communications, where there actually was a "Band" (i.e., a "Channel"
+   or "Frequency".)  It was also used extensively in telephony signaling
+   [RFC4733].
+
+   While those terms, useful in their simplicity, continued to be
+   broadly used to mean "within something" and "outside said something",
+   a challenge is presented when IP communications does not have a
+   "band" per se, and in fact has multiple "somethings" that an OAM can
+   go within or outside.  A frequently encountered case is in-band to
+   mean either in-packet or in-path.
+
+   The guidelines in this document are to avoid the terms "*-band" and
+   instead find finer-granularity descriptive terms.  These definitions
+   are for use in all future IETF documents that refer to OAM, and the
+   terms "in-band OAM" and "out-of-band OAM" are not to be used in
+   future documents.
 
    Path:  OAM in relationship to a path.
 
       Path-Congruent OAM:
-         The OAM protocol follow the exact same path as the observed
-         data traffic.  This was sometimes refered to as "in-band".
+         The OAM messages follow the exact same path as the observed
+         data traffic.  This was sometimes referred to as "in-band".
 
       Non-Path-Congruent OAM:
-         The OAM protocol does not follow the same path as the observed
-         data traffic.  This was sometimes refered to as "out-of-band".
+         The OAM messages do not follow the same path as the observed
+         data traffic.  This was sometimes referred to as "out-of-band".
 
       [RFC6669] gives an example of "Path-Congruent OAM", and further
       describes the OAM Packets "share their fate with data packets."
 
-   Node:  OAM in relationship to a node.
-
-      Node-Traversing OAM:
-         The OAM protocol traverses through a node.  This was sometimes
-         refered to as "in-band".
-
-      Node-Skipping OAM:
-         The OAM protocol does not traverse through a node.  This was
-         sometimes refered to as "out-of-band".
-
    Packet:  OAM in relationship to a user data packet.
 
       In-Packet OAM:
-         The OAM protocol is carried as part of data traffic.  This was
-         sometimes refered to as "in-band".
+         The OAM messages are carried as part of data traffic.  This was
+         sometimes referred to as "in-band".
 
-      Packet-Dedicated OAM:
-         The OAM protocol has its own OAM packets, separated from data
-         traffic.  This was sometimes refered to as "out-of-band".
+      Dedicated-Packet OAM:
+         The OAM messages have their own OAM packets, separated from
+         data traffic.  This was sometimes referred to as "out-of-band".
 
-      In Situ OAM [RFC9197] is an example of "In-Packet OAM", given that
-
-
+      The MPLS echo request/reply messages [RFC8029] are an example of
 
 
 
 
-Pignataro                 Expires 28 June 2024                  [Page 3]
+Pignataro & Farrel         Expires 1 July 2024                  [Page 3]
 
 Internet-Draft             Characterizing OAM              December 2023
 
 
+      "Dedicated-Packet OAM", since they are described as "An MPLS echo
+      request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet;"
+
+      In Situ OAM [RFC9197] is an example of "In-Packet OAM", given that
       it 'records OAM information within the packet while the packet
       traverses a particular network domain.  The term "in situ" refers
       to the fact that the OAM data is added to the data packets rather
       than being sent within packets specifically dedicated to OAM.'
 
       Initially "In Situ OAM" [IETF96-In-Band-OAM] was also referred to
-      as "In-band OAM", but was renamed due to the herein explained
-      meaning overload of "in-band OAM".  Further, [RFC9232] also
-      intertwines the terms "in-band" with "in situ", though
-      [I-D.song-opsawg-ifit-framework] settled on using "In Situ".
-      Other similar uses, including [P4-INT-2.1] and
-      [I-D.kumar-ippm-ifa], still use variations of "in-band", "in
-      band", or "inband".
+      as "In-band OAM", but was renamed due to the overloaded meaning of
+      "in-band OAM".  Further, [RFC9232] also intertwines the terms "in-
+      band" with "in situ", though [I-D.song-opsawg-ifit-framework]
+      settled on using "In Situ".  Other similar uses, including
+      [P4-INT-2.1] and [I-D.kumar-ippm-ifa], still use variations of
+      "in-band", "in band", or "inband".
 
    Packet Treatment:  OAM in relationship to the treatment of user data
       packets, as for example QoS treatment.
 
       Equal-QoS-Treatment OAM:
          The OAM packets receive the same QoS treatment as user data
-         packets.  This was sometimes refered to as "in-band".
+         packets.  This was sometimes referred to as "in-band".
 
       Different-QoS-Treatment OAM:
          The OAM packets receive different QoS treatment as user data
-         packets.  This was sometimes refered to as "out-of-band".
+         packets.  This was sometimes referred to as "out-of-band".
+
+      For a case of either "Non-Path-Congruent OAM" or "Different-QoS-
+      Treatment OAM", [I-D.ietf-detnet-oam-framework] says "Out-of-band
+      OAM is an active OAM whose path through the DetNet domain is not
+      topologically identical to the path of the monitored DetNet flow,
+      or its test packets receive different QoS and/or PREOF treatment,
+      or both."  [I-D.ietf-raw-architecture] uses similar text.
 
    Combined:  OAM in relationship to multiple criteria.  For example, in
       relationship to both topological congruence and packet treatment.
-      One such examples is [I-D.ietf-raw-architecture].
+      Examples include [I-D.ietf-detnet-oam-framework] and
+      [I-D.ietf-raw-architecture].
 
-2.1.  Historical Uses
-
-   There are many examples of "in-band OAM" and "out-of-band OAM" in
-   published documents.  While interpreting those, it is important to
-   understand the semantics of what is "band" a proxy for, and to be
-   more explicit when those documents are updated.
-
-   For example, [RFC5085] uses *-band to refer to the packets "as in-
-   band traffic with the PW's data, or out-of-band", and "in-band (i.e.,
-   following the same data-plane faith as PW data)".  Hence, the
-   inexisting "band" would refer to the "Pseudowire data".
-
-3.  Active, Passive, and Hybrid OAM
-
-   Even though [RFC7799] does not include the specific terms Active,
-   Passive, and Hybrid as modifiers of OAM, the following terms are
-   generally used and well understood:
-
-   Active OAM:
+      [I-D.ietf-detnet-oam-framework] uses Combined OAM when it says
+      "In-band OAM is an active OAM that is in-band within the monitored
+      DetNet OAM domain when it traverses the same set of links and
+      interfaces receiving the same QoS and Packet Replication,
+      Elimination, and Ordering Functions (PREOF) treatment as the
+      monitored DetNet flow".  [I-D.ietf-raw-architecture] uses similar
+      text.
 
 
 
-Pignataro                 Expires 28 June 2024                  [Page 4]
+
+Pignataro & Farrel         Expires 1 July 2024                  [Page 4]
 
 Internet-Draft             Characterizing OAM              December 2023
 
 
-      Depends on dedicated instrumentation OAM packet.
+2.1.  Historical Uses
+
+   There are many examples of "in-band OAM" and "out-of-band OAM" in
+   published RFCs.  While interpreting those, it is important to
+   understand the semantics of what "band" is a proxy for, and to be
+   more explicit if those documents are updated.  This document does not
+   change the meaning of any terms in any prior RFCs.
+
+   For example, [RFC5085] says "as in-band traffic with the PW's data,
+   or out-of-band", and "in-band (i.e., following the same data-plane
+   faith as PW data)".  Hence, the term "band" refers to the "Pseudowire
+   data".
+
+3.  Active, Passive, Hybrid, and Compound OAM
+
+   [RFC7799] provides clear definitions for active and passive
+   performance assessment such that the construction of metrics and
+   methods can be described as either "Active" or "Passive".  Even
+   though [RFC7799] does not include the specific terms "Active",
+   "Passive", or "Hybrid" as modifiers of OAM, the following terms are
+   used in many RFCs and are provided here for use in all future IETF
+   documents that refer to OAM.
+
+   Active OAM:
+      Depends on dedicated instrumentation OAM packets.
 
    Passive OAM:
-      Depends *solely* on the observation of one or more existing data
+      Depends solely on the observation of one or more existing data
       packet streams, and does not use dedicated OAM packets.
 
    Hybrid OAM:
-      Has two definitions:
+      Uses instrumentation or modification of data packets themselves.
+      [RFC9341] and [RFC9197] are examples labeled "Hybrid OAM" under
+      this definition.
 
-      *  Uses either a combination of Active OAM and Passive OAM.
+   Compound OAM:
+      Uses a combination of at least two of Active OAM, Passive OAM, and
+      Hybrid OAM (i.e., a combination of atomic OAM packets, data packet
+      modification for OAM, and no OAM packet.)  Note that [RFC7799]
+      also uses the term "Hybrid" to refer to metric types in-between
+      active and passive, for OAM there are no in-betweens per se, only
+      active, passive, hybrid, or a combination.
 
-      *  Uses instrumentation or modification of data packets
-         themselves.  [RFC8321] and [RFC9197] are examples labeled
-         "Hybrid OAM" under this definition.
+      Compound OAM can further be characterized in a more explicit way,
+      for nuanced use-cases.
 
-   Unfortunately, [RFC7799] also describes "passive methods" as "out of
-   band", adding to the confusion.  This document recommends removing
-   that additional qualification.
+      *  Active-Passive OAM.
 
-4.  Use of OAM-Modifying Acronyms
 
-   It is not surprising to see how also several proposed and used
-   acronyms alias.  For example, is does the "I" in "IOAM" stand for in-
-   band, in situ, or something else?  Is the "O" in "OOAM" for overlay,
-   for out-of-band, or something else?  In light of the potential and
-   experienced confusion caused by OAM extended characterization and
-   acronyms this document's position is to simply avoid using them.
 
-5.  Security Considerations
+
+Pignataro & Farrel         Expires 1 July 2024                  [Page 5]
+
+Internet-Draft             Characterizing OAM              December 2023
+
+
+      *  Active-Hybrid OAM.
+
+      *  Hybrid-Passive OAM.
+
+      *  Active-Hybrid-Passive OAM.
+
+   [RFC7799] adds to the confusion by describing "passive methods" as
+   "out of band".  Following the guidelines of this document, OAM may be
+   qualified according to the terms described in Sections 2 and 3 of
+   this document, and the term "out of band OAM" is not to be used in
+   future documents.
+
+4.  Security Considerations
 
    Security is improved when the terms used and their definitions are
    unambiguous.
 
-6.  Acknowledgements
+5.  Acknowledgements
 
    The creation of this document was triggered when observing one of
    many on-mailing-list discussions of what these terms mean, and how to
@@ -269,18 +309,9 @@ Internet-Draft             Characterizing OAM              December 2023
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
    Vasilenko Eduard, and Xiao Min.
 
-7.  References
+6.  References
 
-7.1.  Normative References
-
-
-
-
-
-Pignataro                 Expires 28 June 2024                  [Page 5]
-
-Internet-Draft             Characterizing OAM              December 2023
-
+6.1.  Normative References
 
    [RFC6291]  Andersson, L., van Helvoort, H., Bonica, R., Romascanu,
               D., and S. Mansfield, "Guidelines for the Use of the "OAM"
@@ -292,7 +323,24 @@ Internet-Draft             Characterizing OAM              December 2023
               Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
               May 2016, <https://www.rfc-editor.org/info/rfc7799>.
 
-7.2.  Informative References
+6.2.  Informative References
+
+   [I-D.ietf-detnet-oam-framework]
+              Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,
+              C. J., Varga, B., and J. Farkas, "Framework of Operations,
+              Administration and Maintenance (OAM) for Deterministic
+              Networking (DetNet)", Work in Progress, Internet-Draft,
+
+
+
+Pignataro & Farrel         Expires 1 July 2024                  [Page 6]
+
+Internet-Draft             Characterizing OAM              December 2023
+
+
+              draft-ietf-detnet-oam-framework-10, 27 December 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-detnet-
+              oam-framework-10>.
 
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
@@ -330,10 +378,18 @@ Internet-Draft             Characterizing OAM              December 2023
               Version 2.1", 11 November 2020,
               <https://p4.org/p4-spec/docs/INT_v2_1.pdf>.
 
+   [RFC4733]  Schulzrinne, H. and T. Taylor, "RTP Payload for DTMF
+              Digits, Telephony Tones, and Telephony Signals", RFC 4733,
+              DOI 10.17487/RFC4733, December 2006,
+              <https://www.rfc-editor.org/info/rfc4733>.
 
 
 
-Pignataro                 Expires 28 June 2024                  [Page 6]
+
+
+
+
+Pignataro & Farrel         Expires 1 July 2024                  [Page 7]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -348,11 +404,11 @@ Internet-Draft             Characterizing OAM              December 2023
               Based Transport Networks", RFC 6669, DOI 10.17487/RFC6669,
               July 2012, <https://www.rfc-editor.org/info/rfc6669>.
 
-   [RFC8321]  Fioccola, G., Ed., Capello, A., Cociglio, M., Castaldelli,
-              L., Chen, M., Zheng, L., Mirsky, G., and T. Mizrahi,
-              "Alternate-Marking Method for Passive and Hybrid
-              Performance Monitoring", RFC 8321, DOI 10.17487/RFC8321,
-              January 2018, <https://www.rfc-editor.org/info/rfc8321>.
+   [RFC8029]  Kompella, K., Swallow, G., Pignataro, C., Ed., Kumar, N.,
+              Aldrin, S., and M. Chen, "Detecting Multiprotocol Label
+              Switched (MPLS) Data-Plane Failures", RFC 8029,
+              DOI 10.17487/RFC8029, March 2017,
+              <https://www.rfc-editor.org/info/rfc8029>.
 
    [RFC9197]  Brockners, F., Ed., Bhandari, S., Ed., and T. Mizrahi,
               Ed., "Data Fields for In Situ Operations, Administration,
@@ -364,7 +420,12 @@ Internet-Draft             Characterizing OAM              December 2023
               DOI 10.17487/RFC9232, May 2022,
               <https://www.rfc-editor.org/info/rfc9232>.
 
-Author's Address
+   [RFC9341]  Fioccola, G., Ed., Cociglio, M., Mirsky, G., Mizrahi, T.,
+              and T. Zhou, "Alternate-Marking Method", RFC 9341,
+              DOI 10.17487/RFC9341, December 2022,
+              <https://www.rfc-editor.org/info/rfc9341>.
+
+Authors' Addresses
 
    Carlos Pignataro
    North Carolina State University
@@ -372,6 +433,10 @@ Author's Address
    Email: cpignata@gmail.com, cmpignat@ncsu.edu
 
 
+   Adrian Farrel
+   Old Dog Consulting
+   United Kingdom
+   Email: adrian@olddog.co.uk
 
 
 
@@ -380,13 +445,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-Pignataro                 Expires 28 June 2024                  [Page 7]
+Pignataro & Farrel         Expires 1 July 2024                  [Page 8]
