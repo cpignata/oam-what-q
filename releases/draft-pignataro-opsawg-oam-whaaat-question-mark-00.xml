@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rfc [
+
+<!ENTITY RFC.6291 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6291.xml">
+<!ENTITY RFC.9197 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9197.xml">
+<!ENTITY RFC.6669 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6669.xml">
+<!ENTITY RFC.5085 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.5085.xml">
+<!ENTITY RFC.7799 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7799.xml">
+<!ENTITY RFC.9232 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9232.xml">
+<!ENTITY RFC.9341 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9341.xml">
+<!ENTITY RFC.4733 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4733.xml">
+<!ENTITY RFC.8029 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8029.xml">
+
+
+<!ENTITY I-D.ietf-raw-architecture SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-raw-architecture.xml">
+<!ENTITY I-D.song-opsawg-ifit-framework SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.song-opsawg-ifit-framework.xml">
+<!ENTITY I-D.kumar-ippm-ifa SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.kumar-ippm-ifa.xml">
+<!ENTITY I-D.ietf-detnet-oam-framework SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-detnet-oam-framework.xml">
+
+
+]>
+<?rfc toc="yes"?>
+<?rfc rfcedstyle="yes"?>
+<?rfc subcompact="no" ?>
+<?rfc symrefs="yes"?>
+<rfc category="bcp" docName="draft-pignataro-opsawg-oam-whaaat-question-mark-00" 
+  ipr="trust200902" submissionType="IETF" consensus="true" updates="6291">
+  <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+  <?rfc toc="yes" ?>
+  <?rfc compact="yes" ?>
+  <?rfc symrefs="yes" ?>
+  <?rfc sortrefs="yes"?>
+  <?rfc iprnotified="no" ?>
+  <?rfc strict="yes" ?>
+
+  <front>
+    <title abbrev="Characterizing OAM">Guidelines for Charactering "OAM"</title>
+
+    <author fullname="Carlos Pignataro" initials="C." surname="Pignataro">
+      <organization abbrev="NC State University">North Carolina State University</organization>
+
+      <address>
+        <postal>
+          <country>US</country>
+        </postal>        
+        <email>cpignata@gmail.com</email>
+        <email>cmpignat@ncsu.edu</email>
+      </address>
+    </author>
+
+    <author fullname="Adrian Farrel" initials="A." surname="Farrel">
+      <organization>Old Dog Consulting</organization>
+
+      <address>
+        <postal>
+          <country>UK</country>
+        </postal>        
+        <email>adrian@olddog.co.uk</email>
+      </address>
+    </author>
+
+    
+    <date />
+
+    <area>Ops Area</area>
+
+    <workgroup>OPS Area Working Group</workgroup>
+
+
+    <abstract>
+      <t>
+   As the IETF continues to produce and standardize different
+   Operations, Administration, and Maintenance (OAM) protocols and
+   technologies, various qualifiers and modifiers are prepended to the
+   OAM acronym.  While, at first glance, the most used appear to be well
+   understood, the same qualifier may be interpreted differently in
+   different contexts.  A case in point is the qualifiers "in-band" and
+   "out-of-band" which have their origins in the radio lexicon and which
+   have been extrapolated into other communication networks.
+      </t>
+      <t>
+   This document considers some common qualifiers and modifiers that are
+   prepended to the OAM acronym, and lays out guidelines for their use
+   in future IETF work.
+      </t>
+      <t>   This document updates RFC 6291 by adding to the guidelines for the
+   use of the term "OAM".</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section title="Introduction">
+      <t>
+      It is not uncommon for historical and popular terms to have fundamental nuances in how they are interpreted or understood. This was, for example, the case with the acronym "OAM", and <xref target="RFC6291" /> provided guidelines for its use as well as definitions of its constituent parts.
+      </t>
+      <t>
+   Characterizations or qualifiers for "OAM" often encounter similar
+   problems, such as with the adjective phrases "in-band" and "out-of-
+   band".  This document considers some common qualifiers and modifiers
+   that are prepended to the OAM acronym, and lays out guidelines for
+   their use in future IETF work to achieve unambiguous
+   characterization.
+      </t>
+      <t>
+        Additionally, this document recommends avoiding the creation and use of extended acronyms for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.
+      </t>
+      <t>
+   This document updates <xref target="RFC6291" /> by adding to the guidelines for the
+   use of the term "OAM".
+      </t>
+    </section>
+
+      <section anchor="band" title="In-Band and Out-of-Band OAM">
+
+
+        <t>
+          Historically, the terms "in-band" and "out-of-band" appear in radio communications, where there actually was a "Band" (i.e., a "Channel" or "Frequency".) It was also used extensively in telephony signaling <xref target="RFC4733" />.
+        </t>
+        <t>
+          While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications which does not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
+        </t>
+
+
+        <t>
+          The guidance in this document is to avoid the terms "*-band" and instead find finer-granularity descriptive terms.
+          The definitions presented in this document are for use in all future IETF documents that refer
+   to OAM, and the terms "in-band OAM" and "out-of-band OAM" are not to
+   be used in future documents.
+
+
+          <list style="hanging">
+
+
+<t hangText="Path:"> OAM in relation to a path.</t>
+<t>
+          <list style="hanging">
+<t hangText="Path-Congruent OAM:"><br />The OAM messages follow the exact same path as the observed data traffic. This was sometimes referred to as "in-band".</t>
+<t hangText="Non-Path-Congruent OAM:"><br />The OAM messages do not follow the same path as the observed data traffic. This was sometimes referred to as "out-of-band".</t>
+          </list>
+</t>
+<t><xref target="RFC6669" /> gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."</t>
+
+
+
+<!--
+
+<t hangText="Node:"> OAM in relationship to a node.</t>
+<t>
+          <list style="hanging">
+<t hangText="Node-Traversing OAM:"><br />The OAM messages traverse through a node. This was sometimes referred to as "in-band".</t>
+<t hangText="Node-Skipping OAM:"><br />The OAM messages do not traverse through a node. This was sometimes referred to as "out-of-band".</t>
+          </list>
+</t>
+
+-->
+
+
+
+<t hangText="Packet:"> OAM in relation to a user data packet.</t>
+<t>
+          <list style="hanging">
+<t hangText="In-Packet OAM:"><br />The OAM messages are carried as part of data traffic. This was sometimes referred to as "in-band".</t>
+<t hangText="Dedicated-Packet OAM:"><br />The OAM messages have their own OAM packets, separate from data traffic. This was sometimes referred to as "out-of-band".</t>
+          </list>
+</t>
+
+<t>
+  The MPLS echo request/reply messages <xref target="RFC8029" /> are an example of "Dedicated-Packet OAM", since they are described as "An MPLS echo request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet".
+</t>
+
+
+<t>In Situ OAM <xref target="RFC9197" /> is an example of "In-Packet OAM", given that it 'records OAM information
+  within the packet while the packet traverses a particular network
+  domain.  The term "in situ" refers to the fact that the OAM data is
+  added to the data packets rather than being sent within packets
+  specifically dedicated to OAM.' 
+
+</t>
+<t>
+  Initially "In Situ OAM" <xref target="IETF96-In-Band-OAM" /> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <xref target="RFC9232" /> also intertwines the terms "in-band" with "in situ", though <xref target="I-D.song-opsawg-ifit-framework" /> settled on using "In Situ". Other similar uses, including <xref target="P4-INT-2.1" /> and <xref target="I-D.kumar-ippm-ifa" />, still use variations of "in-band", "in band", or "inband".
+</t>
+
+
+<t hangText="Packet Treatment:"> OAM in relation to the treatment of user data packets, as for example QoS treatment.</t>
+<t>
+          <list style="hanging">
+<t hangText="Equal-QoS-Treatment OAM:"><br />The OAM packets receive the same QoS treatment as user data packets. This was sometimes referred to as "in-band".</t>
+<t hangText="Different-QoS-Treatment OAM:"><br />The OAM packets receive different QoS treatment as user data packets. This was sometimes referred to as "out-of-band".</t>
+          </list>
+</t>
+<t>
+For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", <xref target="I-D.ietf-detnet-oam-framework" /> says 
+"Out-of-band OAM is an active OAM whose path through the DetNet domain is not topologically identical to the path of the monitored DetNet flow, or its test packets receive different QoS and/or PREOF treatment, or both." <xref target="I-D.ietf-raw-architecture" /> uses similar text.
+
+</t>
+
+<t hangText="Combined:"> OAM in relation to multiple criteria. For example, in relation to both topological congruence and packet treatment. Examples include
+<xref target="I-D.ietf-detnet-oam-framework" />
+and
+<xref target="I-D.ietf-raw-architecture" />.
+<br /><br />
+<xref target="I-D.ietf-detnet-oam-framework" /> uses Combined OAM when it says "In-band OAM is an active OAM that is in-band within the monitored DetNet OAM domain when it traverses the same set of links and interfaces receiving the same QoS and Packet Replication, Elimination, and Ordering Functions (PREOF) treatment as the monitored DetNet flow". <xref target="I-D.ietf-raw-architecture" /> uses similar text.
+</t>
+
+
+
+
+          </list>
+        </t>
+
+    <section anchor="Historical" title="Historical Uses">
+            <t>
+              There are many examples of "in-band OAM" and "out-of-band OAM" in published RFCs. While interpreting those, it is important to understand the semantics of what "band" is a proxy for, and to be more explicit if those documents are updated. This document does not change the meaning of any terms in any prior RFCs.
+            </t>
+            <t>
+              For example, <xref target="RFC5085" /> says "as in-band traffic with the PW's data, or out-of-band", and "in-band (i.e., following the same data-plane faith as PW data)". Hence, the term "band" refers to the "Pseudowire data".
+          </t>
+
+    </section>
+
+
+
+      </section>
+
+
+
+    <section anchor="ippm" title="Active, Passive, Hybrid, and Compound OAM">
+          <t>
+               <xref target="RFC7799" /> provides clear definitions for active and passive
+               performance assessment such that the construction of metrics and
+               methods can be described as either "Active" or "Passive".  Even
+               though <xref target="RFC7799" /> does not include the specific terms "Active",
+               "Passive", or "Hybrid" as modifiers of "OAM", the following terms
+               are used in many RFCs and are provided here for use in all future
+               IETF documents that refer to OAM.
+          
+            <list style="hanging">
+              <t hangText="Active OAM:"><br /> Depends on dedicated instrumentation OAM packets.</t>
+              <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
+      or more existing data packet streams, and does not use dedicated OAM packets.</t>
+
+
+
+               <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data packets themselves. <xref target="RFC9341" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.
+               </t>
+               <t hangText="Compound OAM:"><br /> Uses a combination of at least two of Active OAM, Passive OAM, and Hybrid OAM (i.e., a combination of atomic OAM packets, data packet modification for OAM, and no OAM packet).  Note that
+         <xref target="RFC7799" /> also uses the term "Hybrid" to refer to metric types
+         in-between active and passive, for OAM there are no in-betweens per se,
+         only active, passive, hybrid, or a combination.
+          <br /><br />Compound OAM can further be characterized in a more explicit way, for nuanced use-cases.
+
+
+              <list style="symbols">
+              <t>Active-Passive OAM.</t>
+              <t>Active-Hybrid OAM.</t>
+              <t>Hybrid-Passive OAM.</t>
+              <t>Active-Hybrid-Passive OAM.</t>
+              </list>
+            </t>
+            </list>
+
+
+          </t>
+          <t>
+               <xref target="RFC7799" /> adds to the confusion by describing "passive methods" as
+   "out of band".  Following the guidelines of this document, OAM may be
+   qualified according to the terms described in Sections <xref target="band" format="counter" /> and <xref target="ippm" format="counter" /> of this document, and the term "out of band OAM" is not to be used in future
+   documents.
+</t>
+
+    </section>
+
+<!--
+    <section anchor="acronyms" title="Use of OAM-Modifying Acronyms">
+            <t>It is not surprising to see how also several proposed and used acronyms alias. For example, is does the "I" in "IOAM" stand for in-band, in situ, or something else? Is the "O" in "OOAM" for overlay, for out-of-band, or something else?
+              In light of the potential and experienced confusion caused by OAM extended characterization and acronyms this document's position is to simply avoid using them.</t>
+
+    </section>
+-->
+
+
+    <section title="Security Considerations">
+      <t>Security is improved when the terms used and their definitions are unambiguous.</t>
+    </section>
+
+    <section title="Acknowledgements">
+      <t>The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
+      </t>
+    </section>
+  </middle>
+
+  <back>
+
+
+
+   <references title="Normative References">
+
+      &RFC.6291;
+      &RFC.7799;
+
+    </references>
+    
+    <references title="Informative References">
+
+
+      &RFC.9197;
+      &RFC.6669;
+      &RFC.5085;
+      &RFC.9232;
+      &RFC.8029;
+      &RFC.9341;
+      &RFC.4733;
+      &I-D.ietf-raw-architecture;
+      &I-D.song-opsawg-ifit-framework;
+      &I-D.ietf-detnet-oam-framework;
+      &I-D.kumar-ippm-ifa;
+
+      <reference anchor="IETF96-In-Band-OAM" target="https://www.ietf.org/proceedings/96/slides/slides-96-opsawg-8.pdf">
+        <front>
+            <title>IETF 96, OPSWG: In-Band OAM</title>
+            <author initials="F." surname="Brockners" fullname="Frank Brockners"></author>
+            <author initials="S." surname="Bhandari" fullname="Shwetha Bhandari"></author>
+            <author initials="S." surname="Dara" fullname="Sashank Dara"></author>
+            <author initials="C." surname="Pignataro" fullname="Carlos Pignataro"></author>
+            <author initials="H." surname="Gedler" fullname="Hannes Gedler"></author>
+            <author initials="S." surname="Youell" fullname="Steve Youell"></author>
+            <author initials="J." surname="Leddy" fullname="John Leddy"></author>
+
+            <date month="7" day="19" year="2016"/>
+        </front>
+        <refcontent>IETF-96 Proceedings</refcontent>
+        <seriesInfo name="IETF-96" value="slides-96-opsawg-8.pdf" />
+      </reference>
+
+      <reference anchor="P4-INT-2.1" target="https://p4.org/p4-spec/docs/INT_v2_1.pdf">
+        <front>
+            <title>In-band Network Telemetry (INT) Dataplane Specification, Version 2.1</title>
+            <author initials="" surname="" fullname="The P4.org Applications Working Group"></author>
+            <date month="11" day="11" year="2020"/>
+        </front>
+      </reference>
+
+
+    </references>
+
+  </back>
+</rfc>
