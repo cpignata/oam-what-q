@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 1 July 2024                                    29 December 2023
+Expires: 3 July 2024                                    31 December 2023
 
 
                    Guidelines for Charactering "OAM"
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 July 2024.
+   This Internet-Draft will expire on 3 July 2024.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 1]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 1]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 2]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 2]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -126,18 +126,18 @@ Internet-Draft             Characterizing OAM              December 2023
 
    While those terms, useful in their simplicity, continued to be
    broadly used to mean "within something" and "outside said something",
-   a challenge is presented when IP communications does not have a
-   "band" per se, and in fact has multiple "somethings" that an OAM can
-   go within or outside.  A frequently encountered case is in-band to
-   mean either in-packet or in-path.
+   a challenge is presented for IP communications which does not have a
+   "band" per se, and, in fact, has multiple "somethings" that OAM can
+   go within or outside.  A frequently encountered case is the use of
+   in-band to mean either in-packet or in-path.
 
-   The guidelines in this document are to avoid the terms "*-band" and
-   instead find finer-granularity descriptive terms.  These definitions
-   are for use in all future IETF documents that refer to OAM, and the
-   terms "in-band OAM" and "out-of-band OAM" are not to be used in
-   future documents.
+   The guidance in this document is to avoid the terms "*-band" and
+   instead find finer-granularity descriptive terms.  The definitions
+   presented in this document are for use in all future IETF documents
+   that refer to OAM, and the terms "in-band OAM" and "out-of-band OAM"
+   are not to be used in future documents.
 
-   Path:  OAM in relationship to a path.
+   Path:  OAM in relation to a path.
 
       Path-Congruent OAM:
          The OAM messages follow the exact same path as the observed
@@ -148,30 +148,30 @@ Internet-Draft             Characterizing OAM              December 2023
          data traffic.  This was sometimes referred to as "out-of-band".
 
       [RFC6669] gives an example of "Path-Congruent OAM", and further
-      describes the OAM Packets "share their fate with data packets."
+      describes that the OAM Packets "share their fate with data
+      packets."
 
-   Packet:  OAM in relationship to a user data packet.
+   Packet:  OAM in relation to a user data packet.
 
       In-Packet OAM:
          The OAM messages are carried as part of data traffic.  This was
          sometimes referred to as "in-band".
 
       Dedicated-Packet OAM:
-         The OAM messages have their own OAM packets, separated from
-         data traffic.  This was sometimes referred to as "out-of-band".
+         The OAM messages have their own OAM packets, separate from data
+         traffic.  This was sometimes referred to as "out-of-band".
 
       The MPLS echo request/reply messages [RFC8029] are an example of
 
 
 
-
-Pignataro & Farrel         Expires 1 July 2024                  [Page 3]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 3]
 
 Internet-Draft             Characterizing OAM              December 2023
 
 
       "Dedicated-Packet OAM", since they are described as "An MPLS echo
-      request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet;"
+      request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet".
 
       In Situ OAM [RFC9197] is an example of "In-Packet OAM", given that
       it 'records OAM information within the packet while the packet
@@ -187,7 +187,7 @@ Internet-Draft             Characterizing OAM              December 2023
       [P4-INT-2.1] and [I-D.kumar-ippm-ifa], still use variations of
       "in-band", "in band", or "inband".
 
-   Packet Treatment:  OAM in relationship to the treatment of user data
+   Packet Treatment:  OAM in relation to the treatment of user data
       packets, as for example QoS treatment.
 
       Equal-QoS-Treatment OAM:
@@ -205,8 +205,8 @@ Internet-Draft             Characterizing OAM              December 2023
       or its test packets receive different QoS and/or PREOF treatment,
       or both."  [I-D.ietf-raw-architecture] uses similar text.
 
-   Combined:  OAM in relationship to multiple criteria.  For example, in
-      relationship to both topological congruence and packet treatment.
+   Combined:  OAM in relation to multiple criteria.  For example, in
+      relation to both topological congruence and packet treatment.
       Examples include [I-D.ietf-detnet-oam-framework] and
       [I-D.ietf-raw-architecture].
 
@@ -221,7 +221,7 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 4]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 4]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -245,7 +245,7 @@ Internet-Draft             Characterizing OAM              December 2023
    performance assessment such that the construction of metrics and
    methods can be described as either "Active" or "Passive".  Even
    though [RFC7799] does not include the specific terms "Active",
-   "Passive", or "Hybrid" as modifiers of OAM, the following terms are
+   "Passive", or "Hybrid" as modifiers of "OAM", the following terms are
    used in many RFCs and are provided here for use in all future IETF
    documents that refer to OAM.
 
@@ -264,7 +264,7 @@ Internet-Draft             Characterizing OAM              December 2023
    Compound OAM:
       Uses a combination of at least two of Active OAM, Passive OAM, and
       Hybrid OAM (i.e., a combination of atomic OAM packets, data packet
-      modification for OAM, and no OAM packet.)  Note that [RFC7799]
+      modification for OAM, and no OAM packet).  Note that [RFC7799]
       also uses the term "Hybrid" to refer to metric types in-between
       active and passive, for OAM there are no in-betweens per se, only
       active, passive, hybrid, or a combination.
@@ -277,7 +277,7 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 5]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 5]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -307,7 +307,7 @@ Internet-Draft             Characterizing OAM              December 2023
    alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer,
    Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
-   Vasilenko Eduard, and Xiao Min.
+   Eduard Vasilenko, and Xiao Min.
 
 6.  References
 
@@ -333,7 +333,7 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 6]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 6]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -389,7 +389,7 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 7]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 7]
 
 Internet-Draft             Characterizing OAM              December 2023
 
@@ -445,4 +445,4 @@ Authors' Addresses
 
 
 
-Pignataro & Farrel         Expires 1 July 2024                  [Page 8]
+Pignataro & Farrel         Expires 3 July 2024                  [Page 8]
