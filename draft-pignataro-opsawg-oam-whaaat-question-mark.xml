@@ -80,7 +80,7 @@
       </t>
       <t>
    This document considers some common qualifiers and modifiers that are
-   prepended to the OAM acronym, and lays out guidelines for their use
+   prepended, within the context of packet networks, to the OAM acronym, and lays out guidelines for their use
    in future IETF work.
       </t>
       <t>   This document updates RFC 6291 by adding to the guidelines for the
@@ -91,10 +91,10 @@
   <middle>
     <section title="Introduction">
       <t>
-      It is not uncommon for historical and popular terms to have fundamental nuances in how they are interpreted or understood. This was, for example, the case with the acronym "OAM", and <xref target="RFC6291" /> provided guidelines for its use as well as definitions of its constituent parts.
+      It is not uncommon for historical and popular terms to have fundamental nuances in how they are interpreted or understood. This was, for example, the case with the acronym for Operations, Administration, and Maintenance, "OAM", and <xref target="RFC6291" /> provided guidelines for its use as well as definitions of its constituent parts.
       </t>
       <t>
-   Characterizations or qualifiers for "OAM" often encounter similar
+   Characterizations or qualifiers for "OAM" within packet networks often encounter similar
    problems, such as with the adjective phrases "in-band" and "out-of-
    band".  This document considers some common qualifiers and modifiers
    that are prepended to the OAM acronym, and lays out guidelines for
@@ -117,7 +117,7 @@
           Historically, the terms "in-band" and "out-of-band" appear in radio communications, where there actually was a "Band" (i.e., a "Channel" or "Frequency".) It was also used extensively in telephony signaling <xref target="RFC4733" />.
         </t>
         <t>
-          While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications which does not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
+          While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
         </t>
 
 
@@ -284,7 +284,11 @@ and
     </section>
 
     <section title="Acknowledgements">
-      <t>The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
+      <t>
+        The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
+      </t>
+      <t>
+        The authors wish to thank Hesham Elbakoury and Michael Richardson for their review and very useful comments.
       </t>
     </section>
   </middle>

@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 3 July 2024                                    31 December 2023
+Expires: 10 July 2024                                     7 January 2024
 
 
                    Guidelines for Charactering "OAM"
@@ -24,8 +24,8 @@ Abstract
    have been extrapolated into other communication networks.
 
    This document considers some common qualifiers and modifiers that are
-   prepended to the OAM acronym, and lays out guidelines for their use
-   in future IETF work.
+   prepended, within the context of packet networks, to the OAM acronym,
+   and lays out guidelines for their use in future IETF work.
 
    This document updates RFC 6291 by adding to the guidelines for the
    use of the term "OAM".
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 July 2024.
+   This Internet-Draft will expire on 10 July 2024.
 
 
 
@@ -53,14 +53,14 @@ Status of This Memo
 
 
 
-Pignataro & Farrel         Expires 3 July 2024                  [Page 1]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 1]
 
-Internet-Draft             Characterizing OAM              December 2023
+Internet-Draft             Characterizing OAM               January 2024
 
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -89,16 +89,17 @@ Table of Contents
 
    It is not uncommon for historical and popular terms to have
    fundamental nuances in how they are interpreted or understood.  This
-   was, for example, the case with the acronym "OAM", and [RFC6291]
-   provided guidelines for its use as well as definitions of its
-   constituent parts.
+   was, for example, the case with the acronym for Operations,
+   Administration, and Maintenance, "OAM", and [RFC6291] provided
+   guidelines for its use as well as definitions of its constituent
+   parts.
 
-   Characterizations or qualifiers for "OAM" often encounter similar
-   problems, such as with the adjective phrases "in-band" and "out-of-
-   band".  This document considers some common qualifiers and modifiers
-   that are prepended to the OAM acronym, and lays out guidelines for
-   their use in future IETF work to achieve unambiguous
-   characterization.
+   Characterizations or qualifiers for "OAM" within packet networks
+   often encounter similar problems, such as with the adjective phrases
+   "in-band" and "out-of- band".  This document considers some common
+   qualifiers and modifiers that are prepended to the OAM acronym, and
+   lays out guidelines for their use in future IETF work to achieve
+   unambiguous characterization.
 
    Additionally, this document recommends avoiding the creation and use
    of extended acronyms for the qualifiers of "OAM".  For example, the
@@ -108,10 +109,9 @@ Table of Contents
 
 
 
-
-Pignataro & Farrel         Expires 3 July 2024                  [Page 2]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 2]
 
-Internet-Draft             Characterizing OAM              December 2023
+Internet-Draft             Characterizing OAM               January 2024
 
 
    This document updates [RFC6291] by adding to the guidelines for the
@@ -126,10 +126,11 @@ Internet-Draft             Characterizing OAM              December 2023
 
    While those terms, useful in their simplicity, continued to be
    broadly used to mean "within something" and "outside said something",
-   a challenge is presented for IP communications which does not have a
-   "band" per se, and, in fact, has multiple "somethings" that OAM can
-   go within or outside.  A frequently encountered case is the use of
-   in-band to mean either in-packet or in-path.
+   a challenge is presented for IP communications and packet switch
+   networks (PSNs) which do not have a "band" per se, and, in fact, has
+   multiple "somethings" that OAM can go within or outside.  A
+   frequently encountered case is the use of in-band to mean either in-
+   packet or in-path.
 
    The guidance in this document is to avoid the terms "*-band" and
    instead find finer-granularity descriptive terms.  The definitions
@@ -161,15 +162,15 @@ Internet-Draft             Characterizing OAM              December 2023
          The OAM messages have their own OAM packets, separate from data
          traffic.  This was sometimes referred to as "out-of-band".
 
-      The MPLS echo request/reply messages [RFC8029] are an example of
 
 
 
-Pignataro & Farrel         Expires 3 July 2024                  [Page 3]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 3]
 
-Internet-Draft             Characterizing OAM              December 2023
+Internet-Draft             Characterizing OAM               January 2024
 
 
+      The MPLS echo request/reply messages [RFC8029] are an example of
       "Dedicated-Packet OAM", since they are described as "An MPLS echo
       request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet".
 
@@ -220,10 +221,9 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-
-Pignataro & Farrel         Expires 3 July 2024                  [Page 4]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 4]
 
-Internet-Draft             Characterizing OAM              December 2023
+Internet-Draft             Characterizing OAM               January 2024
 
 
 2.1.  Historical Uses
@@ -277,9 +277,9 @@ Internet-Draft             Characterizing OAM              December 2023
 
 
 
-Pignataro & Farrel         Expires 3 July 2024                  [Page 5]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 5]
 
-Internet-Draft             Characterizing OAM              December 2023
+Internet-Draft             Characterizing OAM               January 2024
 
 
       *  Active-Hybrid OAM.
@@ -309,6 +309,9 @@ Internet-Draft             Characterizing OAM              December 2023
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
    Eduard Vasilenko, and Xiao Min.
 
+   The authors wish to thank Hesham Elbakoury and Michael Richardson for
+   their review and very useful comments.
+
 6.  References
 
 6.1.  Normative References
@@ -325,19 +328,21 @@ Internet-Draft             Characterizing OAM              December 2023
 
 6.2.  Informative References
 
+
+
+
+
+
+Pignataro & Farrel        Expires 10 July 2024                  [Page 6]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
    [I-D.ietf-detnet-oam-framework]
               Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,
               C. J., Varga, B., and J. Farkas, "Framework of Operations,
               Administration and Maintenance (OAM) for Deterministic
               Networking (DetNet)", Work in Progress, Internet-Draft,
-
-
-
-Pignataro & Farrel         Expires 3 July 2024                  [Page 6]
-
-Internet-Draft             Characterizing OAM              December 2023
-
-
               draft-ietf-detnet-oam-framework-10, 27 December 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-detnet-
               oam-framework-10>.
@@ -378,21 +383,21 @@ Internet-Draft             Characterizing OAM              December 2023
               Version 2.1", 11 November 2020,
               <https://p4.org/p4-spec/docs/INT_v2_1.pdf>.
 
+
+
+
+
+
+
+Pignataro & Farrel        Expires 10 July 2024                  [Page 7]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
    [RFC4733]  Schulzrinne, H. and T. Taylor, "RTP Payload for DTMF
               Digits, Telephony Tones, and Telephony Signals", RFC 4733,
               DOI 10.17487/RFC4733, December 2006,
               <https://www.rfc-editor.org/info/rfc4733>.
-
-
-
-
-
-
-
-Pignataro & Farrel         Expires 3 July 2024                  [Page 7]
-
-Internet-Draft             Characterizing OAM              December 2023
-
 
    [RFC5085]  Nadeau, T., Ed. and C. Pignataro, Ed., "Pseudowire Virtual
               Circuit Connectivity Verification (VCCV): A Control
@@ -440,9 +445,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-Pignataro & Farrel         Expires 3 July 2024                  [Page 8]
+Pignataro & Farrel        Expires 10 July 2024                  [Page 8]
