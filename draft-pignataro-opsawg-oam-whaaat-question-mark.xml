@@ -114,10 +114,13 @@
 
 
         <t>
-          Historically, the terms "in-band" and "out-of-band" appear in radio communications, where there actually was a "Band" (i.e., a "Channel" or "Frequency".) It was also used extensively in telephony signaling <xref target="RFC4733" />.
+          Historically, the terms "in-band" and "out-of-band" were used extensively in telephony signaling <xref target="RFC4733" /> and appear also in radio communications. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
         </t>
         <t>
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
+        </t>
+        <t>
+          Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms lack ability to be generalized, and can be confused by participants from other contexts. More importantly, the terms are not self-defining any more and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
         </t>
 
 
@@ -288,7 +291,7 @@ and
         The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
       </t>
       <t>
-        The authors wish to thank Hesham Elbakoury and Michael Richardson for their review and very useful comments.
+        The authors wish to thank Hesham Elbakoury, Michael Richardson, and Greg Mirsky for their review and very useful comments.
       </t>
     </section>
   </middle>

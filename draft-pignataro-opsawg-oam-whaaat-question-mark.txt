@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 10 July 2024                                     7 January 2024
+Expires: 19 July 2024                                    16 January 2024
 
 
                    Guidelines for Charactering "OAM"
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 July 2024.
+   This Internet-Draft will expire on 19 July 2024.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Pignataro & Farrel        Expires 10 July 2024                  [Page 1]
+Pignataro & Farrel        Expires 19 July 2024                  [Page 1]
 
 Internet-Draft             Characterizing OAM               January 2024
 
@@ -82,7 +82,7 @@ Table of Contents
    5.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   6
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   7
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Pignataro & Farrel        Expires 10 July 2024                  [Page 2]
+Pignataro & Farrel        Expires 19 July 2024                  [Page 2]
 
 Internet-Draft             Characterizing OAM               January 2024
 
@@ -119,10 +119,10 @@ Internet-Draft             Characterizing OAM               January 2024
 
 2.  In-Band and Out-of-Band OAM
 
-   Historically, the terms "in-band" and "out-of-band" appear in radio
-   communications, where there actually was a "Band" (i.e., a "Channel"
-   or "Frequency".)  It was also used extensively in telephony signaling
-   [RFC4733].
+   Historically, the terms "in-band" and "out-of-band" were used
+   extensively in telephony signaling [RFC4733] and appear also in radio
+   communications.  In both these cases, there is an actual "Band"
+   (i.e., a "Channel" or "Frequency") to be within or outside.
 
    While those terms, useful in their simplicity, continued to be
    broadly used to mean "within something" and "outside said something",
@@ -131,6 +131,14 @@ Internet-Draft             Characterizing OAM               January 2024
    multiple "somethings" that OAM can go within or outside.  A
    frequently encountered case is the use of in-band to mean either in-
    packet or in-path.
+
+   Within the IETF, the terms "in-band" and "out-of-band" cannot be
+   reliably understood consistently and unambiguously.  Context-specific
+   redefinitions of these terms lack ability to be generalized, and can
+   be confused by participants from other contexts.  More importantly,
+   the terms are not self-defining any more and cannot be understood by
+   someone exposed to them for the first time, since there is no "band"
+   in IP.
 
    The guidance in this document is to avoid the terms "*-band" and
    instead find finer-granularity descriptive terms.  The definitions
@@ -154,6 +162,14 @@ Internet-Draft             Characterizing OAM               January 2024
 
    Packet:  OAM in relation to a user data packet.
 
+
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 3]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
       In-Packet OAM:
          The OAM messages are carried as part of data traffic.  This was
          sometimes referred to as "in-band".
@@ -161,14 +177,6 @@ Internet-Draft             Characterizing OAM               January 2024
       Dedicated-Packet OAM:
          The OAM messages have their own OAM packets, separate from data
          traffic.  This was sometimes referred to as "out-of-band".
-
-
-
-
-Pignataro & Farrel        Expires 10 July 2024                  [Page 3]
-
-Internet-Draft             Characterizing OAM               January 2024
-
 
       The MPLS echo request/reply messages [RFC8029] are an example of
       "Dedicated-Packet OAM", since they are described as "An MPLS echo
@@ -211,6 +219,13 @@ Internet-Draft             Characterizing OAM               January 2024
       Examples include [I-D.ietf-detnet-oam-framework] and
       [I-D.ietf-raw-architecture].
 
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 4]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
       [I-D.ietf-detnet-oam-framework] uses Combined OAM when it says
       "In-band OAM is an active OAM that is in-band within the monitored
       DetNet OAM domain when it traverses the same set of links and
@@ -218,13 +233,6 @@ Internet-Draft             Characterizing OAM               January 2024
       Elimination, and Ordering Functions (PREOF) treatment as the
       monitored DetNet flow".  [I-D.ietf-raw-architecture] uses similar
       text.
-
-
-
-Pignataro & Farrel        Expires 10 July 2024                  [Page 4]
-
-Internet-Draft             Characterizing OAM               January 2024
-
 
 2.1.  Historical Uses
 
@@ -266,6 +274,14 @@ Internet-Draft             Characterizing OAM               January 2024
       Hybrid OAM (i.e., a combination of atomic OAM packets, data packet
       modification for OAM, and no OAM packet).  Note that [RFC7799]
       also uses the term "Hybrid" to refer to metric types in-between
+
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 5]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
       active and passive, for OAM there are no in-betweens per se, only
       active, passive, hybrid, or a combination.
 
@@ -273,14 +289,6 @@ Internet-Draft             Characterizing OAM               January 2024
       for nuanced use-cases.
 
       *  Active-Passive OAM.
-
-
-
-
-Pignataro & Farrel        Expires 10 July 2024                  [Page 5]
-
-Internet-Draft             Characterizing OAM               January 2024
-
 
       *  Active-Hybrid OAM.
 
@@ -309,8 +317,8 @@ Internet-Draft             Characterizing OAM               January 2024
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
    Eduard Vasilenko, and Xiao Min.
 
-   The authors wish to thank Hesham Elbakoury and Michael Richardson for
-   their review and very useful comments.
+   The authors wish to thank Hesham Elbakoury, Michael Richardson, and
+   Greg Mirsky for their review and very useful comments.
 
 6.  References
 
@@ -322,30 +330,28 @@ Internet-Draft             Characterizing OAM               January 2024
               DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/info/rfc6291>.
 
+
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 6]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
    [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
               Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
               May 2016, <https://www.rfc-editor.org/info/rfc7799>.
 
 6.2.  Informative References
 
-
-
-
-
-
-Pignataro & Farrel        Expires 10 July 2024                  [Page 6]
-
-Internet-Draft             Characterizing OAM               January 2024
-
-
    [I-D.ietf-detnet-oam-framework]
               Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,
               C. J., Varga, B., and J. Farkas, "Framework of Operations,
               Administration and Maintenance (OAM) for Deterministic
               Networking (DetNet)", Work in Progress, Internet-Draft,
-              draft-ietf-detnet-oam-framework-10, 27 December 2023,
+              draft-ietf-detnet-oam-framework-11, 8 January 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-detnet-
-              oam-framework-10>.
+              oam-framework-11>.
 
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
@@ -378,21 +384,20 @@ Internet-Draft             Characterizing OAM               January 2024
               <https://www.ietf.org/proceedings/96/slides/slides-96-
               opsawg-8.pdf>.
 
+
+
+
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 7]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
    [P4-INT-2.1]
               "In-band Network Telemetry (INT) Dataplane Specification,
               Version 2.1", 11 November 2020,
               <https://p4.org/p4-spec/docs/INT_v2_1.pdf>.
-
-
-
-
-
-
-
-Pignataro & Farrel        Expires 10 July 2024                  [Page 7]
-
-Internet-Draft             Characterizing OAM               January 2024
-
 
    [RFC4733]  Schulzrinne, H. and T. Taylor, "RTP Payload for DTMF
               Digits, Telephony Tones, and Telephony Signals", RFC 4733,
@@ -438,6 +443,13 @@ Authors' Addresses
    Email: cpignata@gmail.com, cmpignat@ncsu.edu
 
 
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 8]
+
+Internet-Draft             Characterizing OAM               January 2024
+
+
    Adrian Farrel
    Old Dog Consulting
    United Kingdom
@@ -445,4 +457,48 @@ Authors' Addresses
 
 
 
-Pignataro & Farrel        Expires 10 July 2024                  [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pignataro & Farrel        Expires 19 July 2024                  [Page 9]
