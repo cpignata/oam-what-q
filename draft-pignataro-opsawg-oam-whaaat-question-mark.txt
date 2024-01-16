@@ -10,7 +10,7 @@ Expires: 19 July 2024                                    16 January 2024
 
 
                    Guidelines for Charactering "OAM"
-           draft-pignataro-opsawg-oam-whaaat-question-mark-01
+           draft-pignataro-opsawg-oam-whaaat-question-mark-02
 
 Abstract
 
@@ -317,8 +317,9 @@ Internet-Draft             Characterizing OAM               January 2024
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
    Eduard Vasilenko, and Xiao Min.
 
-   The authors wish to thank Hesham Elbakoury, Michael Richardson, and
-   Greg Mirsky for their review and very useful comments.
+   The authors wish to thank Hesham Elbakoury, Michael Richardson,
+   Stewart Bryant, and Greg Mirsky for their review and very useful
+   comments.
 
 6.  References
 
@@ -329,7 +330,6 @@ Internet-Draft             Characterizing OAM               January 2024
               Acronym in the IETF", BCP 161, RFC 6291,
               DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/info/rfc6291>.
-
 
 
 
