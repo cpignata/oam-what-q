@@ -238,7 +238,7 @@ and
                IETF documents that refer to OAM.
           
             <list style="hanging">
-              <t hangText="Active OAM:"><br /> Depends on dedicated instrumentation OAM packets.</t>
+              <t hangText="Active OAM:"><br /> Depends on dedicated instrumented OAM packets.</t>
               <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
       or more existing data packet streams, and does not use dedicated OAM packets.</t>
 
@@ -287,6 +287,45 @@ and
     </section>
 
 
+
+    <section anchor="nodetype" title="Node Processing OAM Packets">
+            <t>
+        There are multiple processing capabilities that nodes processing OAM packets can utilize. Some of those capabilities are explained in <xref target="RFC9197" /> for In situ OAM, and are further generalized in this document.
+      </t>
+      <t>
+Depending on the Type of OAM processing, nodes are chategorized as follows. Please note that this characterization exists within the context of a particular OAM protocol instance, and a given node can support multiple types:
+
+<list style="bullets">
+
+<t>
+  Hybrid OAM instruments or modifies data packet themselves. Consequently:
+  <list style="hanging">
+    <t hangText="Encapsulating Node:"><br />Adds OAM information to data packets.</t>
+    <t hangText="Transit Node:"><br />Processes OAM information in data packets.</t>
+    <t hangText="Transparent Node:"><br />Does not process OAM information in data packets.</t>
+    <t hangText="Decapsulating Node:"><br />Removes OAM information to data packets.</t>
+  </list>
+</t>
+<t>
+  Active OAM uses dedicated OAM packets, outside data packets. Consequently:
+  <list style="hanging">
+    <t hangText="Source Node:"><br />Creates and injects OAM packets into a flow.</t>
+    <t hangText="Sink Node:"><br />Processes and removes OAM packets from a flow.</t>
+  </list>
+  A node could be source and sink of Active OAM packets simultaneously.
+</t>
+
+</list>
+
+
+      </t>
+
+
+
+    </section>
+
+
+
     <section title="Security Considerations">
       <t>Security is improved when the terms used and their definitions are unambiguous.</t>
     </section>
@@ -296,7 +335,7 @@ and
         The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
       </t>
       <t>
-        The authors wish to thank Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, and Loa Andersson for their review and very useful comments.
+        The authors wish to thank Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas Graf, and Alex Huang Feng for their thorough review and very useful comments that improved this document.
       </t>
     </section>
   </middle>
