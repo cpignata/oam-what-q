@@ -10,6 +10,7 @@
 <!ENTITY RFC.9341 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9341.xml">
 <!ENTITY RFC.4733 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4733.xml">
 <!ENTITY RFC.8029 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8029.xml">
+<!ENTITY RFC.9322 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9322.xml">
 
 
 <!ENTITY I-D.ietf-raw-architecture SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-raw-architecture.xml">
@@ -114,7 +115,7 @@
 
 
         <t>
-          Historically, the terms "in-band" and "out-of-band" were used extensively in telephony signaling <xref target="RFC4733" /> and appear also in radio communications. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
+          Historically, the terms "in-band" and "out-of-band" were used extensively in radio communivations as well as in telephony signaling <xref target="RFC4733" />. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
         </t>
         <t>
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
@@ -181,6 +182,9 @@
 </t>
 <t>
   Initially "In Situ OAM" <xref target="IETF96-In-Band-OAM" /> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <xref target="RFC9232" /> also intertwines the terms "in-band" with "in situ", though <xref target="I-D.song-opsawg-ifit-framework" /> settled on using "In Situ". Other similar uses, including <xref target="P4-INT-2.1" /> and <xref target="I-D.kumar-ippm-ifa" />, still use variations of "in-band", "in band", or "inband".
+</t>
+<t>
+  It is noteworthy that an In-Packet OAM cannot be Non-Path-Congruent OAM.
 </t>
 
 
@@ -312,7 +316,7 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
     <t hangText="Source Node:"><br />Creates and injects OAM packets into a flow.</t>
     <t hangText="Sink Node:"><br />Processes and removes OAM packets from a flow.</t>
   </list>
-  A node could be source and sink of Active OAM packets simultaneously.
+  A node could be source and sink of Active OAM packets simultaneously. Further, in some use-cases such as <xref target="RFC9322" />, there is an encapsulating node in one direction of a given data flow, and there could be multiple source nodes creating and injecting OAM packets in the opposite direction towards a sink node (which can be the initially encapsulating node).
 </t>
 
 </list>
@@ -355,6 +359,7 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
 
 
       &RFC.9197;
+      &RFC.9322;
       &RFC.6669;
       &RFC.5085;
       &RFC.9232;
