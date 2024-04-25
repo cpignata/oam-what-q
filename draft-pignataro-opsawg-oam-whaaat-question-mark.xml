@@ -109,6 +109,13 @@
    This document updates <xref target="RFC6291" /> by adding to the guidelines for the
    use of the term "OAM".
       </t>
+      <t>
+        Note that <xref target="RFC7799" /> defines terms for active and passive
+performance assessments through metrics and methods. That RFC does not
+substantially discuss OAM, and although the concepts are similar, this
+document does not modify the definitions in <xref target="RFC7799" />.
+      </t>
+
     </section>
 
       <section anchor="band" title="In-Band and Out-of-Band OAM">
@@ -163,8 +170,8 @@
 <t hangText="Packet:"> OAM in relation to a user data packet.</t>
 <t>
           <list style="hanging">
-<t hangText="In-Packet OAM:"><br />The OAM messages are carried as part of data traffic. This was sometimes referred to as "in-band".</t>
 <t hangText="Dedicated-Packet OAM:"><br />The OAM messages have their own OAM packets, separate from data traffic. This was sometimes referred to as "out-of-band".</t>
+<t hangText="In-Packet OAM:"><br />The OAM messages are carried as part of data traffic. This was sometimes referred to as "in-band".</t>
           </list>
 </t>
 
@@ -283,7 +290,7 @@ and
         This document recommends avoiding the creation and use of extended acronyms for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.
       </t>
       <t>
-        <xref target="RFC9197" /> currently uses the acronym "IOAM" for In Situ Operations, Administration, and Maintenance. While this document does not obsolete that acronym, it still recommends that "In situ OAM" is used instead to avoid potential ambiguity.
+        <xref target="RFC9197" /> and other dependent documents currently uses the acronym "IOAM" for In Situ Operations, Administration, and Maintenance. While this document does not obsolete that acronym, it still recommends that "In situ OAM" is used instead to avoid potential ambiguity.
       </t>
 
 
@@ -313,12 +320,14 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
 <t>
   Active OAM uses dedicated OAM packets, outside data packets. Consequently:
   <list style="hanging">
-    <t hangText="Source Node:"><br />Creates and injects OAM packets into a flow.</t>
-    <t hangText="Sink Node:"><br />Processes and removes OAM packets from a flow.</t>
+    <t hangText="OAM Source Node:"><br />Creates and injects OAM packets into a flow.</t>
+    <t hangText="OAM Sink Node:"><br />Processes and removes OAM packets from a flow.</t>
   </list>
-  A node could be source and sink of Active OAM packets simultaneously. Further, in some use-cases such as <xref target="RFC9322" />, there is an encapsulating node in one direction of a given data flow, and there could be multiple source nodes creating and injecting OAM packets in the opposite direction towards a sink node (which can be the initially encapsulating node).
+  A node could be an OAM Source Node and an OAM Sink Node for Active OAM packets simultaneously.
 </t>
-
+<t>
+  In some use-cases, such as in-situ OAM described in <xref target="RFC9322" />, Compound OAM is used. In the forward direction, Hybrid OAM is used with a single Encapsulating Node. Multiple Transit Nodes may process the OAM information, and this may trigger them to act as OAM Source Nodes for Active OAM sent back to the Encapsulating Node which serves as an OAM Sink Node.
+</t>
 </list>
 
 
@@ -339,7 +348,7 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
         The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
       </t>
       <t>
-        The authors wish to thank Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas Graf, and Alex Huang Feng for their thorough review and very useful comments that improved this document.
+        The authors wish to thank Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas Graf, Alex Huang Feng, and Xiao Min for their thorough review and very useful comments that improved this document.
       </t>
     </section>
   </middle>
