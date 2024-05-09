@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 27 October 2024                                   25 April 2024
+Expires: 9 November 2024                                      8 May 2024
 
 
                    Guidelines for Charactering "OAM"
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 October 2024.
+   This Internet-Draft will expire on 9 November 2024.
 
 
 
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Pignataro & Farrel       Expires 27 October 2024                [Page 1]
+Pignataro & Farrel       Expires 9 November 2024                [Page 1]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Pignataro & Farrel       Expires 27 October 2024                [Page 2]
+Pignataro & Farrel       Expires 9 November 2024                [Page 2]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
    Additionally, this document recommends avoiding the creation and use
@@ -159,20 +159,21 @@ Internet-Draft             Characterizing OAM                 April 2024
    Path:  OAM in relation to a path.
 
       Path-Congruent OAM:
-         The OAM messages follow the exact same path as the observed
+         The OAM information follows the exact same path as the observed
          data traffic.  This was sometimes referred to as "in-band".
 
 
 
 
-Pignataro & Farrel       Expires 27 October 2024                [Page 3]
+Pignataro & Farrel       Expires 9 November 2024                [Page 3]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
       Non-Path-Congruent OAM:
-         The OAM messages do not follow the same path as the observed
-         data traffic.  This was sometimes referred to as "out-of-band".
+         The OAM information does not follow the same path as the
+         observed data traffic.  This was sometimes referred to as "out-
+         of-band".
 
       [RFC6669] gives an example of "Path-Congruent OAM", and further
       describes that the OAM Packets "share their fate with data
@@ -181,12 +182,13 @@ Internet-Draft             Characterizing OAM                 April 2024
    Packet:  OAM in relation to a user data packet.
 
       Dedicated-Packet OAM:
-         The OAM messages have their own OAM packets, separate from data
-         traffic.  This was sometimes referred to as "out-of-band".
+         The OAM information is carried in its own OAM packets, separate
+         from data traffic.  This was sometimes referred to as "out-of-
+         band".
 
       In-Packet OAM:
-         The OAM messages are carried as part of data traffic.  This was
-         sometimes referred to as "in-band".
+         The OAM information is carried as part of data traffic.  This
+         was sometimes referred to as "in-band".
 
       The MPLS echo request/reply messages [RFC8029] are an example of
       "Dedicated-Packet OAM", since they are described as "An MPLS echo
@@ -216,16 +218,15 @@ Internet-Draft             Characterizing OAM                 April 2024
          The OAM packets receive the same QoS treatment as user data
          packets.  This was sometimes referred to as "in-band".
 
-      Different-QoS-Treatment OAM:
 
 
 
-
-Pignataro & Farrel       Expires 27 October 2024                [Page 4]
+Pignataro & Farrel       Expires 9 November 2024                [Page 4]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
+      Different-QoS-Treatment OAM:
          The OAM packets receive different QoS treatment as user data
          packets.  This was sometimes referred to as "out-of-band".
 
@@ -273,14 +274,15 @@ Internet-Draft             Characterizing OAM                 April 2024
    documents that refer to OAM.
 
    Active OAM:
-      Depends on dedicated instrumented OAM packets.
 
 
 
-Pignataro & Farrel       Expires 27 October 2024                [Page 5]
+Pignataro & Farrel       Expires 9 November 2024                [Page 5]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
+
+      Depends on dedicated instrumented OAM packets.
 
    Passive OAM:
       Depends solely on the observation of one or more existing data
@@ -331,11 +333,9 @@ Internet-Draft             Characterizing OAM                 April 2024
 
 
 
-
-
-Pignataro & Farrel       Expires 27 October 2024                [Page 6]
+Pignataro & Farrel       Expires 9 November 2024                [Page 6]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
 5.  Node Processing OAM Packets
@@ -389,9 +389,9 @@ Internet-Draft             Characterizing OAM                 April 2024
 
 
 
-Pignataro & Farrel       Expires 27 October 2024                [Page 7]
+Pignataro & Farrel       Expires 9 November 2024                [Page 7]
 
-Internet-Draft             Characterizing OAM                 April 2024
+Internet-Draft             Characterizing OAM                   May 2024
 
 
 6.  Security Considerations
@@ -411,8 +411,9 @@ Internet-Draft             Characterizing OAM                 April 2024
 
    The authors wish to thank Hesham Elbakoury, Michael Richardson,
    Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas
-   Graf, Alex Huang Feng, and Xiao Min for their thorough review and
-   very useful comments that improved this document.
+   Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, and Henk Birkholz for
+   their thorough review and very useful comments that improved this
+   document.
 
 8.  References
 
@@ -439,17 +440,19 @@ Internet-Draft             Characterizing OAM                 April 2024
               <https://datatracker.ietf.org/doc/html/draft-ietf-detnet-
               oam-framework-11>.
 
+
+
+
+
+
+Pignataro & Farrel       Expires 9 November 2024                [Page 8]
+
+Internet-Draft             Characterizing OAM                   May 2024
+
+
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
               Architecture", Work in Progress, Internet-Draft, draft-
-
-
-
-Pignataro & Farrel       Expires 27 October 2024                [Page 8]
-
-Internet-Draft             Characterizing OAM                 April 2024
-
-
               ietf-raw-architecture-17, 4 March 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-raw-
               architecture-17>.
@@ -493,18 +496,20 @@ Internet-Draft             Characterizing OAM                 April 2024
               Channel for Pseudowires", RFC 5085, DOI 10.17487/RFC5085,
               December 2007, <https://www.rfc-editor.org/info/rfc5085>.
 
+
+
+
+
+
+Pignataro & Farrel       Expires 9 November 2024                [Page 9]
+
+Internet-Draft             Characterizing OAM                   May 2024
+
+
    [RFC6669]  Sprecher, N. and L. Fang, "An Overview of the Operations,
               Administration, and Maintenance (OAM) Toolset for MPLS-
               Based Transport Networks", RFC 6669, DOI 10.17487/RFC6669,
               July 2012, <https://www.rfc-editor.org/info/rfc6669>.
-
-
-
-
-Pignataro & Farrel       Expires 27 October 2024                [Page 9]
-
-Internet-Draft             Characterizing OAM                 April 2024
-
 
    [RFC8029]  Kompella, K., Swallow, G., Pignataro, C., Ed., Kumar, N.,
               Aldrin, S., and M. Chen, "Detecting Multiprotocol Label
@@ -552,9 +557,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-Pignataro & Farrel       Expires 27 October 2024               [Page 10]
+Pignataro & Farrel       Expires 9 November 2024               [Page 10]
