@@ -10,7 +10,7 @@ Expires: 9 November 2024                                      8 May 2024
 
 
                    Guidelines for Charactering "OAM"
-           draft-pignataro-opsawg-oam-whaaat-question-mark-05
+               draft-ietf-opsawg-oam-characterization-00
 
 Abstract
 
