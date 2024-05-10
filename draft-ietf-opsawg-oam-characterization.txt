@@ -6,11 +6,11 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 9 November 2024                                      8 May 2024
+Expires: 11 November 2024                                    10 May 2024
 
 
                    Guidelines for Charactering "OAM"
-               draft-ietf-opsawg-oam-characterization-00
+               draft-ietf-opsawg-oam-characterization-01
 
 Abstract
 
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 November 2024.
+   This Internet-Draft will expire on 11 November 2024.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 1]
+Pignataro & Farrel      Expires 11 November 2024                [Page 1]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 2]
+Pignataro & Farrel      Expires 11 November 2024                [Page 2]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -165,7 +165,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 3]
+Pignataro & Farrel      Expires 11 November 2024                [Page 3]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -221,7 +221,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 4]
+Pignataro & Farrel      Expires 11 November 2024                [Page 4]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -277,7 +277,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 5]
+Pignataro & Farrel      Expires 11 November 2024                [Page 5]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -333,7 +333,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 6]
+Pignataro & Farrel      Expires 11 November 2024                [Page 6]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -389,7 +389,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 7]
+Pignataro & Farrel      Expires 11 November 2024                [Page 7]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -445,7 +445,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 8]
+Pignataro & Farrel      Expires 11 November 2024                [Page 8]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -461,9 +461,9 @@ Internet-Draft             Characterizing OAM                   May 2024
               Kumar, J., Anubolu, S., Lemon, J., Manur, R., Holbrook,
               H., Ghanwani, A., Cai, D., Ou, H., Li, Y., and X. Wang,
               "Inband Flow Analyzer", Work in Progress, Internet-Draft,
-              draft-kumar-ippm-ifa-07, 7 September 2023,
+              draft-kumar-ippm-ifa-08, 26 April 2024,
               <https://datatracker.ietf.org/doc/html/draft-kumar-ippm-
-              ifa-07>.
+              ifa-08>.
 
    [I-D.song-opsawg-ifit-framework]
               Song, H., Qin, F., Chen, H., Jin, J., and J. Shin,
@@ -501,7 +501,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel       Expires 9 November 2024                [Page 9]
+Pignataro & Farrel      Expires 11 November 2024                [Page 9]
 
 Internet-Draft             Characterizing OAM                   May 2024
 
@@ -557,4 +557,4 @@ Authors' Addresses
 
 
 
-Pignataro & Farrel       Expires 9 November 2024               [Page 10]
+Pignataro & Farrel      Expires 11 November 2024               [Page 10]
