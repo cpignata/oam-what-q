@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 11 November 2024                                    10 May 2024
+Expires: 12 January 2025                                    11 July 2024
 
 
                    Guidelines for Charactering "OAM"
@@ -20,11 +20,11 @@ Abstract
    OAM acronym.  While, at first glance, the most used appear to be well
    understood, the same qualifier may be interpreted differently in
    different contexts.  A case in point is the qualifiers "in-band" and
-   "out-of-band" which have their origins in the radio lexicon and which
-   have been extrapolated into other communication networks.
+   "out-of-band" which have their origins in the radio lexicon, and
+   which have been extrapolated into other communication networks.
 
    This document considers some common qualifiers and modifiers that are
-   prepended, within the context of packet networks, to the OAM acronym,
+   prepended, within the context of packet networks, to the OAM acronym
    and lays out guidelines for their use in future IETF work.
 
    This document updates RFC 6291 by adding to the guidelines for the
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 November 2024.
+   This Internet-Draft will expire on 12 January 2025.
 
 
 
@@ -53,9 +53,9 @@ Status of This Memo
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 1]
+Pignataro & Farrel       Expires 12 January 2025                [Page 1]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 2]
+Pignataro & Farrel       Expires 12 January 2025                [Page 2]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
    Additionally, this document recommends avoiding the creation and use
@@ -130,7 +130,7 @@ Internet-Draft             Characterizing OAM                   May 2024
 2.  In-Band and Out-of-Band OAM
 
    Historically, the terms "in-band" and "out-of-band" were used
-   extensively in radio communivations as well as in telephony signaling
+   extensively in radio communications as well as in telephony signaling
    [RFC4733].  In both these cases, there is an actual "Band" (i.e., a
    "Channel" or "Frequency") to be within or outside.
 
@@ -144,11 +144,11 @@ Internet-Draft             Characterizing OAM                   May 2024
 
    Within the IETF, the terms "in-band" and "out-of-band" cannot be
    reliably understood consistently and unambiguously.  Context-specific
-   redefinitions of these terms lack ability to be generalized, and can
+   redefinitions of these terms lack ability to be generalized and can
    be confused by participants from other contexts.  More importantly,
-   the terms are not self-defining any more and cannot be understood by
-   someone exposed to them for the first time, since there is no "band"
-   in IP.
+   the terms are not self-defining to any further extent and cannot be
+   understood by someone exposed to them for the first time, since there
+   is no "band" in IP.
 
    The guidance in this document is to avoid the terms "*-band" and
    instead find finer-granularity descriptive terms.  The definitions
@@ -165,9 +165,9 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 3]
+Pignataro & Farrel       Expires 12 January 2025                [Page 3]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
       Non-Path-Congruent OAM:
@@ -194,17 +194,17 @@ Internet-Draft             Characterizing OAM                   May 2024
       "Dedicated-Packet OAM", since they are described as "An MPLS echo
       request/reply is a (possibly labeled) IPv4 or IPv6 UDP packet".
 
-      In Situ OAM [RFC9197] is an example of "In-Packet OAM", given that
+      In situ OAM [RFC9197] is an example of "In-Packet OAM", given that
       it 'records OAM information within the packet while the packet
       traverses a particular network domain.  The term "in situ" refers
       to the fact that the OAM data is added to the data packets rather
       than being sent within packets specifically dedicated to OAM.'
 
-      Initially "In Situ OAM" [IETF96-In-Band-OAM] was also referred to
-      as "In-band OAM", but was renamed due to the overloaded meaning of
+      Initially, "in situ OAM" [IETF96-In-Band-OAM] was also referred to
+      as "In-band OAM" but was renamed due to the overloaded meaning of
       "in-band OAM".  Further, [RFC9232] also intertwines the terms "in-
       band" with "in situ", though [I-D.song-opsawg-ifit-framework]
-      settled on using "In Situ".  Other similar uses, including
+      settled on using "in Situ".  Other similar uses, including
       [P4-INT-2.1] and [I-D.kumar-ippm-ifa], still use variations of
       "in-band", "in band", or "inband".
 
@@ -221,9 +221,9 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 4]
+Pignataro & Farrel       Expires 12 January 2025                [Page 4]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
       Different-QoS-Treatment OAM:
@@ -277,16 +277,16 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 5]
+Pignataro & Farrel       Expires 12 January 2025                [Page 5]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
       Depends on dedicated instrumented OAM packets.
 
    Passive OAM:
       Depends solely on the observation of one or more existing data
-      packet streams, and does not use dedicated OAM packets.
+      packet streams and does not use dedicated OAM packets.
 
    Hybrid OAM:
       Uses instrumentation or modification of data packets themselves.
@@ -325,27 +325,27 @@ Internet-Draft             Characterizing OAM                   May 2024
    "OOAM" could mean out-of-band, overlay, or something else.
 
    [RFC9197] and other dependent documents currently uses the acronym
-   "IOAM" for In Situ Operations, Administration, and Maintenance.
-   While this document does not obsolete that acronym, it still
-   recommends that "In situ OAM" is used instead to avoid potential
-   ambiguity.
+   "IOAM" for In situ Operations, Administration, and Maintenance
+   (IOAM).  While this document does not obsolete that acronym, it still
+   recommends that the expanded "in situ OAM" is used instead to avoid
+   potential ambiguity.
 
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 6]
+Pignataro & Farrel       Expires 12 January 2025                [Page 6]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
 5.  Node Processing OAM Packets
 
    There are multiple processing capabilities that nodes processing OAM
    packets can utilize.  Some of those capabilities are explained in
-   [RFC9197] for In situ OAM, and are further generalized in this
+   [RFC9197] for in situ OAM and are further generalized in this
    document.
 
-   Depending on the Type of OAM processing, nodes are chategorized as
+   Depending on the Type of OAM processing, nodes are categorized as
    follows.  Please note that this characterization exists within the
    context of a particular OAM protocol instance, and a given node can
    support multiple types:
@@ -377,7 +377,7 @@ Internet-Draft             Characterizing OAM                   May 2024
       A node could be an OAM Source Node and an OAM Sink Node for Active
       OAM packets simultaneously.
 
-   In some use-cases, such as in-situ OAM described in [RFC9322],
+   In some use-cases, such as in situ OAM described in [RFC9322],
    Compound OAM is used.  In the forward direction, Hybrid OAM is used
    with a single Encapsulating Node.  Multiple Transit Nodes may process
    the OAM information, and this may trigger them to act as OAM Source
@@ -389,15 +389,15 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 7]
+Pignataro & Farrel       Expires 12 January 2025                [Page 7]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
 6.  Security Considerations
 
-   Security is improved when the terms used and their definitions are
-   unambiguous.
+   Security is improved when terms are used with precision, and their
+   definitions are unambiguous.
 
 7.  Acknowledgements
 
@@ -445,17 +445,17 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 8]
+Pignataro & Farrel       Expires 12 January 2025                [Page 8]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
               Architecture", Work in Progress, Internet-Draft, draft-
-              ietf-raw-architecture-17, 4 March 2024,
+              ietf-raw-architecture-18, 8 July 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-raw-
-              architecture-17>.
+              architecture-18>.
 
    [I-D.kumar-ippm-ifa]
               Kumar, J., Anubolu, S., Lemon, J., Manur, R., Holbrook,
@@ -501,9 +501,9 @@ Internet-Draft             Characterizing OAM                   May 2024
 
 
 
-Pignataro & Farrel      Expires 11 November 2024                [Page 9]
+Pignataro & Farrel       Expires 12 January 2025                [Page 9]
 
-Internet-Draft             Characterizing OAM                   May 2024
+Internet-Draft             Characterizing OAM                  July 2024
 
 
    [RFC6669]  Sprecher, N. and L. Fang, "An Overview of the Operations,
@@ -557,4 +557,4 @@ Authors' Addresses
 
 
 
-Pignataro & Farrel      Expires 11 November 2024               [Page 10]
+Pignataro & Farrel       Expires 12 January 2025               [Page 10]

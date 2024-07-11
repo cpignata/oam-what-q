@@ -76,15 +76,15 @@
    OAM acronym.  While, at first glance, the most used appear to be well
    understood, the same qualifier may be interpreted differently in
    different contexts.  A case in point is the qualifiers "in-band" and
-   "out-of-band" which have their origins in the radio lexicon and which
+   "out-of-band" which have their origins in the radio lexicon, and which
    have been extrapolated into other communication networks.
       </t>
       <t>
    This document considers some common qualifiers and modifiers that are
-   prepended, within the context of packet networks, to the OAM acronym, and lays out guidelines for their use
+   prepended, within the context of packet networks, to the OAM acronym and lays out guidelines for their use
    in future IETF work.
       </t>
-      <t>   This document updates RFC 6291 by adding to the guidelines for the
+      <t>This document updates RFC 6291 by adding to the guidelines for the
    use of the term "OAM".</t>
     </abstract>
   </front>
@@ -122,13 +122,13 @@ document does not modify the definitions in <xref target="RFC7799" />.
 
 
         <t>
-          Historically, the terms "in-band" and "out-of-band" were used extensively in radio communivations as well as in telephony signaling <xref target="RFC4733" />. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
+          Historically, the terms "in-band" and "out-of-band" were used extensively in radio communications as well as in telephony signaling <xref target="RFC4733" />. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
         </t>
         <t>
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside said something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, has multiple "somethings" that OAM can go within or outside. A frequently encountered case is the use of in-band to mean either in-packet or in-path.
         </t>
         <t>
-          Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms lack ability to be generalized, and can be confused by participants from other contexts. More importantly, the terms are not self-defining any more and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
+          Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms lack ability to be generalized and can be confused by participants from other contexts. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
         </t>
 
 
@@ -168,7 +168,7 @@ document does not modify the definitions in <xref target="RFC7799" />.
 </t>
 
 
-<t>In Situ OAM <xref target="RFC9197" /> is an example of "In-Packet OAM", given that it 'records OAM information
+<t>In situ OAM <xref target="RFC9197" /> is an example of "In-Packet OAM", given that it 'records OAM information
   within the packet while the packet traverses a particular network
   domain.  The term "in situ" refers to the fact that the OAM data is
   added to the data packets rather than being sent within packets
@@ -176,7 +176,7 @@ document does not modify the definitions in <xref target="RFC7799" />.
 
 </t>
 <t>
-  Initially "In Situ OAM" <xref target="IETF96-In-Band-OAM" /> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <xref target="RFC9232" /> also intertwines the terms "in-band" with "in situ", though <xref target="I-D.song-opsawg-ifit-framework" /> settled on using "In Situ". Other similar uses, including <xref target="P4-INT-2.1" /> and <xref target="I-D.kumar-ippm-ifa" />, still use variations of "in-band", "in band", or "inband".
+  Initially, "in situ OAM" <xref target="IETF96-In-Band-OAM" /> was also referred to as "In-band OAM" but was renamed due to the overloaded meaning of "in-band OAM". Further, <xref target="RFC9232" /> also intertwines the terms "in-band" with "in situ", though <xref target="I-D.song-opsawg-ifit-framework" /> settled on using "in Situ". Other similar uses, including <xref target="P4-INT-2.1" /> and <xref target="I-D.kumar-ippm-ifa" />, still use variations of "in-band", "in band", or "inband".
 </t>
 <t>
   It is noteworthy that an In-Packet OAM cannot be Non-Path-Congruent OAM.
@@ -239,7 +239,7 @@ and
             <list style="hanging">
               <t hangText="Active OAM:"><br /> Depends on dedicated instrumented OAM packets.</t>
               <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
-      or more existing data packet streams, and does not use dedicated OAM packets.</t>
+      or more existing data packet streams and does not use dedicated OAM packets.</t>
 
 
 
@@ -278,7 +278,7 @@ and
         This document recommends avoiding the creation and use of extended acronyms for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.
       </t>
       <t>
-        <xref target="RFC9197" /> and other dependent documents currently uses the acronym "IOAM" for In Situ Operations, Administration, and Maintenance. While this document does not obsolete that acronym, it still recommends that "In situ OAM" is used instead to avoid potential ambiguity.
+        <xref target="RFC9197" /> and other dependent documents currently uses the acronym "IOAM" for In situ Operations, Administration, and Maintenance (IOAM). While this document does not obsolete that acronym, it still recommends that the expanded "in situ OAM" is used instead to avoid potential ambiguity.
       </t>
 
 
@@ -289,10 +289,10 @@ and
 
     <section anchor="nodetype" title="Node Processing OAM Packets">
             <t>
-        There are multiple processing capabilities that nodes processing OAM packets can utilize. Some of those capabilities are explained in <xref target="RFC9197" /> for In situ OAM, and are further generalized in this document.
+        There are multiple processing capabilities that nodes processing OAM packets can utilize. Some of those capabilities are explained in <xref target="RFC9197" /> for in situ OAM and are further generalized in this document.
       </t>
       <t>
-Depending on the Type of OAM processing, nodes are chategorized as follows. Please note that this characterization exists within the context of a particular OAM protocol instance, and a given node can support multiple types:
+Depending on the Type of OAM processing, nodes are categorized as follows. Please note that this characterization exists within the context of a particular OAM protocol instance, and a given node can support multiple types:
 
 <list style="bullets">
 
@@ -316,7 +316,7 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
 </list></t>
 
 <t>
-  In some use-cases, such as in-situ OAM described in <xref target="RFC9322" />, Compound OAM is used. In the forward direction, Hybrid OAM is used with a single Encapsulating Node. Multiple Transit Nodes may process the OAM information, and this may trigger them to act as OAM Source Nodes for Active OAM sent back to the Encapsulating Node which serves as an OAM Sink Node.
+  In some use-cases, such as in situ OAM described in <xref target="RFC9322" />, Compound OAM is used. In the forward direction, Hybrid OAM is used with a single Encapsulating Node. Multiple Transit Nodes may process the OAM information, and this may trigger them to act as OAM Source Nodes for Active OAM sent back to the Encapsulating Node which serves as an OAM Sink Node.
 </t>
 
 
@@ -326,7 +326,7 @@ Depending on the Type of OAM processing, nodes are chategorized as follows. Plea
 
 
     <section title="Security Considerations">
-      <t>Security is improved when the terms used and their definitions are unambiguous.</t>
+      <t>Security is improved when terms are used with precision, and their definitions are unambiguous.</t>
     </section>
 
     <section title="Acknowledgements">
