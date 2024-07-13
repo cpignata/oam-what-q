@@ -329,12 +329,18 @@ Depending on the Type of OAM processing, nodes are categorized as follows. Pleas
       <t>Security is improved when terms are used with precision, and their definitions are unambiguous.</t>
     </section>
 
+
+    <section title="IANA Considerations">
+      <t>This document has no IANA actions.</t>
+    </section>
+
+
     <section title="Acknowledgements">
       <t>
         The creation of this document was triggered when observing one of many on-mailing-list discussions of what these terms mean, and how to abbreviate them. Participants on that mailing thread include, alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer, Frank Brockners, Greg Mirsky, Italo Busi, Loa Andersson, Med Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch, Eduard Vasilenko, and Xiao Min.
       </t>
       <t>
-        The authors wish to thank Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, and Henk Birkholz for their thorough review and very useful comments that improved this document.
+        The authors wish to thank, chronologically, Hesham Elbakoury, Michael Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, and Henk Birkholz for their thorough review, supportive feedback, and useful comments that greatly improved this document.
       </t>
     </section>
   </middle>
@@ -346,12 +352,13 @@ Depending on the Type of OAM processing, nodes are categorized as follows. Pleas
    <references title="Normative References">
 
       &RFC.6291;
-      &RFC.7799;
 
     </references>
     
     <references title="Informative References">
 
+
+      &RFC.7799;
 
       &RFC.9197;
       &RFC.9322;

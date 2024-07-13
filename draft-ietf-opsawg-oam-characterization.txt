@@ -6,7 +6,7 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 12 January 2025                                    11 July 2024
+Expires: 13 January 2025                                    12 July 2024
 
 
                    Guidelines for Charactering "OAM"
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 January 2025.
+   This Internet-Draft will expire on 13 January 2025.
 
 
 
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 1]
+Pignataro & Farrel       Expires 13 January 2025                [Page 1]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -81,10 +81,11 @@ Table of Contents
    4.  Extended OAM Acronyms . . . . . . . . . . . . . . . . . . . .   6
    5.  Node Processing OAM Packets . . . . . . . . . . . . . . . . .   7
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
-   7.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   8
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   8
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   8
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   8
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  10
 
 1.  Introduction
@@ -108,8 +109,7 @@ Table of Contents
 
 
 
-
-Pignataro & Farrel       Expires 12 January 2025                [Page 2]
+Pignataro & Farrel       Expires 13 January 2025                [Page 2]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -165,7 +165,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 3]
+Pignataro & Farrel       Expires 13 January 2025                [Page 3]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -221,7 +221,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 4]
+Pignataro & Farrel       Expires 13 January 2025                [Page 4]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -277,7 +277,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 5]
+Pignataro & Farrel       Expires 13 January 2025                [Page 5]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -333,7 +333,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 6]
+Pignataro & Farrel       Expires 13 January 2025                [Page 6]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -389,7 +389,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 7]
+Pignataro & Farrel       Expires 13 January 2025                [Page 7]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -399,7 +399,11 @@ Internet-Draft             Characterizing OAM                  July 2024
    Security is improved when terms are used with precision, and their
    definitions are unambiguous.
 
-7.  Acknowledgements
+7.  IANA Considerations
+
+   This document has no IANA actions.
+
+8.  Acknowledgements
 
    The creation of this document was triggered when observing one of
    many on-mailing-list discussions of what these terms mean, and how to
@@ -409,15 +413,15 @@ Internet-Draft             Characterizing OAM                  July 2024
    Boucadair, Michael Richardson, Quan Xiong, Stewart Bryant, Tom Petch,
    Eduard Vasilenko, and Xiao Min.
 
-   The authors wish to thank Hesham Elbakoury, Michael Richardson,
-   Stewart Bryant, Greg Mirsky, Med Boucadair, Loa Andersson, Thomas
-   Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, and Henk Birkholz for
-   their thorough review and very useful comments that improved this
-   document.
+   The authors wish to thank, chronologically, Hesham Elbakoury, Michael
+   Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa
+   Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, and
+   Henk Birkholz for their thorough review, supportive feedback, and
+   useful comments that greatly improved this document.
 
-8.  References
+9.  References
 
-8.1.  Normative References
+9.1.  Normative References
 
    [RFC6291]  Andersson, L., van Helvoort, H., Bonica, R., Romascanu,
               D., and S. Mansfield, "Guidelines for the Use of the "OAM"
@@ -425,11 +429,7 @@ Internet-Draft             Characterizing OAM                  July 2024
               DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/info/rfc6291>.
 
-   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
-              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
-              May 2016, <https://www.rfc-editor.org/info/rfc7799>.
-
-8.2.  Informative References
+9.2.  Informative References
 
    [I-D.ietf-detnet-oam-framework]
               Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,
@@ -445,7 +445,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 8]
+Pignataro & Farrel       Expires 13 January 2025                [Page 8]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -501,7 +501,7 @@ Internet-Draft             Characterizing OAM                  July 2024
 
 
 
-Pignataro & Farrel       Expires 12 January 2025                [Page 9]
+Pignataro & Farrel       Expires 13 January 2025                [Page 9]
 
 Internet-Draft             Characterizing OAM                  July 2024
 
@@ -510,6 +510,10 @@ Internet-Draft             Characterizing OAM                  July 2024
               Administration, and Maintenance (OAM) Toolset for MPLS-
               Based Transport Networks", RFC 6669, DOI 10.17487/RFC6669,
               July 2012, <https://www.rfc-editor.org/info/rfc6669>.
+
+   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
+              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
+              May 2016, <https://www.rfc-editor.org/info/rfc7799>.
 
    [RFC8029]  Kompella, K., Swallow, G., Pignataro, C., Ed., Kumar, N.,
               Aldrin, S., and M. Chen, "Detecting Multiprotocol Label
@@ -553,8 +557,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-Pignataro & Farrel       Expires 12 January 2025               [Page 10]
+Pignataro & Farrel       Expires 13 January 2025               [Page 10]
