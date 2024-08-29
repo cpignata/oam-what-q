@@ -10,7 +10,7 @@ Expires: 2 March 2025                                     29 August 2024
 
 
                    Guidelines for Charactering "OAM"
-               draft-ietf-opsawg-oam-characterization-02
+               draft-ietf-opsawg-oam-characterization-03
 
 Abstract
 
