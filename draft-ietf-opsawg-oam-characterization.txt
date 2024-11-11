@@ -6,10 +6,10 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                       NC State University
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 2 March 2025                                     29 August 2024
+Expires: 15 May 2025                                    11 November 2024
 
 
-                   Guidelines for Charactering "OAM"
+                  Guidelines for Characterizing "OAM"
                draft-ietf-opsawg-oam-characterization-03
 
 Abstract
@@ -46,16 +46,16 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 March 2025.
+   This Internet-Draft will expire on 15 May 2025.
 
 
 
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                  [Page 1]
+Pignataro & Farrel         Expires 15 May 2025                  [Page 1]
 
-Internet-Draft             Characterizing OAM                August 2024
+Internet-Draft             Characterizing OAM              November 2024
 
 
 Copyright Notice
@@ -78,7 +78,7 @@ Table of Contents
    2.  In-Band and Out-of-Band OAM . . . . . . . . . . . . . . . . .   3
      2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5
    3.  Active, Passive, Hybrid, and Compound OAM . . . . . . . . . .   5
-   4.  Extended OAM Abbreviations  . . . . . . . . . . . . . . . . .   6
+   4.  Extended OAM Abbreviations  . . . . . . . . . . . . . . . . .   7
    5.  Processing of OAM Packets by Nodes  . . . . . . . . . . . . .   7
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
    7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                  [Page 2]
+Pignataro & Farrel         Expires 15 May 2025                  [Page 2]
 
-Internet-Draft             Characterizing OAM                August 2024
+Internet-Draft             Characterizing OAM              November 2024
 
 
    Additionally, this document recommends avoiding the creation and use
@@ -156,7 +156,7 @@ Internet-Draft             Characterizing OAM                August 2024
    IETF documents that refer to OAM, and the terms "in-band OAM" and
    "out-of-band OAM" are not to be used in future documents.
 
-   Path:  OAM in relation to a path.
+   Path OAM:  OAM in relation to a path.
 
       Path-Congruent OAM:
          The OAM information follows the exact same path as the observed
@@ -165,9 +165,9 @@ Internet-Draft             Characterizing OAM                August 2024
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                  [Page 3]
+Pignataro & Farrel         Expires 15 May 2025                  [Page 3]
 
-Internet-Draft             Characterizing OAM                August 2024
+Internet-Draft             Characterizing OAM              November 2024
 
 
       Non-Path-Congruent OAM:
@@ -179,7 +179,7 @@ Internet-Draft             Characterizing OAM                August 2024
       describes that the OAM Packets "share their fate with data
       packets."
 
-   Packet:  OAM in relation to a user data packet.
+   Packet OAM:  OAM in relation to a user data packet.
 
       In-Packet OAM:
          The OAM information is carried in the packets that also carry
@@ -212,7 +212,7 @@ Internet-Draft             Characterizing OAM                August 2024
       It is noteworthy that In-Packet OAM cannot be Non-Path-Congruent
       OAM.
 
-   Packet Treatment:  OAM in relation to the treatment of user data
+   Packet Treatment OAM:  OAM in relation to the treatment of user data
       packets, as for example QoS treatment.
 
       Equal-QoS-Treatment OAM:
@@ -221,9 +221,9 @@ Internet-Draft             Characterizing OAM                August 2024
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                  [Page 4]
+Pignataro & Farrel         Expires 15 May 2025                  [Page 4]
 
-Internet-Draft             Characterizing OAM                August 2024
+Internet-Draft             Characterizing OAM              November 2024
 
 
       Different-QoS-Treatment OAM:
@@ -237,7 +237,7 @@ Internet-Draft             Characterizing OAM                August 2024
       or its test packets receive different QoS and/or PREOF treatment,
       or both."  [I-D.ietf-raw-architecture] uses similar text.
 
-   Combined:  OAM in relation to multiple criteria.  For example, in
+   Combined OAM:  OAM in relation to multiple criteria.  For example, in
       relation to both topological congruence and packet treatment.
 
       [I-D.ietf-detnet-oam-framework] uses Combined OAM when it says
@@ -277,9 +277,9 @@ Internet-Draft             Characterizing OAM                August 2024
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                  [Page 5]
+Pignataro & Farrel         Expires 15 May 2025                  [Page 5]
 
-Internet-Draft             Characterizing OAM                August 2024
+Internet-Draft             Characterizing OAM              November 2024
 
 
    Passive OAM:
@@ -300,7 +300,8 @@ Internet-Draft             Characterizing OAM                August 2024
       active, passive, hybrid, or a compound combination.
 
       Compound OAM can be characterized in a more explicit way, for
-      nuanced use-cases:
+      nuanced use-cases, and named according to the OAM types that are
+      combined:
 
       *  Active-Passive OAM.
 
@@ -310,6 +311,13 @@ Internet-Draft             Characterizing OAM                August 2024
 
       *  Active-Hybrid-Passive OAM.
 
+
+      When two or more OAM types are combined, it is simply the case
+      that both OAM types are used at once.  For example, in Active-
+      Passive OAM both specific OAM packets and the observation of data
+      packets may be used to provide information about the data flow in
+      the network.  Each component may supplement the total data.
+
    Note that [RFC7799] describes "passive methods" as "out of band"
    which is contrary to the concept of "Passive OAM" as defined here
    because there are no OAM packets to be in-band or out-of-band.
@@ -317,6 +325,18 @@ Internet-Draft             Characterizing OAM                August 2024
    according to the terms described in Sections 2 and 3 of this
    document, and the term "out of band OAM" is not to be used in future
    documents.
+
+
+
+
+
+
+
+
+Pignataro & Farrel         Expires 15 May 2025                  [Page 6]
+
+Internet-Draft             Characterizing OAM              November 2024
+
 
 4.  Extended OAM Abbreviations
 
@@ -329,14 +349,6 @@ Internet-Draft             Characterizing OAM                August 2024
    Maintenance (IOAM).  While this document does not obsolete that
    abbreviation, it still recommends that the expanded "in situ OAM" is
    used instead to avoid potential ambiguity.
-
-
-
-
-Pignataro & Farrel        Expires 2 March 2025                  [Page 6]
-
-Internet-Draft             Characterizing OAM                August 2024
-
 
 5.  Processing of OAM Packets by Nodes
 
@@ -375,6 +387,13 @@ Internet-Draft             Characterizing OAM                August 2024
       OAM Sink Node:
          Processes and removes OAM packets from a flow.
 
+
+
+Pignataro & Farrel         Expires 15 May 2025                  [Page 7]
+
+Internet-Draft             Characterizing OAM              November 2024
+
+
       A node could be an OAM Source Node and an OAM Sink Node for Active
       OAM packets simultaneously.
 
@@ -384,15 +403,6 @@ Internet-Draft             Characterizing OAM                August 2024
    the OAM information, and this may trigger them to act as OAM Source
    Nodes for Active OAM sent back to the Encapsulating Node which serves
    as an OAM Sink Node.
-
-
-
-
-
-Pignataro & Farrel        Expires 2 March 2025                  [Page 7]
-
-Internet-Draft             Characterizing OAM                August 2024
-
 
 6.  Security Considerations
 
@@ -416,8 +426,9 @@ Internet-Draft             Characterizing OAM                August 2024
    The authors wish to thank, chronologically, Hesham Elbakoury, Michael
    Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa
    Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, Henk
-   Birkholz, and Alex Huang Feng for their thorough review, supportive
-   feedback, and useful comments that greatly improved this document.
+   Birkholz, Alex Huang Feng, Tom Petch, and Roni Even for their
+   thorough review and useful feedback comments that greatly improved
+   this document.
 
 9.  References
 
@@ -431,6 +442,14 @@ Internet-Draft             Characterizing OAM                August 2024
 
 9.2.  Informative References
 
+
+
+
+Pignataro & Farrel         Expires 15 May 2025                  [Page 8]
+
+Internet-Draft             Characterizing OAM              November 2024
+
+
    [I-D.ietf-detnet-oam-framework]
               Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,
               C. J., Varga, B., and J. Farkas, "Framework of Operations,
@@ -440,22 +459,12 @@ Internet-Draft             Characterizing OAM                August 2024
               <https://datatracker.ietf.org/doc/html/draft-ietf-detnet-
               oam-framework-11>.
 
-
-
-
-
-
-Pignataro & Farrel        Expires 2 March 2025                  [Page 8]
-
-Internet-Draft             Characterizing OAM                August 2024
-
-
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
               Architecture", Work in Progress, Internet-Draft, draft-
-              ietf-raw-architecture-18, 8 July 2024,
+              ietf-raw-architecture-21, 17 October 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-raw-
-              architecture-18>.
+              architecture-21>.
 
    [I-D.kumar-ippm-ifa]
               Kumar, J., Anubolu, S., Lemon, J., Manur, R., Holbrook,
@@ -486,6 +495,17 @@ Internet-Draft             Characterizing OAM                August 2024
               Version 2.1", 11 November 2020,
               <https://p4.org/p4-spec/docs/INT_v2_1.pdf>.
 
+
+
+
+
+
+
+Pignataro & Farrel         Expires 15 May 2025                  [Page 9]
+
+Internet-Draft             Characterizing OAM              November 2024
+
+
    [RFC4733]  Schulzrinne, H. and T. Taylor, "RTP Payload for DTMF
               Digits, Telephony Tones, and Telephony Signals", RFC 4733,
               DOI 10.17487/RFC4733, December 2006,
@@ -495,16 +515,6 @@ Internet-Draft             Characterizing OAM                August 2024
               Circuit Connectivity Verification (VCCV): A Control
               Channel for Pseudowires", RFC 5085, DOI 10.17487/RFC5085,
               December 2007, <https://www.rfc-editor.org/info/rfc5085>.
-
-
-
-
-
-
-Pignataro & Farrel        Expires 2 March 2025                  [Page 9]
-
-Internet-Draft             Characterizing OAM                August 2024
-
 
    [RFC6669]  Sprecher, N. and L. Fang, "An Overview of the Operations,
               Administration, and Maintenance (OAM) Toolset for MPLS-
@@ -544,6 +554,14 @@ Internet-Draft             Characterizing OAM                August 2024
 
 Authors' Addresses
 
+
+
+
+Pignataro & Farrel         Expires 15 May 2025                 [Page 10]
+
+Internet-Draft             Characterizing OAM              November 2024
+
+
    Carlos Pignataro
    North Carolina State University
    United States of America
@@ -557,4 +575,42 @@ Authors' Addresses
 
 
 
-Pignataro & Farrel        Expires 2 March 2025                 [Page 10]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pignataro & Farrel         Expires 15 May 2025                 [Page 11]
