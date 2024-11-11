@@ -11,12 +11,12 @@
 <!ENTITY RFC.4733 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4733.xml">
 <!ENTITY RFC.8029 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8029.xml">
 <!ENTITY RFC.9322 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9322.xml">
+<!ENTITY RFC.9551 SYSTEM "https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9551.xml">
 
 
 <!ENTITY I-D.ietf-raw-architecture SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-raw-architecture.xml">
 <!ENTITY I-D.song-opsawg-ifit-framework SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.song-opsawg-ifit-framework.xml">
 <!ENTITY I-D.kumar-ippm-ifa SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.kumar-ippm-ifa.xml">
-<!ENTITY I-D.ietf-detnet-oam-framework SYSTEM "https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-detnet-oam-framework.xml">
 
 
 ]>
@@ -85,7 +85,7 @@
    in future IETF work.
       </t>
       <t>This document updates RFC 6291 by adding to the guidelines for the
-   use of the term "OAM".</t>
+   use of the term "OAM". It does not modify any other part of RFC 6291.</t>
     </abstract>
   </front>
 
@@ -98,7 +98,7 @@
    Characterizations or qualifiers for "OAM" within packet networks often encounter similar
    problems of interpretation, such as with the adjective phrases "in-band" and "out-of-band".  This document considers some common qualifiers and modifiers
    that are prepended to the OAM abbreviation, and lays out guidelines for
-   their use in future IETF work to achieve unambiguous
+   their use in future IETF work to achieve consistent and unambiguous
    characterization.
       </t>
       <t>
@@ -106,7 +106,7 @@
       </t>
       <t>
    This document updates <xref target="RFC6291" /> by adding to the guidelines for the
-   use of the term "OAM".
+   use of the term "OAM". It does not modify any other part of <xref target="RFC6291" />.
       </t>
       <t>
         Note that <xref target="RFC7799" /> defines terms for active and passive
@@ -130,9 +130,11 @@ document does not modify the definitions in <xref target="RFC7799" />.
           Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms cannot be generalized and can be confused by participants from other contexts. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
         </t>
 
+      <section anchor="terms" title="Terminology and Guidance">
+
 
         <t>
-          The guidance in this document is to avoid the terms "in-band" and "out-of-band", and instead find finer-granularity descriptive terms.
+          The guidance in this document is to avoid the terms "in-band" and "out-of-band" when refering to OAM, and instead find finer-granularity descriptive terms.
           The definitions presented in this document are for use in all future IETF documents that refer
    to OAM, and the terms "in-band OAM" and "out-of-band OAM" are not to
    be used in future documents.
@@ -145,10 +147,10 @@ document does not modify the definitions in <xref target="RFC7799" />.
 <t>
           <list style="hanging">
 <t hangText="Path-Congruent OAM:"><br />The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".</t>
-<t hangText="Non-Path-Congruent OAM:"><br />The OAM information does not follow the same path as the observed data traffic. This was sometimes referred to as "out-of-band".</t>
+<t hangText="Non-Path-Congruent OAM:"><br />The OAM information does not follow the exact same path as the observed data traffic. This was sometimes referred to as "out-of-band".</t>
           </list>
 </t>
-<t><xref target="RFC6669" /> gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."</t>
+<t><xref target="RFC6669" />, Section 2 fourth bullet, gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."</t>
 
 
 
@@ -184,16 +186,19 @@ document does not modify the definitions in <xref target="RFC7799" />.
 
 
 
-<t hangText="Packet Treatment OAM:"> OAM in relation to the treatment of user data packets, as for example QoS treatment.</t>
+<t hangText="Packet Forwarding Treatment OAM:"> OAM in relation to the forwarding treatment of user data packets, as for example QoS treatment.</t>
 <t>
           <list style="hanging">
-<t hangText="Equal-QoS-Treatment OAM:"><br />The OAM packets receive the same QoS treatment as user data packets. This was sometimes referred to as "in-band".</t>
-<t hangText="Different-QoS-Treatment OAM:"><br />The OAM packets receive different QoS treatment as user data packets. This was sometimes referred to as "out-of-band".</t>
+<t hangText="Equal-Forwarding-Treatment OAM:"><br />The OAM packets receive the same forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "in-band".</t>
+<t hangText="Different-Forwarding-Treatment OAM:"><br />The OAM packets receive different forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "out-of-band".</t>
           </list>
 </t>
 <t>
-For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", <xref target="I-D.ietf-detnet-oam-framework" /> says 
-"Out-of-band OAM is an active OAM whose path through the DetNet domain is not topologically identical to the path of the monitored DetNet flow, or its test packets receive different QoS and/or PREOF treatment, or both." <xref target="I-D.ietf-raw-architecture" /> uses similar text.
+For a case of either "Non-Path-Congruent OAM" or "Different-Forwarding-Treatment OAM", <xref target="RFC9551" /> says 
+
+"Out-of-band OAM:
+an active OAM method whose path through the DetNet domain may not be topologically identical to the path of the monitored DetNet flow, its test packets may receive different QoS and/or PREOF treatment, or both."
+<xref target="I-D.ietf-raw-architecture" /> uses similar text.
 
 </t>
 
@@ -202,12 +207,20 @@ For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", 
 <t hangText="Combined OAM:"> OAM in relation to multiple criteria. For example, in relation to both topological congruence and packet treatment. 
 <!--
 Examples include
-<xref target="I-D.ietf-detnet-oam-framework" />
+<xref target="RFC9551" />
 and
 <xref target="I-D.ietf-raw-architecture" />.
 -->
 <br /><br />
-<xref target="I-D.ietf-detnet-oam-framework" /> uses Combined OAM when it says "In-band OAM is an active OAM that is in-band within the monitored DetNet OAM domain when it traverses the same set of links and interfaces receiving the same QoS and Packet Replication, Elimination, and Ordering Functions (PREOF) treatment as the monitored DetNet flow". <xref target="I-D.ietf-raw-architecture" /> uses similar text.
+<xref target="RFC9551" /> uses Combined OAM when it says 
+
+"In-band OAM: an active OAM method that is in band within
+the monitored DetNet OAM domain when it traverses the
+same set of links and interfaces receiving the same QoS and
+Packet Replication, Elimination, and Ordering Functions
+(PREOF) treatment as the monitored DetNet flow."
+
+<xref target="I-D.ietf-raw-architecture" /> uses similar text.
 </t>
 
 
@@ -215,6 +228,8 @@ and
 
           </list>
         </t>
+
+    </section>
 
     <section anchor="Historical" title="Historical Uses">
             <t>
@@ -243,7 +258,7 @@ and
                IETF documents that refer to OAM.
           
             <list style="hanging">
-              <t hangText="Active OAM:"><br /> Depends on dedicated, instrumented OAM packets.</t>
+              <t hangText="Active OAM:"><br /> Depends on injected, dedicated OAM packets.</t>
               <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
       or more existing data packet streams and does not use dedicated OAM packets.</t>
 
@@ -252,7 +267,7 @@ and
                <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data packets themselves. <xref target="RFC9341" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.
                </t>
                <t hangText="Compound OAM:"><br /> Uses a combination of at least two of Active OAM, Passive OAM, and Hybrid OAM (i.e., a combination of atomic OAM packets, data packet modification for OAM, and no explicit OAM).  Note that
-         <xref target="RFC7799" /> also uses the term "Hybrid" to refer to metric types
+         Section 3.7 of <xref target="RFC7799" /> also uses the term "Hybrid" to refer to metric types
          in-between active and passive, for OAM there are no in-betweens per se,
          only active, passive, hybrid, or a compound combination.
 
@@ -390,7 +405,7 @@ Depending on the Type of OAM processing, nodes are categorized as follows. Pleas
       &RFC.4733;
       &I-D.ietf-raw-architecture;
       &I-D.song-opsawg-ifit-framework;
-      &I-D.ietf-detnet-oam-framework;
+      &RFC.9551;
       &I-D.kumar-ippm-ifa;
 
       <reference anchor="IETF96-In-Band-OAM" target="https://www.ietf.org/proceedings/96/slides/slides-96-opsawg-8.pdf">

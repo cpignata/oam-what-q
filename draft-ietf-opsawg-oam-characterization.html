@@ -24,7 +24,7 @@
    in future IETF work.
        
        This document updates RFC 6291 by adding to the guidelines for the
-   use of the term "OAM". 
+   use of the term "OAM". It does not modify any other part of RFC 6291. 
     ' name="description">
 <meta content="xml2rfc 3.22.0" name="generator">
 <meta content="draft-ietf-opsawg-oam-characterization-03" name="ietf.draft">
@@ -1282,7 +1282,7 @@ li > p:last-of-type:only-child {
    prepended, within the context of packet networks, to the OAM abbreviation and lays out guidelines for their use
    in future IETF work.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 <p id="section-abstract-3">This document updates RFC 6291 by adding to the guidelines for the
-   use of the term "OAM".<a href="#section-abstract-3" class="pilcrow">¶</a></p>
+   use of the term "OAM". It does not modify any other part of RFC 6291.<a href="#section-abstract-3" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1336,10 +1336,13 @@ li > p:last-of-type:only-child {
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-in-band-and-out-of-band-oam" class="internal xref">In-Band and Out-of-Band OAM</a></p>
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-in-band-and-out-of-band-oam" class="internal xref">In-Band and Out-of-Band OAM</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.1">
-                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-historical-uses" class="internal xref">Historical Uses</a></p>
+                <p id="section-toc.1-1.2.2.1.1" class="keepWithNext"><a href="#section-2.1" class="auto internal xref">2.1</a>.  <a href="#name-terminology-and-guidance" class="internal xref">Terminology and Guidance</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.2">
+                <p id="section-toc.1-1.2.2.2.1" class="keepWithNext"><a href="#section-2.2" class="auto internal xref">2.2</a>.  <a href="#name-historical-uses" class="internal xref">Historical Uses</a></p>
 </li>
             </ul>
 </li>
@@ -1389,13 +1392,13 @@ li > p:last-of-type:only-child {
    Characterizations or qualifiers for "OAM" within packet networks often encounter similar
    problems of interpretation, such as with the adjective phrases "in-band" and "out-of-band".  This document considers some common qualifiers and modifiers
    that are prepended to the OAM abbreviation, and lays out guidelines for
-   their use in future IETF work to achieve unambiguous
+   their use in future IETF work to achieve consistent and unambiguous
    characterization.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">
         Additionally, this document recommends avoiding the creation and use of extended abbreviation for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">
    This document updates <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span> by adding to the guidelines for the
-   use of the term "OAM".<a href="#section-1-4" class="pilcrow">¶</a></p>
+   use of the term "OAM". It does not modify any other part of <span>[<a href="#RFC6291" class="cite xref">RFC6291</a>]</span>.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <p id="section-1-5">
         Note that <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> defines terms for active and passive
 performance assessments through metrics and methods. That RFC does not
@@ -1413,122 +1416,140 @@ document does not modify the definitions in <span>[<a href="#RFC7799" class="cit
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, have multiple "somethings" that OAM can be carried within or outside. A frequently encountered case is the use of "in-band" to mean either in-packet or on-path.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">
           Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms cannot be generalized and can be confused by participants from other contexts. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.<a href="#section-2-3" class="pilcrow">¶</a></p>
-<p id="section-2-4">
-          The guidance in this document is to avoid the terms "in-band" and "out-of-band", and instead find finer-granularity descriptive terms.
+<div id="terms">
+<section id="section-2.1">
+        <h3 id="name-terminology-and-guidance">
+<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-terminology-and-guidance" class="section-name selfRef">Terminology and Guidance</a>
+        </h3>
+<p id="section-2.1-1">
+          The guidance in this document is to avoid the terms "in-band" and "out-of-band" when refering to OAM, and instead find finer-granularity descriptive terms.
           The definitions presented in this document are for use in all future IETF documents that refer
    to OAM, and the terms "in-band OAM" and "out-of-band OAM" are not to
-   be used in future documents.<a href="#section-2-4" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2-5">
-        <dt id="section-2-5.1">Path OAM:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.2"> OAM in relation to a path.<a href="#section-2-5.2" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.3"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.4">
-          <span class="break"></span><dl class="dlParallel" id="section-2-5.4.1">
-            <dt id="section-2-5.4.1.1">Path-Congruent OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.4.1.2">
-              <br>The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".<a href="#section-2-5.4.1.2" class="pilcrow">¶</a>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-2-5.4.1.3">Non-Path-Congruent OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.4.1.4">
-              <br>The OAM information does not follow the same path as the observed data traffic. This was sometimes referred to as "out-of-band".<a href="#section-2-5.4.1.4" class="pilcrow">¶</a>
+   be used in future documents.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-2.1-2">
+          <dt id="section-2.1-2.1">Path OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.2"> OAM in relation to a path.<a href="#section-2.1-2.2" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-</dl>
+<dt id="section-2.1-2.3"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.4">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.4.1">
+              <dt id="section-2.1-2.4.1.1">Path-Congruent OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.4.1.2">
+                <br>The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-2.4.1.2" class="pilcrow">¶</a>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.5"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.6">
-          <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."<a href="#section-2-5.6" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.7">Packet OAM:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.8"> OAM in relation to a user data packet.<a href="#section-2-5.8" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.9"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.10">
-          <span class="break"></span><dl class="dlParallel" id="section-2-5.10.1">
-            <dt id="section-2-5.10.1.1">In-Packet OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.10.1.2">
-              <br>The OAM information is carried in the packets that also carry the data traffic. This was sometimes referred to as "in-band".<a href="#section-2-5.10.1.2" class="pilcrow">¶</a>
+              <dd class="break"></dd>
+<dt id="section-2.1-2.4.1.3">Non-Path-Congruent OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.4.1.4">
+                <br>The OAM information does not follow the exact same path as the observed data traffic. This was sometimes referred to as "out-of-band".<a href="#section-2.1-2.4.1.4" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
-<dt id="section-2-5.10.1.3">Dedicated-Packet OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.10.1.4">
-              <br>The OAM information is carried in its own OAM packets, separate from data traffic. This was sometimes referred to as "out-of-band".<a href="#section-2-5.10.1.4" class="pilcrow">¶</a>
-</dd>
-          <dd class="break"></dd>
 </dl>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.11"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.12">
-  The MPLS echo request/reply messages <span>[<a href="#RFC8029" class="cite xref">RFC8029</a>]</span> are an example of "Dedicated-Packet OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".<a href="#section-2-5.12" class="pilcrow">¶</a>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.5"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.6">
+            <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span>, Section 2 fourth bullet, gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."<a href="#section-2.1-2.6" class="pilcrow">¶</a>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.13"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.14">In situ OAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is an example of "In-Packet OAM", given that it: '...records OAM information
+          <dd class="break"></dd>
+<dt id="section-2.1-2.7">Packet OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.8"> OAM in relation to a user data packet.<a href="#section-2.1-2.8" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.9"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.10">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.10.1">
+              <dt id="section-2.1-2.10.1.1">In-Packet OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.10.1.2">
+                <br>The OAM information is carried in the packets that also carry the data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-2.10.1.2" class="pilcrow">¶</a>
+</dd>
+              <dd class="break"></dd>
+<dt id="section-2.1-2.10.1.3">Dedicated-Packet OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.10.1.4">
+                <br>The OAM information is carried in its own OAM packets, separate from data traffic. This was sometimes referred to as "out-of-band".<a href="#section-2.1-2.10.1.4" class="pilcrow">¶</a>
+</dd>
+            <dd class="break"></dd>
+</dl>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.11"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.12">
+  The MPLS echo request/reply messages <span>[<a href="#RFC8029" class="cite xref">RFC8029</a>]</span> are an example of "Dedicated-Packet OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".<a href="#section-2.1-2.12" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.13"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.14">In situ OAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is an example of "In-Packet OAM", given that it: '...records OAM information
   within the packet while the packet traverses a particular network
   domain.  The term "in situ" refers to the fact that the OAM data is
   added to the data packets rather than being sent within packets
-  specifically dedicated to OAM.'<a href="#section-2-5.14" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.15"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.16">
-  Initially, "in situ OAM" <span>[<a href="#IETF96-In-Band-OAM" class="cite xref">IETF96-In-Band-OAM</a>]</span> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2-5.16" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.17"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.18">
-  It is noteworthy that In-Packet OAM cannot be Non-Path-Congruent OAM.<a href="#section-2-5.18" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.19">Packet Treatment OAM:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.20"> OAM in relation to the treatment of user data packets, as for example QoS treatment.<a href="#section-2-5.20" class="pilcrow">¶</a>
-</dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.21"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.22">
-          <span class="break"></span><dl class="dlParallel" id="section-2-5.22.1">
-            <dt id="section-2-5.22.1.1">Equal-QoS-Treatment OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.22.1.2">
-              <br>The OAM packets receive the same QoS treatment as user data packets. This was sometimes referred to as "in-band".<a href="#section-2-5.22.1.2" class="pilcrow">¶</a>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-2-5.22.1.3">Different-QoS-Treatment OAM:</dt>
-            <dd style="margin-left: 1.5em" id="section-2-5.22.1.4">
-              <br>The OAM packets receive different QoS treatment as user data packets. This was sometimes referred to as "out-of-band".<a href="#section-2-5.22.1.4" class="pilcrow">¶</a>
+  specifically dedicated to OAM.'<a href="#section-2.1-2.14" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
+<dt id="section-2.1-2.15"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.16">
+  Initially, "in situ OAM" <span>[<a href="#IETF96-In-Band-OAM" class="cite xref">IETF96-In-Band-OAM</a>]</span> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2.1-2.16" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.17"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.18">
+  It is noteworthy that In-Packet OAM cannot be Non-Path-Congruent OAM.<a href="#section-2.1-2.18" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.19">Packet Forwarding Treatment OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.20"> OAM in relation to the forwarding treatment of user data packets, as for example QoS treatment.<a href="#section-2.1-2.20" class="pilcrow">¶</a>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.21"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.22">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.22.1">
+              <dt id="section-2.1-2.22.1.1">Equal-Forwarding-Treatment OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.22.1.2">
+                <br>The OAM packets receive the same forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "in-band".<a href="#section-2.1-2.22.1.2" class="pilcrow">¶</a>
+</dd>
+              <dd class="break"></dd>
+<dt id="section-2.1-2.22.1.3">Different-Forwarding-Treatment OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-2.22.1.4">
+                <br>The OAM packets receive different forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "out-of-band".<a href="#section-2.1-2.22.1.4" class="pilcrow">¶</a>
+</dd>
+            <dd class="break"></dd>
 </dl>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.23"></dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.24">
-For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", <span>[<a href="#I-D.ietf-detnet-oam-framework" class="cite xref">I-D.ietf-detnet-oam-framework</a>]</span> says 
-"Out-of-band OAM is an active OAM whose path through the DetNet domain is not topologically identical to the path of the monitored DetNet flow, or its test packets receive different QoS and/or PREOF treatment, or both." <span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2-5.24" class="pilcrow">¶</a>
+          <dd class="break"></dd>
+<dt id="section-2.1-2.23"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.24">
+For a case of either "Non-Path-Congruent OAM" or "Different-Forwarding-Treatment OAM", <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> says 
+
+"Out-of-band OAM:
+an active OAM method whose path through the DetNet domain may not be topologically identical to the path of the monitored DetNet flow, its test packets may receive different QoS and/or PREOF treatment, or both."
+<span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2.1-2.24" class="pilcrow">¶</a>
 </dd>
-        <dd class="break"></dd>
-<dt id="section-2-5.25">Combined OAM:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-5.26"> OAM in relation to multiple criteria. For example, in relation to both topological congruence and packet treatment. 
+          <dd class="break"></dd>
+<dt id="section-2.1-2.25">Combined OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.26"> OAM in relation to multiple criteria. For example, in relation to both topological congruence and packet treatment. 
 <br><br>
-          <span>[<a href="#I-D.ietf-detnet-oam-framework" class="cite xref">I-D.ietf-detnet-oam-framework</a>]</span> uses Combined OAM when it says "In-band OAM is an active OAM that is in-band within the monitored DetNet OAM domain when it traverses the same set of links and interfaces receiving the same QoS and Packet Replication, Elimination, and Ordering Functions (PREOF) treatment as the monitored DetNet flow". <span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2-5.26" class="pilcrow">¶</a>
+            <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> uses Combined OAM when it says 
+
+"In-band OAM: an active OAM method that is in band within
+the monitored DetNet OAM domain when it traverses the
+same set of links and interfaces receiving the same QoS and
+Packet Replication, Elimination, and Ordering Functions
+(PREOF) treatment as the monitored DetNet flow."
+
+<span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2.1-2.26" class="pilcrow">¶</a>
 </dd>
-      <dd class="break"></dd>
+        <dd class="break"></dd>
 </dl>
+</section>
+</div>
 <div id="Historical">
-<section id="section-2.1">
+<section id="section-2.2">
         <h3 id="name-historical-uses">
-<a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-historical-uses" class="section-name selfRef">Historical Uses</a>
+<a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-historical-uses" class="section-name selfRef">Historical Uses</a>
         </h3>
-<p id="section-2.1-1">
-              There are many examples of "in-band OAM" and "out-of-band OAM" in published RFCs. While interpreting those, it is important to understand the semantics of what "band" is a proxy for, and to be more explicit if those documents are updated. This document does not change the meaning of any terms in any prior RFCs.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
-<p id="section-2.1-2">
-              For example, <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> says "as in-band traffic with the PW's data, or out-of-band", and "in-band (i.e., following the same data-plane faith as PW data)". Hence, in that specific case, the term "band" refers to the "Pseudowire data".<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+<p id="section-2.2-1">
+              There are many examples of "in-band OAM" and "out-of-band OAM" in published RFCs. While interpreting those, it is important to understand the semantics of what "band" is a proxy for, and to be more explicit if those documents are updated. This document does not change the meaning of any terms in any prior RFCs.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+<p id="section-2.2-2">
+              For example, <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> says "as in-band traffic with the PW's data, or out-of-band", and "in-band (i.e., following the same data-plane faith as PW data)". Hence, in that specific case, the term "band" refers to the "Pseudowire data".<a href="#section-2.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1549,7 +1570,7 @@ For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", 
 <span class="break"></span><dl class="dlParallel" id="section-3-2">
         <dt id="section-3-2.1">Active OAM:</dt>
         <dd style="margin-left: 1.5em" id="section-3-2.2">
-          <br> Depends on dedicated, instrumented OAM packets.<a href="#section-3-2.2" class="pilcrow">¶</a>
+          <br> Depends on injected, dedicated OAM packets.<a href="#section-3-2.2" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
 <dt id="section-3-2.3">Passive OAM:</dt>
@@ -1566,7 +1587,7 @@ For a case of either "Non-Path-Congruent OAM" or "Different-QoS-Treatment OAM", 
 <dt id="section-3-2.7">Compound OAM:</dt>
         <dd style="margin-left: 1.5em" id="section-3-2.8">
           <p id="section-3-2.8.1"><br> Uses a combination of at least two of Active OAM, Passive OAM, and Hybrid OAM (i.e., a combination of atomic OAM packets, data packet modification for OAM, and no explicit OAM).  Note that
-         <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> also uses the term "Hybrid" to refer to metric types
+         Section 3.7 of <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> also uses the term "Hybrid" to refer to metric types
          in-between active and passive, for OAM there are no in-betweens per se,
          only active, passive, hybrid, or a compound combination.
 
@@ -1719,10 +1740,6 @@ Depending on the Type of OAM processing, nodes are categorized as follows. Pleas
 <a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
-<dt id="I-D.ietf-detnet-oam-framework">[I-D.ietf-detnet-oam-framework]</dt>
-        <dd>
-<span class="refAuthor">Mirsky, G.</span>, <span class="refAuthor">Theoleyre, F.</span>, <span class="refAuthor">Papadopoulos, G. Z.</span>, <span class="refAuthor">Bernardos, C. J.</span>, <span class="refAuthor">Varga, B.</span>, and <span class="refAuthor">J. Farkas</span>, <span class="refTitle">"Framework of Operations, Administration and Maintenance (OAM) for Deterministic Networking (DetNet)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-detnet-oam-framework-11</span>, <time datetime="2024-01-08" class="refDate">8 January 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-detnet-oam-framework-11">https://datatracker.ietf.org/doc/html/draft-ietf-detnet-oam-framework-11</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="I-D.ietf-raw-architecture">[I-D.ietf-raw-architecture]</dt>
         <dd>
 <span class="refAuthor">Thubert, P.</span>, <span class="refTitle">"Reliable and Available Wireless Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-raw-architecture-21</span>, <time datetime="2024-10-17" class="refDate">17 October 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-21">https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-21</a>&gt;</span>. </dd>
@@ -1776,8 +1793,12 @@ Depending on the Type of OAM processing, nodes are categorized as follows. Pleas
 <span class="refAuthor">Mizrahi, T.</span>, <span class="refAuthor">Brockners, F.</span>, <span class="refAuthor">Bhandari, S.</span>, <span class="refAuthor">Gafni, B.</span>, and <span class="refAuthor">M. Spiegel</span>, <span class="refTitle">"In Situ Operations, Administration, and Maintenance (IOAM) Loopback and Active Flags"</span>, <span class="seriesInfo">RFC 9322</span>, <span class="seriesInfo">DOI 10.17487/RFC9322</span>, <time datetime="2022-11" class="refDate">November 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9322">https://www.rfc-editor.org/info/rfc9322</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9341">[RFC9341]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Cociglio, M.</span>, <span class="refAuthor">Mirsky, G.</span>, <span class="refAuthor">Mizrahi, T.</span>, and <span class="refAuthor">T. Zhou</span>, <span class="refTitle">"Alternate-Marking Method"</span>, <span class="seriesInfo">RFC 9341</span>, <span class="seriesInfo">DOI 10.17487/RFC9341</span>, <time datetime="2022-12" class="refDate">December 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9341">https://www.rfc-editor.org/info/rfc9341</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9551">[RFC9551]</dt>
+      <dd>
+<span class="refAuthor">Mirsky, G.</span>, <span class="refAuthor">Theoleyre, F.</span>, <span class="refAuthor">Papadopoulos, G.</span>, <span class="refAuthor">Bernardos, CJ.</span>, <span class="refAuthor">Varga, B.</span>, and <span class="refAuthor">J. Farkas</span>, <span class="refTitle">"Framework of Operations, Administration, and Maintenance (OAM) for Deterministic Networking (DetNet)"</span>, <span class="seriesInfo">RFC 9551</span>, <span class="seriesInfo">DOI 10.17487/RFC9551</span>, <time datetime="2024-03" class="refDate">March 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc9551">https://www.rfc-editor.org/info/rfc9551</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
