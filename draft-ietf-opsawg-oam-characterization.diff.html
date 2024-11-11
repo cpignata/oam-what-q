@@ -110,8 +110,24 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">   OAM abbreviation.  While, at first glance, the most used appear to be</td><td> </td><td class="right">   OAM abbreviation.  While, at first glance, the most used appear to be</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   well understood, the same qualifier may be interpreted differently in</td><td> </td><td class="right">   well understood, the same qualifier may be interpreted differently in</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   different contexts.  A case in point is the qualifiers "in-band" and</td><td> </td><td class="right">   different contexts.  A case in point is the qualifiers "in-band" and</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   "out-of-band" which have their origins in the radio lexicon, and</td><td> </td><td class="right">   "out-of-band" which have their origins in the radio lexicon, and</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   which have been extrapolated into other communication networks.</td><td> </td><td class="right">   which have been extrapolated into other communication networks.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-2" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-2"><em> page 1, line 46<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-2"><em> page 1, line 46<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">   This document considers some common qualifiers and modifiers that are</td><td> </td><td class="right">   This document considers some common qualifiers and modifiers that are</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   prepended, within the context of packet networks, to the OAM</td><td> </td><td class="right">   prepended, within the context of packet networks, to the OAM</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   abbreviation and lays out guidelines for their use in future IETF</td><td> </td><td class="right">   abbreviation and lays out guidelines for their use in future IETF</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   work.</td><td> </td><td class="right">   work.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   This document updates RFC 6291 by adding to the guidelines for the</td><td> </td><td class="right">   This document updates RFC 6291 by adding to the guidelines for the</td><td class="lineno"></td></tr>
+      <tr id="diff0003"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   use of the term "OAM".</td><td> </td><td class="rblock">   use of the term "OAM".  <span class="insert">It does not modify any other part of RFC</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">   6291.</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">Status of This Memo</td><td> </td><td class="right">Status of This Memo</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   This Internet-Draft is submitted in full conformance with the</td><td> </td><td class="right">   This Internet-Draft is submitted in full conformance with the</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   provisions of BCP 78 and BCP 79.</td><td> </td><td class="right">   provisions of BCP 78 and BCP 79.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Internet-Drafts are working documents of the Internet Engineering</td><td> </td><td class="right">   Internet-Drafts are working documents of the Internet Engineering</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Task Force (IETF).  Note that other groups may also distribute</td><td> </td><td class="right">   Task Force (IETF).  Note that other groups may also distribute</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   working documents as Internet-Drafts.  The list of current Internet-</td><td> </td><td class="right">   working documents as Internet-Drafts.  The list of current Internet-</td><td class="lineno"></td></tr>
@@ -122,7 +138,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">   time.  It is inappropriate to use Internet-Drafts as reference</td><td> </td><td class="right">   time.  It is inappropriate to use Internet-Drafts as reference</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   material or to cite them other than as "work in progress."</td><td> </td><td class="right">   material or to cite them other than as "work in progress."</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0003"><td></td></tr>
+      <tr id="diff0004"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   This Internet-Draft will expire on <span class="delete">2 March</span> 2025.</td><td> </td><td class="rblock">   This Internet-Draft will expire on <span class="insert">15 May</span> 2025.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">Copyright Notice</td><td> </td><td class="right">Copyright Notice</td><td class="lineno"></td></tr>
@@ -134,8 +150,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">   Provisions Relating to IETF Documents (https://trustee.ietf.org/</td><td> </td><td class="right">   Provisions Relating to IETF Documents (https://trustee.ietf.org/</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   license-info) in effect on the date of publication of this document.</td><td> </td><td class="right">   license-info) in effect on the date of publication of this document.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Please review these documents carefully, as they describe your rights</td><td> </td><td class="right">   Please review these documents carefully, as they describe your rights</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-3" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-3"><em> page 2, line 25<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-3"><em> page 2, line 25<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">   and restrictions with respect to this document.  Code Components</td><td> </td><td class="right">   and restrictions with respect to this document.  Code Components</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   extracted from this document must include Revised BSD License text as</td><td> </td><td class="right">   extracted from this document must include Revised BSD License text as</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   described in Section 4.e of the Trust Legal Provisions and are</td><td> </td><td class="right">   described in Section 4.e of the Trust Legal Provisions and are</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   provided without warranty as described in the Revised BSD License.</td><td> </td><td class="right">   provided without warranty as described in the Revised BSD License.</td><td class="lineno"></td></tr>
@@ -144,9 +159,11 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2</td><td> </td><td class="right">   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   2.  In-Band and Out-of-Band OAM . . . . . . . . . . . . . . . . .   3</td><td> </td><td class="right">   2.  In-Band and Out-of-Band OAM . . . . . . . . . . . . . . . . .   3</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">     2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5</td><td> </td><td class="right">     2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5</td><td class="lineno"></td></tr>
+      <tr id="diff0005"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">     2.1.  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5</td><td> </td><td class="rblock">     2.1.  <span class="insert">Terminology and Guidance  . . . . . . . . . . . . . . . .   3</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">     2.2.</span>  Historical Uses . . . . . . . . . . . . . . . . . . . . .   5</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   3.  Active, Passive, Hybrid, and Compound OAM . . . . . . . . . .   5</td><td> </td><td class="right">   3.  Active, Passive, Hybrid, and Compound OAM . . . . . . . . . .   5</td><td class="lineno"></td></tr>
-      <tr id="diff0004"><td></td></tr>
+      <tr id="diff0006"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   4.  Extended OAM Abbreviations  . . . . . . . . . . . . . . . . .   <span class="delete">6</span></td><td> </td><td class="rblock">   4.  Extended OAM Abbreviations  . . . . . . . . . . . . . . . . .   <span class="insert">7</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   5.  Processing of OAM Packets by Nodes  . . . . . . . . . . . . .   7</td><td> </td><td class="right">   5.  Processing of OAM Packets by Nodes  . . . . . . . . . . . . .   7</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8</td><td> </td><td class="right">   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8</td><td class="lineno"></td></tr>
@@ -159,18 +176,63 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">1.  Introduction</td><td> </td><td class="right">1.  Introduction</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-4" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-4"><em> page 3, line 47<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-4"><em> page 3, line 47<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr id="part-2" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-2"><em> page 2, line 48<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-2"><em> page 2, line 49<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">   in how they are interpreted or understood.  This was, for example,</td><td> </td><td class="right">   in how they are interpreted or understood.  This was, for example,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   the case with the abbreviation for Operations, Administration, and</td><td> </td><td class="right">   the case with the abbreviation for Operations, Administration, and</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Maintenance, "OAM", and [RFC6291] provided guidelines for its use as</td><td> </td><td class="right">   Maintenance, "OAM", and [RFC6291] provided guidelines for its use as</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   well as definitions of its constituent parts.</td><td> </td><td class="right">   well as definitions of its constituent parts.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Characterizations or qualifiers for "OAM" within packet networks</td><td> </td><td class="right">   Characterizations or qualifiers for "OAM" within packet networks</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   often encounter similar problems of interpretation, such as with the</td><td> </td><td class="right">   often encounter similar problems of interpretation, such as with the</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   adjective phrases "in-band" and "out-of-band".  This document</td><td> </td><td class="right">   adjective phrases "in-band" and "out-of-band".  This document</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   considers some common qualifiers and modifiers that are prepended to</td><td> </td><td class="right">   considers some common qualifiers and modifiers that are prepended to</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   the OAM abbreviation, and lays out guidelines for their use in future</td><td> </td><td class="right">   the OAM abbreviation, and lays out guidelines for their use in future</td><td class="lineno"></td></tr>
+      <tr id="diff0007"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   IETF work to achieve unambiguous characterization.</td><td> </td><td class="rblock">   IETF work to achieve <span class="insert">consistent and </span>unambiguous characterization.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Additionally, this document recommends avoiding the creation and use</td><td> </td><td class="right">   Additionally, this document recommends avoiding the creation and use</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   of extended abbreviation for the qualifiers of "OAM".  For example,</td><td> </td><td class="right">   of extended abbreviation for the qualifiers of "OAM".  For example,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   the first "O" in "OOAM" could mean out-of-band, overlay, or something</td><td> </td><td class="right">   the first "O" in "OOAM" could mean out-of-band, overlay, or something</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   else.</td><td> </td><td class="right">   else.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   This document updates [RFC6291] by adding to the guidelines for the</td><td> </td><td class="right">   This document updates [RFC6291] by adding to the guidelines for the</td><td class="lineno"></td></tr>
+      <tr id="diff0008"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   use of the term "OAM".</td><td> </td><td class="rblock">   use of the term "OAM".  <span class="insert">It does not modify any other part of</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">   [RFC6291].</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Note that [RFC7799] defines terms for active and passive performance</td><td> </td><td class="right">   Note that [RFC7799] defines terms for active and passive performance</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   assessments through metrics and methods.  That RFC does not</td><td> </td><td class="right">   assessments through metrics and methods.  That RFC does not</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   substantially discuss OAM, and although the concepts are similar,</td><td> </td><td class="right">   substantially discuss OAM, and although the concepts are similar,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   this document does not modify the definitions in [RFC7799].</td><td> </td><td class="right">   this document does not modify the definitions in [RFC7799].</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">2.  In-Band and Out-of-Band OAM</td><td> </td><td class="right">2.  In-Band and Out-of-Band OAM</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Historically, the terms "in-band" and "out-of-band" were used</td><td> </td><td class="right">   Historically, the terms "in-band" and "out-of-band" were used</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   extensively in radio communications as well as in telephony signaling</td><td> </td><td class="right">   extensively in radio communications as well as in telephony signaling</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="part-3" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-3"><em> page 3, line 41<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-3"><em> page 3, line 42<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">   in-packet or on-path.</td><td> </td><td class="right">   in-packet or on-path.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Within the IETF, the terms "in-band" and "out-of-band" cannot be</td><td> </td><td class="right">   Within the IETF, the terms "in-band" and "out-of-band" cannot be</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   reliably understood consistently and unambiguously.  Context-specific</td><td> </td><td class="right">   reliably understood consistently and unambiguously.  Context-specific</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   redefinitions of these terms cannot be generalized and can be</td><td> </td><td class="right">   redefinitions of these terms cannot be generalized and can be</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   confused by participants from other contexts.  More importantly, the</td><td> </td><td class="right">   confused by participants from other contexts.  More importantly, the</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   terms are not self-defining to any further extent and cannot be</td><td> </td><td class="right">   terms are not self-defining to any further extent and cannot be</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   understood by someone exposed to them for the first time, since there</td><td> </td><td class="right">   understood by someone exposed to them for the first time, since there</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   is no "band" in IP.</td><td> </td><td class="right">   is no "band" in IP.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="diff0009"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">2.1.  Terminology and Guidance</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                         </td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   The guidance in this document is to avoid the terms "in-band" and</td><td> </td><td class="right">   The guidance in this document is to avoid the terms "in-band" and</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">   "out-of-band", and instead find finer-granularity descriptive terms.</td><td> </td><td class="right">   "out-of-band", and instead find finer-granularity descriptive terms.</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">   The definitions presented in this document are for use in all future</td><td> </td><td class="right">   The definitions presented in this document are for use in all future</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">   IETF documents that refer to OAM, and the terms "in-band OAM" and</td><td> </td><td class="right">   IETF documents that refer to OAM, and the terms "in-band OAM" and</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">   "out-of-band OAM" are not to be used in future documents.</td><td> </td><td class="right">   "out-of-band OAM" are not to be used in future documents.</td><td class="lineno"></td></tr>
+      <tr id="diff0010"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   <span class="delete">"out-of-band",</span> and instead find <span class="delete">finer-granularity</span> descriptive terms.</td><td> </td><td class="rblock">   <span class="insert">"out-of-band" when refering to OAM,</span> and instead find <span class="insert">finer-</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   The definitions presented in this document are for use in all future</td><td> </td><td class="rblock"><span class="insert">   granularity</span> descriptive terms.  The definitions presented in this</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   IETF documents that refer to OAM, and the terms "in-band OAM" and</td><td> </td><td class="rblock">   document are for use in all future IETF documents that refer to OAM,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   "out-of-band OAM" are not to be used in future documents.</td><td> </td><td class="rblock">   and the terms "in-band OAM" and "out-of-band OAM" are not to be used</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">   in future documents.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0005"><td></td></tr>
+      <tr id="diff0011"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   Path:  OAM in relation to a path.</td><td> </td><td class="rblock">   Path<span class="insert"> OAM</span>:  OAM in relation to a path.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      Path-Congruent OAM:</td><td> </td><td class="right">      Path-Congruent OAM:</td><td class="lineno"></td></tr>
@@ -178,15 +240,17 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">         data traffic.  This was sometimes referred to as "in-band".</td><td> </td><td class="right">         data traffic.  This was sometimes referred to as "in-band".</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      Non-Path-Congruent OAM:</td><td> </td><td class="right">      Non-Path-Congruent OAM:</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">         The OAM information does not follow the same path as the</td><td> </td><td class="right">         The OAM information does not follow the same path as the</td><td class="lineno"></td></tr>
+      <tr id="diff0012"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">         The OAM information does not follow the same path as the</td><td> </td><td class="rblock">         The OAM information does not follow the <span class="insert">exact </span>same path as the</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">         observed data traffic.  This was sometimes referred to as "out-</td><td> </td><td class="right">         observed data traffic.  This was sometimes referred to as "out-</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">         of-band".</td><td> </td><td class="right">         of-band".</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      [RFC6669] gives an example of "Path-Congruent OAM", and further</td><td> </td><td class="right">      [RFC6669] gives an example of "Path-Congruent OAM", and further</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      describes that the OAM Packets "share their fate with data</td><td> </td><td class="right">      describes that the OAM Packets "share their fate with data</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      packets."</td><td> </td><td class="right">      packets."</td><td class="lineno"></td></tr>
+      <tr id="diff0013"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">[RFC6669]</span> gives an example of <span class="delete">"Path-Congruent</span> OAM", and further</td><td> </td><td class="rblock">      <span class="insert">[RFC6669], Section 2 fourth bullet,</span> gives an example of <span class="insert">"Path-</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      describes that the OAM Packets "share their fate with data</td><td> </td><td class="rblock"><span class="insert">      Congruent</span> OAM", and further describes that the OAM Packets "share</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      packets."</td><td> </td><td class="rblock">      their fate with data packets."</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0006"><td></td></tr>
+      <tr id="diff0014"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   Packet:  OAM in relation to a user data packet.</td><td> </td><td class="rblock">   Packet<span class="insert"> OAM</span>:  OAM in relation to a user data packet.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      In-Packet OAM:</td><td> </td><td class="right">      In-Packet OAM:</td><td class="lineno"></td></tr>
@@ -199,7 +263,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">         band".</td><td> </td><td class="right">         band".</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-5" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-5"><em> page 4, line 47<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-5"><em> page 4, line 47<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr id="part-4" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-4"><em> page 4, line 47<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-4"><em> page 4, line 51<span class="hide"> &para;</span></em></a></th><td></td></tr>
       <tr><td class="lineno"></td><td class="left">      as "In-band OAM", but was renamed due to the overloaded meaning of</td><td> </td><td class="right">      as "In-band OAM", but was renamed due to the overloaded meaning of</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      "in-band OAM".  Further, [RFC9232] also intertwines the terms "in-</td><td> </td><td class="right">      "in-band OAM".  Further, [RFC9232] also intertwines the terms "in-</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      band" with "in situ", though [I-D.song-opsawg-ifit-framework]</td><td> </td><td class="right">      band" with "in situ", though [I-D.song-opsawg-ifit-framework]</td><td class="lineno"></td></tr>
@@ -210,50 +274,91 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">      It is noteworthy that In-Packet OAM cannot be Non-Path-Congruent</td><td> </td><td class="right">      It is noteworthy that In-Packet OAM cannot be Non-Path-Congruent</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      OAM.</td><td> </td><td class="right">      OAM.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0007"><td></td></tr>
-      <tr><td class="lineno"></td><td class="lblock">   Packet Treatment:  OAM in relation to the treatment of user data</td><td> </td><td class="rblock">   Packet Treatment<span class="insert"> OAM</span>:  OAM in relation to the treatment of user data</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      packets, as for example QoS treatment.</td><td> </td><td class="right">      packets, as for example QoS treatment.</td><td class="lineno"></td></tr>
+      <tr id="diff0015"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   Packet <span class="delete">Treatment:</span>  OAM in relation to the treatment of user data</td><td> </td><td class="rblock">   Packet <span class="insert">Forwarding Treatment OAM:</span>  OAM in relation to the <span class="insert">forwarding</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      packets, as for example QoS treatment.</td><td> </td><td class="rblock">      treatment of user data packets, as for example QoS treatment.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      Equal-QoS-Treatment OAM:</td><td> </td><td class="right">      Equal-QoS-Treatment OAM:</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">         The OAM packets receive the same QoS treatment as user data</td><td> </td><td class="right">         The OAM packets receive the same QoS treatment as user data</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">         packets.  This was sometimes referred to as "in-band".</td><td> </td><td class="right">         packets.  This was sometimes referred to as "in-band".</td><td class="lineno"></td></tr>
+      <tr id="diff0016"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">Equal-QoS-Treatment</span> OAM:</td><td> </td><td class="rblock">      <span class="insert">Equal-Forwarding-Treatment</span> OAM:</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">         The OAM packets receive the same <span class="delete">QoS</span> treatment as user data</td><td> </td><td class="rblock">         The OAM packets receive the same <span class="insert">forwarding (e.g., QoS)</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">         packets.  This was sometimes referred to as "in-band".</td><td> </td><td class="rblock">         treatment as user data packets.  This was sometimes referred to</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">         as "in-band".</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      Different-QoS-Treatment OAM:</td><td> </td><td class="right">      Different-QoS-Treatment OAM:</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">         The OAM packets receive different QoS treatment as user data</td><td> </td><td class="right">         The OAM packets receive different QoS treatment as user data</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">         packets.  This was sometimes referred to as "out-of-band".</td><td> </td><td class="right">         packets.  This was sometimes referred to as "out-of-band".</td><td class="lineno"></td></tr>
+      <tr id="diff0017"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">Different-QoS-Treatment</span> OAM:</td><td> </td><td class="rblock">      <span class="insert">Different-Forwarding-Treatment</span> OAM:</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">         The OAM packets receive different <span class="delete">QoS</span> treatment as user data</td><td> </td><td class="rblock">         The OAM packets receive different <span class="insert">forwarding (e.g., QoS)</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">         packets.  This was sometimes referred to as "out-of-band".</td><td> </td><td class="rblock">         treatment as user data packets.  This was sometimes referred to</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">         as "out-of-band".</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      For a case of either "Non-Path-Congruent OAM" or "Different-QoS-</td><td> </td><td class="right">      For a case of either "Non-Path-Congruent OAM" or "Different-QoS-</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      Treatment OAM", [I-D.ietf-detnet-oam-framework] says "Out-of-band</td><td> </td><td class="right">      Treatment OAM", [I-D.ietf-detnet-oam-framework] says "Out-of-band</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      OAM is an active OAM whose path through the DetNet domain is not</td><td> </td><td class="right">      OAM is an active OAM whose path through the DetNet domain is not</td><td class="lineno"></td></tr>
+      <tr id="diff0018"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      For a case of either "Non-Path-Congruent OAM" or <span class="delete">"Different-QoS-</span></td><td> </td><td class="rblock">      For a case of either "Non-Path-Congruent OAM" or <span class="insert">"Different-</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">      Treatment</span> OAM", <span class="delete">[I-D.ietf-detnet-oam-framework]</span> says "Out-of-band</td><td> </td><td class="rblock"><span class="insert">      Forwarding-Treatment</span> OAM", <span class="insert">[RFC9551]</span> says "Out-of-band <span class="insert">OAM:</span> an</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">OAM is</span> an active OAM whose path through the DetNet domain <span class="delete">is</span> not</td><td> </td><td class="rblock">      active OAM <span class="insert">method</span> whose path through the DetNet domain <span class="insert">may</span> not <span class="insert">be</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      topologically identical to the path of the monitored DetNet flow,</td><td> </td><td class="right">      topologically identical to the path of the monitored DetNet flow,</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      or its test packets receive different QoS and/or PREOF treatment,</td><td> </td><td class="right">      or its test packets receive different QoS and/or PREOF treatment,</td><td class="lineno"></td></tr>
+      <tr id="diff0019"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">or its test packets</span> receive different QoS and/or PREOF treatment,</td><td> </td><td class="rblock">      <span class="insert">its test packets may</span> receive different QoS and/or PREOF treatment,</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      or both."  [I-D.ietf-raw-architecture] uses similar text.</td><td> </td><td class="right">      or both."  [I-D.ietf-raw-architecture] uses similar text.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0008"><td></td></tr>
+      <tr id="diff0020"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   Combined:  OAM in relation to multiple criteria.  For example, in</td><td> </td><td class="rblock">   Combined<span class="insert"> OAM</span>:  OAM in relation to multiple criteria.  For example, in</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      relation to both topological congruence and packet treatment.</td><td> </td><td class="right">      relation to both topological congruence and packet treatment.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      [I-D.ietf-detnet-oam-framework] uses Combined OAM when it says</td><td> </td><td class="right">      [I-D.ietf-detnet-oam-framework] uses Combined OAM when it says</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      "In-band OAM is an active OAM that is in-band within the monitored</td><td> </td><td class="right">      "In-band OAM is an active OAM that is in-band within the monitored</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      DetNet OAM domain when it traverses the same set of links and</td><td> </td><td class="right">      DetNet OAM domain when it traverses the same set of links and</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      interfaces receiving the same QoS and Packet Replication,</td><td> </td><td class="right">      interfaces receiving the same QoS and Packet Replication,</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      Elimination, and Ordering Functions (PREOF) treatment as the</td><td> </td><td class="right">      Elimination, and Ordering Functions (PREOF) treatment as the</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      monitored DetNet flow".  [I-D.ietf-raw-architecture] uses similar</td><td> </td><td class="right">      monitored DetNet flow".  [I-D.ietf-raw-architecture] uses similar</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      text.</td><td> </td><td class="right">      text.</td><td class="lineno"></td></tr>
+      <tr id="diff0021"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      <span class="delete">[I-D.ietf-detnet-oam-framework]</span> uses Combined OAM when it says</td><td> </td><td class="rblock">      <span class="insert">[RFC9551]</span> uses Combined OAM when it says "In-band <span class="insert">OAM:</span> an active</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      "In-band <span class="delete">OAM is</span> an active OAM that is <span class="delete">in-band</span> within the monitored</td><td> </td><td class="rblock">      OAM <span class="insert">method</span> that is <span class="insert">in band</span> within the monitored DetNet OAM domain</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      DetNet OAM domain when it traverses the same set of links and</td><td> </td><td class="rblock">      when it traverses the same set of links and interfaces receiving</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      interfaces receiving the same QoS and Packet Replication,</td><td> </td><td class="rblock">      the same QoS and Packet Replication, Elimination, and Ordering</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      Elimination, and Ordering Functions (PREOF) treatment as the</td><td> </td><td class="rblock">      Functions (PREOF) treatment as the monitored DetNet <span class="insert">flow."</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      monitored DetNet <span class="delete">flow".</span>  [I-D.ietf-raw-architecture] uses similar</td><td> </td><td class="rblock">      [I-D.ietf-raw-architecture] uses similar text.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      text.</td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="diff0022"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">2.<span class="delete">1</span>.  Historical Uses</td><td> </td><td class="rblock">2.<span class="insert">2</span>.  Historical Uses</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-6" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-6"><em> page 6, line 23<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-6"><em> page 6, line 23<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">   There are many examples of "in-band OAM" and "out-of-band OAM" in</td><td> </td><td class="right">   There are many examples of "in-band OAM" and "out-of-band OAM" in</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   published RFCs.  While interpreting those, it is important to</td><td> </td><td class="right">   published RFCs.  While interpreting those, it is important to</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   understand the semantics of what "band" is a proxy for, and to be</td><td> </td><td class="right">   understand the semantics of what "band" is a proxy for, and to be</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   more explicit if those documents are updated.  This document does not</td><td> </td><td class="right">   more explicit if those documents are updated.  This document does not</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   change the meaning of any terms in any prior RFCs.</td><td> </td><td class="right">   change the meaning of any terms in any prior RFCs.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   For example, [RFC5085] says "as in-band traffic with the PW's data,</td><td> </td><td class="right">   For example, [RFC5085] says "as in-band traffic with the PW's data,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   or out-of-band", and "in-band (i.e., following the same data-plane</td><td> </td><td class="right">   or out-of-band", and "in-band (i.e., following the same data-plane</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   faith as PW data)".  Hence, in that specific case, the term "band"</td><td> </td><td class="right">   faith as PW data)".  Hence, in that specific case, the term "band"</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="part-5" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-5"><em> page 5, line 51<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-5"><em> page 6, line 7<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   [RFC7799] provides clear definitions for active and passive</td><td> </td><td class="right">   [RFC7799] provides clear definitions for active and passive</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   performance assessment such that the construction of metrics and</td><td> </td><td class="right">   performance assessment such that the construction of metrics and</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   methods can be described as either "Active" or "Passive".  Even</td><td> </td><td class="right">   methods can be described as either "Active" or "Passive".  Even</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   though [RFC7799] does not include the specific terms "Active",</td><td> </td><td class="right">   though [RFC7799] does not include the specific terms "Active",</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   "Passive", or "Hybrid" as modifiers of "OAM", the following terms are</td><td> </td><td class="right">   "Passive", or "Hybrid" as modifiers of "OAM", the following terms are</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   used in many RFCs and are provided here for use in all future IETF</td><td> </td><td class="right">   used in many RFCs and are provided here for use in all future IETF</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   documents that refer to OAM.</td><td> </td><td class="right">   documents that refer to OAM.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Active OAM:</td><td> </td><td class="right">   Active OAM:</td><td class="lineno"></td></tr>
+      <tr id="diff0023"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      Depends on <span class="delete">dedicated, instrumen</span>ted OAM packets.</td><td> </td><td class="rblock">      Depends on <span class="insert">injected, dedica</span>ted OAM packets.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Passive OAM:</td><td> </td><td class="right">   Passive OAM:</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">      Depends solely on the observation of one or more existing data</td><td> </td><td class="right">      Depends solely on the observation of one or more existing data</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">      packet streams and does not use dedicated OAM packets.</td><td> </td><td class="right">      packet streams and does not use dedicated OAM packets.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Hybrid OAM:</td><td> </td><td class="right">   Hybrid OAM:</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">      Uses instrumentation or modification of data packets themselves.</td><td> </td><td class="right">      Uses instrumentation or modification of data packets themselves.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">      [RFC9341] and [RFC9197] are examples labeled "Hybrid OAM" under</td><td> </td><td class="right">      [RFC9341] and [RFC9197] are examples labeled "Hybrid OAM" under</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">      this definition.</td><td> </td><td class="right">      this definition.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Compound OAM:</td><td> </td><td class="right">   Compound OAM:</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      Uses a combination of at least two of Active OAM, Passive OAM, and</td><td> </td><td class="right">      Uses a combination of at least two of Active OAM, Passive OAM, and</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      Hybrid OAM (i.e., a combination of atomic OAM packets, data packet</td><td> </td><td class="right">      Hybrid OAM (i.e., a combination of atomic OAM packets, data packet</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      modification for OAM, and no explicit OAM).  Note that [RFC7799]</td><td> </td><td class="right">      modification for OAM, and no explicit OAM).  Note that [RFC7799]</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      also uses the term "Hybrid" to refer to metric types in-between</td><td> </td><td class="right">      also uses the term "Hybrid" to refer to metric types in-between</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      active and passive, for OAM there are no in-betweens per se, only</td><td> </td><td class="right">      active and passive, for OAM there are no in-betweens per se, only</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">      active, passive, hybrid, or a compound combination.</td><td> </td><td class="right">      active, passive, hybrid, or a compound combination.</td><td class="lineno"></td></tr>
+      <tr id="diff0024"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      modification for OAM, and no explicit OAM).  Note that [RFC7799]</td><td> </td><td class="rblock">      modification for OAM, and no explicit OAM).  Note that <span class="insert">Section 3.7</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      also uses the term "Hybrid" to refer to metric types in-between</td><td> </td><td class="rblock"><span class="insert">      of</span> [RFC7799] also uses the term "Hybrid" to refer to metric types</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      active and passive, for OAM there are no in-betweens per se, only</td><td> </td><td class="rblock">      in-between active and passive, for OAM there are no in-betweens</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">      active, passive, hybrid, or a compound combination.</td><td> </td><td class="rblock">      per se, only active, passive, hybrid, or a compound combination.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      Compound OAM can be characterized in a more explicit way, for</td><td> </td><td class="right">      Compound OAM can be characterized in a more explicit way, for</td><td class="lineno"></td></tr>
-      <tr id="diff0009"><td></td></tr>
+      <tr id="diff0025"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">      nuanced <span class="delete">use-cases:</span></td><td> </td><td class="rblock">      nuanced <span class="insert">use-cases, and named according to the OAM types that are</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">      combined:</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
@@ -265,7 +370,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">      *  Active-Hybrid-Passive OAM.</td><td> </td><td class="right">      *  Active-Hybrid-Passive OAM.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="diff0010"><td></td></tr>
+      <tr id="diff0026"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">      <span class="insert">When two or more OAM types are combined, it is simply the case</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">      that both OAM types are used at once.  For example, in Active-</span></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">      Passive OAM both specific OAM packets and the observation of data</span></td><td class="lineno"></td></tr>
@@ -283,7 +388,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">4.  Extended OAM Abbreviations</td><td> </td><td class="right">4.  Extended OAM Abbreviations</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-7" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-7"><em> page 8, line 27<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-7"><em> page 8, line 37<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr id="part-6" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-6"><em> page 8, line 27<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-6"><em> page 8, line 37<span class="hide"> &para;</span></em></a></th><td></td></tr>
       <tr><td class="lineno"></td><td class="left">   many on-mailing-list discussions of what these terms mean, and how to</td><td> </td><td class="right">   many on-mailing-list discussions of what these terms mean, and how to</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   abbreviate them.  Participants on that mailing thread include,</td><td> </td><td class="right">   abbreviate them.  Participants on that mailing thread include,</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer,</td><td> </td><td class="right">   alphabetically: Adrian Farrel, Alexander Vainshtein, Florian Kauer,</td><td class="lineno"></td></tr>
@@ -294,7 +399,7 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">   The authors wish to thank, chronologically, Hesham Elbakoury, Michael</td><td> </td><td class="right">   The authors wish to thank, chronologically, Hesham Elbakoury, Michael</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa</td><td> </td><td class="right">   Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, Henk</td><td> </td><td class="right">   Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, Henk</td><td class="lineno"></td></tr>
-      <tr id="diff0011"><td></td></tr>
+      <tr id="diff0027"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">   Birkholz, <span class="delete">and</span> Alex Huang <span class="delete">Feng</span> for their thorough <span class="delete">review, supportive</span></td><td> </td><td class="rblock">   Birkholz, Alex Huang <span class="insert">Feng, Tom Petch, and Roni Even</span> for their</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="lblock"><span class="delete">   feedback,</span> and useful comments that greatly improved this document.</td><td> </td><td class="rblock">   thorough <span class="insert">review</span> and useful <span class="insert">feedback</span> comments that greatly improved</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">   this document.</td><td class="lineno"></td></tr>
@@ -309,21 +414,25 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">              DOI 10.17487/RFC6291, June 2011,</td><td> </td><td class="right">              DOI 10.17487/RFC6291, June 2011,</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">              &lt;https://www.rfc-editor.org/info/rfc6291&gt;.</td><td> </td><td class="right">              &lt;https://www.rfc-editor.org/info/rfc6291&gt;.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
-      <tr id="part-8" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-8"><em> page 9, line 8<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-8"><em> page 9, line 17<span class="hide"> &para;</span></em></a></th><td></td></tr>
-      <tr><td class="lineno"></td><td class="left">              C. J., Varga, B., and J. Farkas, "Framework of Operations,</td><td> </td><td class="right">              C. J., Varga, B., and J. Farkas, "Framework of Operations,</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">              Administration and Maintenance (OAM) for Deterministic</td><td> </td><td class="right">              Administration and Maintenance (OAM) for Deterministic</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">              Networking (DetNet)", Work in Progress, Internet-Draft,</td><td> </td><td class="right">              Networking (DetNet)", Work in Progress, Internet-Draft,</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">              draft-ietf-detnet-oam-framework-11, 8 January 2024,</td><td> </td><td class="right">              draft-ietf-detnet-oam-framework-11, 8 January 2024,</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">              &lt;https://datatracker.ietf.org/doc/html/draft-ietf-detnet-</td><td> </td><td class="right">              &lt;https://datatracker.ietf.org/doc/html/draft-ietf-detnet-</td><td class="lineno"></td></tr>
-      <tr><td class="lineno"></td><td class="left">              oam-framework-11&gt;.</td><td> </td><td class="right">              oam-framework-11&gt;.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">9.2.  Informative References</td><td> </td><td class="right">9.2.  Informative References</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="diff0028"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">   <span class="delete">[I-D.ietf-detnet-oam-framework]</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              Mirsky, G., Theoleyre, F., Papadopoulos, G. Z., Bernardos,</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              C. J., Varga, B., and J. Farkas, "Framework of Operations,</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              Administration and Maintenance (OAM) for Deterministic</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              Networking (DetNet)", Work in Progress, Internet-Draft,</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              draft-ietf-detnet-oam-framework-11, 8 January 2024,</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              &lt;https://datatracker.ietf.org/doc/html/draft-ietf-detnet-</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">              oam-framework-11&gt;.</span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock">                                                                         </td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   [I-D.ietf-raw-architecture]</td><td> </td><td class="right">   [I-D.ietf-raw-architecture]</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">              Thubert, P., "Reliable and Available Wireless</td><td> </td><td class="right">              Thubert, P., "Reliable and Available Wireless</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">              Architecture", Work in Progress, Internet-Draft, draft-</td><td> </td><td class="right">              Architecture", Work in Progress, Internet-Draft, draft-</td><td class="lineno"></td></tr>
-      <tr id="diff0012"><td></td></tr>
+      <tr id="diff0029"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">              ietf-raw-architecture-<span class="delete">18, 8 July</span> 2024,</td><td> </td><td class="rblock">              ietf-raw-architecture-<span class="insert">21, 17 October</span> 2024,</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">              &lt;https://datatracker.ietf.org/doc/html/draft-ietf-raw-</td><td> </td><td class="right">              &lt;https://datatracker.ietf.org/doc/html/draft-ietf-raw-</td><td class="lineno"></td></tr>
-      <tr id="diff0013"><td></td></tr>
+      <tr id="diff0030"><td></td></tr>
       <tr><td class="lineno"></td><td class="lblock">              architecture-<span class="delete">18</span>&gt;.</td><td> </td><td class="rblock">              architecture-<span class="insert">21</span>&gt;.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   [I-D.kumar-ippm-ifa]</td><td> </td><td class="right">   [I-D.kumar-ippm-ifa]</td><td class="lineno"></td></tr>
@@ -335,11 +444,42 @@ document.onkeydown = function(e) {
       <tr><td class="lineno"></td><td class="left">              ifa-08&gt;.</td><td> </td><td class="right">              ifa-08&gt;.</td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
       <tr><td class="lineno"></td><td class="left">   [I-D.song-opsawg-ifit-framework]</td><td> </td><td class="right">   [I-D.song-opsawg-ifit-framework]</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="part-7" class="change" ><td></td><th><small>skipping to change at</small><a href="#part-7"><em> page 10, line 41<span class="hide"> &para;</span></em></a></th><th> </th><th><small>skipping to change at</small><a href="#part-7"><em> page 10, line 41<span class="hide"> &para;</span></em></a></th><td></td></tr>
+      <tr><td class="lineno"></td><td class="left">              M. Spiegel, "In Situ Operations, Administration, and</td><td> </td><td class="right">              M. Spiegel, "In Situ Operations, Administration, and</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              Maintenance (IOAM) Loopback and Active Flags", RFC 9322,</td><td> </td><td class="right">              Maintenance (IOAM) Loopback and Active Flags", RFC 9322,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              DOI 10.17487/RFC9322, November 2022,</td><td> </td><td class="right">              DOI 10.17487/RFC9322, November 2022,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              &lt;https://www.rfc-editor.org/info/rfc9322&gt;.</td><td> </td><td class="right">              &lt;https://www.rfc-editor.org/info/rfc9322&gt;.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   [RFC9341]  Fioccola, G., Ed., Cociglio, M., Mirsky, G., Mizrahi, T.,</td><td> </td><td class="right">   [RFC9341]  Fioccola, G., Ed., Cociglio, M., Mirsky, G., Mizrahi, T.,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              and T. Zhou, "Alternate-Marking Method", RFC 9341,</td><td> </td><td class="right">              and T. Zhou, "Alternate-Marking Method", RFC 9341,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              DOI 10.17487/RFC9341, December 2022,</td><td> </td><td class="right">              DOI 10.17487/RFC9341, December 2022,</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">              &lt;https://www.rfc-editor.org/info/rfc9341&gt;.</td><td> </td><td class="right">              &lt;https://www.rfc-editor.org/info/rfc9341&gt;.</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr id="diff0031"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">   <span class="insert">[RFC9551]  Mirsky, G., Theoleyre, F., Papadopoulos, G., Bernardos,</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">              CJ., Varga, B., and J. Farkas, "Framework of Operations,</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">              Administration, and Maintenance (OAM) for Deterministic</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">              Networking (DetNet)", RFC 9551, DOI 10.17487/RFC9551,</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock"><span class="insert">              March 2024, &lt;https://www.rfc-editor.org/info/rfc9551&gt;.</span></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"></td><td> </td><td class="rblock">                                                                         </td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">Authors' Addresses</td><td> </td><td class="right">Authors' Addresses</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left"></td><td> </td><td class="right"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Carlos Pignataro</td><td> </td><td class="right">   Carlos Pignataro</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   North Carolina State University</td><td> </td><td class="right">   North Carolina State University</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   United States of America</td><td> </td><td class="right">   United States of America</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Email: cpignata@gmail.com, cmpignat@ncsu.edu</td><td> </td><td class="right">   Email: cpignata@gmail.com, cmpignat@ncsu.edu</td><td class="lineno"></td></tr>
+      <tr id="diff0032"><td></td></tr>
+      <tr><td class="lineno"></td><td class="lblock"><span class="delete">                                                                         </span></td><td> </td><td class="rblock"></td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Adrian Farrel</td><td> </td><td class="right">   Adrian Farrel</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Old Dog Consulting</td><td> </td><td class="right">   Old Dog Consulting</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   United Kingdom</td><td> </td><td class="right">   United Kingdom</td><td class="lineno"></td></tr>
+      <tr><td class="lineno"></td><td class="left">   Email: adrian@olddog.co.uk</td><td> </td><td class="right">   Email: adrian@olddog.co.uk</td><td class="lineno"></td></tr>
 
      <tr><td></td><td class="left"></td><td> </td><td class="right"></td><td></td></tr>
-     <tr id="end" bgcolor="gray"><th colspan="5" align="center">&nbsp;End of changes. 13 change blocks.&nbsp;</th></tr>
-     <tr class="stats"><td></td><th><i>13 lines changed or deleted</i></th><th><i> </i></th><th><i>21 lines changed or added</i></th><td></td></tr>
+     <tr id="end" bgcolor="gray"><th colspan="5" align="center">&nbsp;End of changes. 32 change blocks.&nbsp;</th></tr>
+     <tr class="stats"><td></td><th><i>59 lines changed or deleted</i></th><th><i> </i></th><th><i>70 lines changed or added</i></th><td></td></tr>
      <tr><td colspan="5" align="center" class="small"><br/>This html diff was produced by rfcdiff 1.45. The latest version is available from <a href="http://www.tools.ietf.org/tools/rfcdiff/" >http://tools.ietf.org/tools/rfcdiff/</a> </td></tr>
    </table>
-   </body>
+   <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8e0dab174db49460',t:'MTczMTMyMTY3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
    </html>
