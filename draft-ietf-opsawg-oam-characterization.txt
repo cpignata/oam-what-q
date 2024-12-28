@@ -3,7 +3,7 @@
 
 
 OPS Area Working Group                                      C. Pignataro
-Internet-Draft                                       NC State University
+Internet-Draft                                      Blue Fern Consulting
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
 Expires: 1 July 2025                                    28 December 2024
@@ -551,9 +551,9 @@ Internet-Draft             Characterizing OAM              December 2024
 Authors' Addresses
 
    Carlos Pignataro
-   North Carolina State University
+   Blue Fern Consulting
    United States of America
-   Email: cpignata@gmail.com, cmpignat@ncsu.edu
+   Email: cpignata@gmail.com, carlos@bluefern.consulting
 
 
 
