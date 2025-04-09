@@ -108,12 +108,6 @@
    This document updates <xref target="RFC6291" /> by adding to the guidelines for the
    use of the term "OAM". It does not modify any other part of <xref target="RFC6291" />.
       </t>
-      <t>
-        Note that <xref target="RFC7799" /> defines terms for active and passive
-performance assessments through metrics and methods. That RFC does not
-substantially discuss OAM, and although the concepts are similar, this
-document does not modify the definitions in <xref target="RFC7799" />.
-      </t>
 
     </section>
 
@@ -124,7 +118,7 @@ document does not modify the definitions in <xref target="RFC7799" />.
           Historically, the terms "in-band" and "out-of-band" were used extensively in radio communications as well as in telephony signaling <xref target="RFC4733" />. In both these cases, there is an actual "Band" (i.e., a "Channel" or "Frequency") to be within or outside.
         </t>
         <t>
-          While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside something", a challenge is presented for IP communications and packet switch networks (PSNs) which do not have a "band" per se, and, in fact, have multiple "somethings" that OAM can be carried within or outside. A frequently encountered case is the use of "in-band" to mean either in-packet or on-path.
+          While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside something", a challenge is presented for IP communications and packet-switched networks (PSNs) which do not have a "band" per se, and, in fact, have multiple "somethings" that OAM can be carried within or outside. A frequently encountered case is the use of "in-band" to mean either in-packet or on-path.
         </t>
         <t>
           Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms cannot be generalized and can be confused by participants from other contexts. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
@@ -156,16 +150,35 @@ document does not modify the definitions in <xref target="RFC7799" />.
 
 
 
-<t hangText="Packet OAM:"> OAM in relation to a user data packet.</t>
+<t hangText="Active, Passive, Hybrid, and In-Packet OAM"></t>
+
+          <t>
+               <xref target="RFC7799" /> provides clear definitions for active and passive
+               performance assessment such that the construction of metrics and
+               methods can be described as either "Active" or "Passive".  Even
+               though <xref target="RFC7799" /> does not include the specific terms "Active",
+               "Passive", or "Hybrid" as modifiers of "OAM", the following terms
+               are used in many RFCs and are provided here for use in all future
+               IETF documents that refer to OAM.
+          
+            <list style="hanging">
+              <t hangText="Active OAM:"><br /> Depends on dedicated OAM packets.</t>
+              <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
+      or more existing data packet streams and does not use dedicated OAM packets.</t>
+               <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data packets themselves. <xref target="RFC9341" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.
+               </t>
+            </list>
+          </t>
+
+            <t>This document defines the term In-Packet OAM, which is a special case of Hybrid OAM:</t>
 <t>
           <list style="hanging">
 <t hangText="In-Packet OAM:"><br />The OAM information is carried in the packets that also carry the data traffic. This was sometimes referred to as "in-band".</t>
-<t hangText="Dedicated-Packet OAM:"><br />The OAM information is carried in its own OAM packets, separate from data traffic. This was sometimes referred to as "out-of-band".</t>
           </list>
 </t>
 
 <t>
-  The MPLS echo request/reply messages <xref target="RFC8029" /> are an example of "Dedicated-Packet OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".
+  The MPLS echo request/reply messages <xref target="RFC8029" /> are an example of "Active OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".
 </t>
 
 
@@ -206,15 +219,8 @@ an active OAM method whose path through the DetNet domain may not be topological
 
 
 
-<t hangText="Combined OAM:"> OAM in relation to multiple criteria. For example, in relation to both topological congruence and packet treatment. 
-<!--
-Examples include
-<xref target="RFC9551" />
-and
-<xref target="I-D.ietf-raw-architecture" />.
--->
-<br /><br />
-<xref target="RFC9551" /> uses Combined OAM when it says 
+<t>Note that OAM can be classified in relation to multiple criteria, e.g., relating to both topological congruence and packet treatment, as well as other criteria, such as active, passive or hybrid <xref target="RFC7799" />. 
+For example, <xref target="RFC9551" /> says 
 
 "In-band OAM: an active OAM method that is in band within
 the monitored DetNet OAM domain when it traverses the
@@ -246,119 +252,6 @@ Packet Replication, Elimination, and Ordering Functions
 
 
       </section>
-
-
-
-    <section anchor="ippm" title="Active, Passive, Hybrid, and Compound OAM">
-          <t>
-               <xref target="RFC7799" /> provides clear definitions for active and passive
-               performance assessment such that the construction of metrics and
-               methods can be described as either "Active" or "Passive".  Even
-               though <xref target="RFC7799" /> does not include the specific terms "Active",
-               "Passive", or "Hybrid" as modifiers of "OAM", the following terms
-               are used in many RFCs and are provided here for use in all future
-               IETF documents that refer to OAM.
-          
-            <list style="hanging">
-              <t hangText="Active OAM:"><br /> Depends on injected, dedicated-packet OAM.</t>
-              <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
-      or more existing data packet streams and does not use dedicated-packet OAM.</t>
-
-
-
-               <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data packets themselves. <xref target="RFC9341" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.
-               </t>
-               <t hangText="Compound OAM:"><br /> Uses a combination of at least two of Active OAM, Passive OAM, and Hybrid OAM.  Note that
-         Section 3.7 of <xref target="RFC7799" /> also uses the term "Hybrid" to refer to metric types
-         in-between active and passive, for OAM there are no in-betweens per se,
-         only active, passive, hybrid, or a compound combination.
-
-          <br /><br />      Compound OAM can be characterized in a more explicit way, for
-      nuanced use-cases, and named according to the OAM types that
-      are combined:
-
-
-              <list style="symbols">
-              <t>Active-Passive OAM.</t>
-              <t>Active-Hybrid OAM.</t>
-              <t>Hybrid-Passive OAM.</t>
-              <t>Active-Hybrid-Passive OAM.</t>
-              </list>
-
-          <br />   
-          When two or more OAM types are combined, it is simply the case
-    that both OAM types are used at once. For example, in Active-Passive
-    OAM both specific OAM packets and the observation of data packets 
-    may be used to provide information about the data flow in the network.
-    Each component may supplement the total data. 
-
-            </t>
-            </list>
-
-
-          </t>
-          <t>
-               Note that <xref target="RFC7799" /> describes "passive methods" as "out of band"
-   which is contrary to the concept of "Passive OAM" as defined here
-   because there are no OAM packets to be in-band or out-of-band.
-
-  Following the guidelines of this document, OAM may be
-   qualified according to the terms described in Sections <xref target="band" format="counter" /> and <xref target="ippm" format="counter" /> of this document, and the term "out of band OAM" is not to be used in future
-   documents.
-</t>
-
-    </section>
-
-
-    <section anchor="acronyms" title="Extended OAM Abbreviations">
-            <t>
-        This document recommends avoiding the creation and use of extended abbreviations for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.
-      </t>
-      <t>
-        <xref target="RFC9197" /> and other dependent documents currently uses the abbreviations "IOAM" for In situ Operations, Administration, and Maintenance (IOAM). While this document does not obsolete that abbreviation, it still recommends that the expanded "in situ OAM" is used instead to avoid potential ambiguity.
-      </t>
-
-
-
-    </section>
-
-
-
-    <section anchor="nodetype" title="Processing of OAM Packets by Nodes">
-            <t>
-        There are multiple processing capabilities that nodes processing OAM packets can utilize. Some of those capabilities are explained in <xref target="RFC9197" /> for in situ OAM and are further generalized in this document.
-      </t>
-      <t>
-Depending on the Type of OAM processing, nodes are categorized as follows. Please note that this characterization exists within the context of a particular OAM protocol instance, and a given node can support multiple types.
-
-<list style="bullets">
-
-<t>
-  Hybrid OAM instruments or modifies data packet themselves. Consequently:
-  <list style="hanging">
-    <t hangText="Encapsulating Node:"><br />Adds OAM information to data packets.</t>
-    <t hangText="Transit Node:"><br />May process OAM information in data packets.</t>
-    <t hangText="Transparent Node:"><br />Does not process or even notice OAM information in data packets. Does not drop OAM packets.</t>
-    <t hangText="Decapsulating Node:"><br />Removes OAM information from data packets.</t>
-  </list>
-</t>
-<t>
-  Active OAM uses dedicated-packet OAM, separate from data packets. Consequently:
-  <list style="hanging">
-    <t hangText="OAM Source Node:"><br />Creates and injects OAM packets into a flow.</t>
-    <t hangText="OAM Sink Node:"><br />Processes and removes OAM packets from a flow.</t>
-  </list>
-  A node could be an OAM Source Node and an OAM Sink Node for Active OAM packets simultaneously.
-</t>
-</list></t>
-
-<t>
-  In some use-cases, such as in situ OAM described in <xref target="RFC9322" />, Compound OAM is used. In the forward direction, Hybrid OAM is used with a single Encapsulating Node. Multiple Transit Nodes may process the OAM information, and this may trigger them to act as OAM Source Nodes for Active OAM sent back to the Encapsulating Node which serves as an OAM Sink Node.
-</t>
-
-
-
-    </section>
 
 
 
