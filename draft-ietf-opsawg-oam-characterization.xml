@@ -24,7 +24,7 @@
 <?rfc rfcedstyle="yes"?>
 <?rfc subcompact="no" ?>
 <?rfc symrefs="yes"?>
-<rfc category="bcp" docName="draft-ietf-opsawg-oam-characterization-04" 
+<rfc category="bcp" docName="draft-ietf-opsawg-oam-characterization-05" 
   ipr="trust200902" submissionType="IETF" consensus="true" updates="6291">
   <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
   <?rfc toc="yes" ?>
@@ -60,6 +60,24 @@
       </address>
     </author>
 
+    <author fullname="Tal Mizrahi" initials="T." surname="Mizrahi">
+      <organization abbrev="">Huawei</organization>
+
+      <address>
+        <postal>
+          <street>Matam</street>
+
+          <city>Haifa</city>
+
+          <code>3190501</code>
+
+          <country>Israel</country>
+        </postal>
+
+        <email>tal.mizrahi.phd@gmail.com</email>
+      </address>
+    </author>
+    
     
     <date />
 
@@ -118,7 +136,7 @@
           While those terms, useful in their simplicity, continued to be broadly used to mean "within something" and "outside something", a challenge is presented for IP communications and packet-switched networks (PSNs) which do not have a "band" per se, and, in fact, have multiple "somethings" that OAM can be carried within or outside. A frequently encountered case is the use of "in-band" to mean either in-packet or on-path.
         </t>
         <t>
-          Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific redefinitions of these terms cannot be generalized and can be confused by participants from other contexts. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
+          Within the IETF, the terms "in-band" and "out-of-band" cannot be reliably understood consistently and unambiguously. Context-specific definitions of these terms are inconsistent and therefore cannot be generalized. More importantly, the terms are not self-defining to any further extent and cannot be understood by someone exposed to them for the first time, since there is no "band" in IP.
         </t>
 
       <section anchor="terms" title="Terminology and Guidance">
