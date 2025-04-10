@@ -102,9 +102,6 @@
    characterization.
       </t>
       <t>
-        Additionally, this document recommends avoiding the creation and use of extended abbreviation for the qualifiers of "OAM". For example, the first "O" in "OOAM" could mean out-of-band, overlay, or something else.
-      </t>
-      <t>
    This document updates <xref target="RFC6291" /> by adding to the guidelines for the
    use of the term "OAM". It does not modify any other part of <xref target="RFC6291" />.
       </t>
@@ -129,15 +126,13 @@
 
         <t>
           The guidance in this document is to avoid the terms "in-band" and "out-of-band" when refering to OAM, and instead find finer-granularity descriptive terms.
-          The definitions presented in this document are for use in all future IETF documents that refer
-   to OAM, and the terms "in-band OAM" and "out-of-band OAM" are not to
-   be used in future documents.
+          Alternative terms and definitions are presented in this document for future use in IETF documents that refer to OAM.
 
 
           <list style="hanging">
 
 
-<t hangText="Path OAM:"> OAM in relation to a path.</t>
+<t hangText="Path OAM:"> OAM in relation to a path</t>
 <t>
           <list style="hanging">
 <t hangText="Path-Congruent OAM:"><br />The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".</t>
@@ -158,8 +153,7 @@
                methods can be described as either "Active" or "Passive".  Even
                though <xref target="RFC7799" /> does not include the specific terms "Active",
                "Passive", or "Hybrid" as modifiers of "OAM", the following terms
-               are used in many RFCs and are provided here for use in all future
-               IETF documents that refer to OAM.
+               are used in many RFCs and are provided here for clarity.
           
             <list style="hanging">
               <t hangText="Active OAM:"><br /> Depends on dedicated OAM packets.</t>
