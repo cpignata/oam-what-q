@@ -177,7 +177,13 @@
               <t hangText="Active OAM:"><br /> Depends on dedicated OAM packets.</t>
               <t hangText="Passive OAM:"><br /> Depends solely on the observation of one
       or more existing data packet streams and does not use dedicated OAM packets.</t>
-               <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data packets themselves. <xref target="RFC9341" /> and <xref target="RFC9197" /> are examples labeled "Hybrid OAM" under this definition.
+               <t hangText="Hybrid OAM:"><br /> Uses instrumentation or modification of data 
+                 packets themselves. Examples of protocols classified under "Hybrid OAM" 
+                 include <xref target="RFC9341" /> and <xref target="RFC9197" />. Hybrid 
+                 OAM can be implemented by piggybacking OAM-related information onto data 
+                 packets, as seen in <xref target="RFC9197" />, or by utilizing reserved 
+                 fields in the packet header or specific values of existing header fields, 
+                 as proposed in <xref target="RFC9341" />.
                </t>
             </list>
           </t>
