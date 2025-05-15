@@ -12,7 +12,7 @@ Expires: 16 November 2025                                     T. Mizrahi
 
 
                   Guidelines for Characterizing "OAM"
-               draft-ietf-opsawg-oam-characterization-05
+               draft-ietf-opsawg-oam-characterization-06
 
 Abstract
 
@@ -84,7 +84,7 @@ Table of Contents
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   6
      6.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
 
@@ -429,26 +429,10 @@ Internet-Draft             Characterizing OAM                   May 2025
               DOI 10.17487/RFC9232, May 2022,
               <https://www.rfc-editor.org/info/rfc9232>.
 
-   [RFC9322]  Mizrahi, T., Brockners, F., Bhandari, S., Gafni, B., and
-              M. Spiegel, "In Situ Operations, Administration, and
-              Maintenance (IOAM) Loopback and Active Flags", RFC 9322,
-              DOI 10.17487/RFC9322, November 2022,
-              <https://www.rfc-editor.org/info/rfc9322>.
-
    [RFC9341]  Fioccola, G., Ed., Cociglio, M., Mirsky, G., Mizrahi, T.,
               and T. Zhou, "Alternate-Marking Method", RFC 9341,
               DOI 10.17487/RFC9341, December 2022,
               <https://www.rfc-editor.org/info/rfc9341>.
-
-
-
-
-
-
-Pignataro, et al.       Expires 16 November 2025                [Page 8]
-
-Internet-Draft             Characterizing OAM                   May 2025
-
 
    [RFC9551]  Mirsky, G., Theoleyre, F., Papadopoulos, G., Bernardos,
               CJ., Varga, B., and J. Farkas, "Framework of Operations,
@@ -457,6 +441,14 @@ Internet-Draft             Characterizing OAM                   May 2025
               March 2024, <https://www.rfc-editor.org/info/rfc9551>.
 
 Authors' Addresses
+
+
+
+
+Pignataro, et al.       Expires 16 November 2025                [Page 8]
+
+Internet-Draft             Characterizing OAM                   May 2025
+
 
    Carlos Pignataro
    Blue Fern Consulting
@@ -476,6 +468,14 @@ Authors' Addresses
    Haifa 3190501
    Israel
    Email: tal.mizrahi.phd@gmail.com
+
+
+
+
+
+
+
+
 
 
 
