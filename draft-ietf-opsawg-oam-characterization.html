@@ -45,7 +45,7 @@
     wcwidth 0.2.13
     weasyprint 65.0
 -->
-<link href="draft-ietf-opsawg-oam-characterization.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-ietf-opsawg-oam-characterization-05.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">/*
 
@@ -1228,11 +1228,11 @@ li > p:last-of-type:only-child {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Characterizing OAM</td>
-<td class="right">April 2025</td>
+<td class="right">May 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Pignataro, et al.</td>
-<td class="center">Expires 24 October 2025</td>
+<td class="center">Expires 16 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1248,12 +1248,12 @@ li > p:last-of-type:only-child {
 <a href="https://www.rfc-editor.org/rfc/rfc6291" class="eref">6291</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-22" class="published">22 April 2025</time>
+<time datetime="2025-05-15" class="published">15 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-24">24 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-16">16 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1309,7 +1309,7 @@ li > p:last-of-type:only-child {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 24 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 16 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1436,8 +1436,14 @@ li > p:last-of-type:only-child {
 </dd>
           <dd class="break"></dd>
 <dt id="section-2.1-2.5"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.6">
-            <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span>, Section 2 fourth bullet, gives an example of "Path-Congruent OAM", and further describes that the OAM Packets "share their fate with data packets."<a href="#section-2.1-2.6" class="pilcrow">¶</a>
+          <dd style="margin-left: 1.5em" id="section-2.1-2.6">An example of "Path-Congruent OAM" is the Virtual 
+ Circuit Connectivity Verification (VCCV), described
+ is Section 6 of <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> as "The VCCV
+        message travels in-band with the Session and follows the exact same
+        path as the user data for the session". Thus,
+ the term "in-band" in <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> refers to using the same path as the user data.
+ This term is also used in Section 2 of <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> with the same meaning,
+        and the word "congruent" is mentioned as synonymous.<a href="#section-2.1-2.6" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 <dt id="section-2.1-2.7">Active, Passive, Hybrid, and In-Packet OAM</dt>
@@ -1465,13 +1471,16 @@ li > p:last-of-type:only-child {
               <dd class="break"></dd>
 <dt id="section-2.1-2.10.2.5">Hybrid OAM:</dt>
               <dd style="margin-left: 1.5em" id="section-2.1-2.10.2.6">
-                <br> Uses instrumentation or modification of data 
-                 packets themselves. Examples of protocols classified under "Hybrid OAM" 
-                 include <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span> and <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>. Hybrid 
+                <br> Uses instrumentation or modification of the data 
+                 stream. Examples of protocols classified as "Hybrid OAM" 
+                 include <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>, <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>, and <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>. Hybrid 
                  OAM can be implemented by piggybacking OAM-related information onto data 
-                 packets, as seen in <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>, or by utilizing reserved 
+                 packets, as described in <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>, or by utilizing reserved 
                  fields in the packet header or specific values of existing header fields, 
-                 as proposed in <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>.<a href="#section-2.1-2.10.2.6" class="pilcrow">¶</a>
+                 as proposed in <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>. Direct loss measurment <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
+          is an example of "Hybrid OAM" in which user packets are not modified by the protocol. Instead,
+          OAM packets are used to exchange information about user packet counters, allowing for
+          packet loss computation.<a href="#section-2.1-2.10.2.6" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 </dl>
@@ -1502,12 +1511,13 @@ li > p:last-of-type:only-child {
   within the packet while the packet traverses a particular network
   domain.  The term "in situ" refers to the fact that the OAM data is
   added to the data packets rather than being sent within packets
-  specifically dedicated to OAM.'<a href="#section-2.1-2.18" class="pilcrow">¶</a>
+  specifically dedicated to OAM.' On the other hand, direct loss measurement <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
+  is an example of "Hybrid OAM" which is not classified as "In-Packet OAM".<a href="#section-2.1-2.18" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 <dt id="section-2.1-2.19"></dt>
           <dd style="margin-left: 1.5em" id="section-2.1-2.20">
-  Initially, "in situ OAM" <span>[<a href="#IETF96-In-Band-OAM" class="cite xref">IETF96-In-Band-OAM</a>]</span> was also referred to as "In-band OAM", but was renamed due to the overloaded meaning of "in-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2.1-2.20" class="pilcrow">¶</a>
+  Initially, "In situ OAM" <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> was also referred to as "In-band OAM" <span>[<a href="#I-D.brockners-inband-oam-data" class="cite xref">I-D.brockners-inband-oam-data</a>]</span>, but was renamed due to the overloaded meaning of "In-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2.1-2.20" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd><dt id="section-2.1-2.21">Packet Forwarding Treatment OAM:</dt>
           <dd style="margin-left: 1.5em" id="section-2.1-2.22"> OAM in relation to the forwarding treatment of user data packets, as for example QoS treatment.<a href="#section-2.1-2.22" class="pilcrow">¶</a>
@@ -1531,7 +1541,8 @@ li > p:last-of-type:only-child {
           <dd class="break"></dd>
 <dt id="section-2.1-2.25"></dt>
           <dd style="margin-left: 1.5em" id="section-2.1-2.26">
-For a case of either "Non-Path-Congruent OAM" or "Different-Forwarding-Treatment OAM", <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> says 
+As an example, the behavior of "Equal-Forwarding-Treatment OAM" is described in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> as "it traverses the same set of links and interfaces receiving the same QoS and Packet Replication, Elimination, and Ordering Functions (PREOF) treatment as the monitored DetNet flow". This is classified in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> as "In-band OAM".
+Similarly, the property of "Different-Forwarding-Treatment OAM" can be found in the following definition in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span>: 
 
 "Out-of-band OAM:
 an active OAM method whose path through the DetNet domain may not be topologically identical to the path of the monitored DetNet flow, its test packets may receive different QoS and/or PREOF treatment, or both."
@@ -1540,15 +1551,7 @@ an active OAM method whose path through the DetNet domain may not be topological
           <dd class="break"></dd>
 <dt id="section-2.1-2.27"></dt>
           <dd style="margin-left: 1.5em" id="section-2.1-2.28">Note that OAM can be classified in relation to multiple criteria, e.g., relating to both topological congruence and packet treatment, as well as other criteria, such as active, passive or hybrid <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>. 
-For example, <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> says 
-
-"In-band OAM: an active OAM method that is in band within
-the monitored DetNet OAM domain when it traverses the
-same set of links and interfaces receiving the same QoS and
-Packet Replication, Elimination, and Ordering Functions
-(PREOF) treatment as the monitored DetNet flow."
-
-<span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2.1-2.28" class="pilcrow">¶</a>
+For example, <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> classifies OAM both in terms of whether it is active or passive as well as in terms of whether it receives the same treatment as the user traffic.<a href="#section-2.1-2.28" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1560,9 +1563,9 @@ Packet Replication, Elimination, and Ordering Functions
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-historical-uses" class="section-name selfRef">Historical Uses</a>
         </h3>
 <p id="section-2.2-1">
-              There are many examples of "in-band OAM" and "out-of-band OAM" in published RFCs. While interpreting those, it is important to understand the semantics of what "band" is a proxy for, and to be more explicit if those documents are updated. This document does not change the meaning of any terms in any prior RFCs.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+              There are many examples of "in-band OAM" and "out-of-band OAM" in published RFCs. For instance, the term "in-band" appears in both <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> and <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span>. While the context in each of these documents is clear, the term carries different meanings in each case.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <p id="section-2.2-2">
-              For example, <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> says "as in-band traffic with the PW's data, or out-of-band", and "in-band (i.e., following the same data-plane faith as PW data)". Hence, in that specific case, the term "band" refers to the "Pseudowire data".<a href="#section-2.2-2" class="pilcrow">¶</a></p>
+   While interpreting existing documents, it is important to understand the semantics of what "band" is a proxy for, and to be more explicit if those documents are updated. This document does not change the meaning of any terms in any prior RFCs.<a href="#section-2.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1608,6 +1611,10 @@ Packet Replication, Elimination, and Ordering Functions
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="I-D.brockners-inband-oam-data">[I-D.brockners-inband-oam-data]</dt>
+        <dd>
+<span class="refAuthor">Brockners, F.</span>, <span class="refAuthor">Bhandari, S.</span>, <span class="refAuthor">Pignataro, C.</span>, and <span class="refAuthor">H. Gredler</span>, <span class="refTitle">"Data Formats for In-band OAM"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-brockners-inband-oam-data-00</span>, <time datetime="2016-07-08" class="refDate">8 July 2016</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-brockners-inband-oam-data-00">https://datatracker.ietf.org/doc/html/draft-brockners-inband-oam-data-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.ietf-raw-architecture">[I-D.ietf-raw-architecture]</dt>
         <dd>
 <span class="refAuthor">Thubert, P.</span>, <span class="refTitle">"Reliable and Available Wireless Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-raw-architecture-24</span>, <time datetime="2025-02-28" class="refDate">28 February 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-24">https://datatracker.ietf.org/doc/html/draft-ietf-raw-architecture-24</a>&gt;</span>. </dd>
@@ -1620,10 +1627,6 @@ Packet Replication, Elimination, and Ordering Functions
         <dd>
 <span class="refAuthor">Song, H.</span>, <span class="refAuthor">Qin, F.</span>, <span class="refAuthor">Chen, H.</span>, <span class="refAuthor">Jin, J.</span>, and <span class="refAuthor">J. Shin</span>, <span class="refTitle">"Framework for In-situ Flow Information Telemetry"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-song-opsawg-ifit-framework-21</span>, <time datetime="2023-10-23" class="refDate">23 October 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-song-opsawg-ifit-framework-21">https://datatracker.ietf.org/doc/html/draft-song-opsawg-ifit-framework-21</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="IETF96-In-Band-OAM">[IETF96-In-Band-OAM]</dt>
-        <dd>
-<span class="refAuthor">Brockners, F.</span>, <span class="refAuthor">Bhandari, S.</span>, <span class="refAuthor">Dara, S.</span>, <span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Gedler, H.</span>, <span class="refAuthor">Youell, S.</span>, and <span class="refAuthor">J. Leddy</span>, <span class="refTitle">"IETF 96, OPSWG: In-Band OAM"</span>, <span class="refContent">IETF-96 Proceedings</span>, <span class="seriesInfo">IETF-96 slides-96-opsawg-8.pdf</span>, <time datetime="2016-07-19" class="refDate">19 July 2016</time>, <span>&lt;<a href="https://www.ietf.org/proceedings/96/slides/slides-96-opsawg-8.pdf">https://www.ietf.org/proceedings/96/slides/slides-96-opsawg-8.pdf</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="P4-INT-2.1">[P4-INT-2.1]</dt>
         <dd>
 <span class="refTitle">"In-band Network Telemetry (INT) Dataplane Specification, Version 2.1"</span>, <time datetime="2020-11-11" class="refDate">11 November 2020</time>, <span>&lt;<a href="https://p4.org/p4-spec/docs/INT_v2_1.pdf">https://p4.org/p4-spec/docs/INT_v2_1.pdf</a>&gt;</span>. </dd>
@@ -1635,6 +1638,10 @@ Packet Replication, Elimination, and Ordering Functions
 <dt id="RFC5085">[RFC5085]</dt>
         <dd>
 <span class="refAuthor">Nadeau, T., Ed.</span> and <span class="refAuthor">C. Pignataro, Ed.</span>, <span class="refTitle">"Pseudowire Virtual Circuit Connectivity Verification (VCCV): A Control Channel for Pseudowires"</span>, <span class="seriesInfo">RFC 5085</span>, <span class="seriesInfo">DOI 10.17487/RFC5085</span>, <time datetime="2007-12" class="refDate">December 2007</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc5085">https://www.rfc-editor.org/info/rfc5085</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6374">[RFC6374]</dt>
+        <dd>
+<span class="refAuthor">Frost, D.</span> and <span class="refAuthor">S. Bryant</span>, <span class="refTitle">"Packet Loss and Delay Measurement for MPLS Networks"</span>, <span class="seriesInfo">RFC 6374</span>, <span class="seriesInfo">DOI 10.17487/RFC6374</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc6374">https://www.rfc-editor.org/info/rfc6374</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6669">[RFC6669]</dt>
         <dd>
