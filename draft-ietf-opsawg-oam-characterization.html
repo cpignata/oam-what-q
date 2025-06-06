@@ -1227,11 +1227,11 @@ li > p:last-of-type:only-child {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Characterizing OAM</td>
-<td class="right">May 2025</td>
+<td class="right">June 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Pignataro, et al.</td>
-<td class="center">Expires 16 November 2025</td>
+<td class="center">Expires 8 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1247,12 +1247,12 @@ li > p:last-of-type:only-child {
 <a href="https://www.rfc-editor.org/rfc/rfc6291" class="eref">6291</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-05-15" class="published">15 May 2025</time>
+<time datetime="2025-06-06" class="published">6 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-11-16">16 November 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-08">8 December 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1308,7 +1308,7 @@ li > p:last-of-type:only-child {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 16 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 8 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1411,65 +1411,66 @@ li > p:last-of-type:only-child {
 <a href="#section-2.1" class="section-number selfRef">2.1. </a><a href="#name-terminology-and-guidance" class="section-name selfRef">Terminology and Guidance</a>
         </h3>
 <p id="section-2.1-1">
-          The guidance in this document is to avoid the terms "in-band" and "out-of-band" when refering to OAM, and instead find finer-granularity descriptive terms.
-          Alternative terms and definitions are presented in this document for future use in IETF documents that refer to OAM.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2.1-2">
-          <dt id="section-2.1-2.1">Path OAM:</dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.2"> OAM in relation to a path<a href="#section-2.1-2.2" class="pilcrow">¶</a>
+          This document recommends avoiding the terms “in-band” and “out-of-band” when referring to OAM. Instead, it encourages the use of more fine-grained and descriptive terminology. It presents alternative terms and definitions for use in future IETF documents referencing OAM, without precluding the use of other precise, descriptive terms that do not rely on the “-band” convention.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
+<p id="section-2.1-2">
+          In this document, the term “path-congruent” describes packets that follow the exact same path (i.e., traverse the same nodes and links) within a network. Note that this definition does not describe how the packets are treated in queues within the nodes on the path. A further concept, “equal-forwarding-treatment” describes how path-congruent packets receive the same forwarding (e.g., Quality of Service) treatment.<a href="#section-2.1-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-2.1-3">
+          <dt id="section-2.1-3.1">Path OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.2"> OAM in relation to a path<a href="#section-2.1-3.2" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.3"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.4">
-            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.4.1">
-              <dt id="section-2.1-2.4.1.1">Path-Congruent OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.4.1.2">
-                <br>The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-2.4.1.2" class="pilcrow">¶</a>
+<dt id="section-2.1-3.3"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.4">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-3.4.1">
+              <dt id="section-2.1-3.4.1.1">Path-Congruent OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.4.1.2">
+                <br>The OAM information follows the exact same path as the observed data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-3.4.1.2" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
-<dt id="section-2.1-2.4.1.3">Non-Path-Congruent OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.4.1.4">
-                <br>The OAM information does not follow the exact same path as the observed data traffic. This can also be called Path-Incongruent OAM, and was sometimes referred to as "out-of-band".<a href="#section-2.1-2.4.1.4" class="pilcrow">¶</a>
+<dt id="section-2.1-3.4.1.3">Non-Path-Congruent OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.4.1.4">
+                <br>The OAM information does not follow the exact same path as the observed data traffic. This can also be called Path-Incongruent OAM, and was sometimes referred to as "out-of-band".<a href="#section-2.1-3.4.1.4" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 </dl>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.5"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.6">An example of "Path-Congruent OAM" is the Virtual 
+<dt id="section-2.1-3.5"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.6">An example of "Path-Congruent OAM" is the Virtual 
  Circuit Connectivity Verification (VCCV), described
  is Section 6 of <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> as "The VCCV
         message travels in-band with the Session and follows the exact same
         path as the user data for the session". Thus,
  the term "in-band" in <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> refers to using the same path as the user data.
  This term is also used in Section 2 of <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> with the same meaning,
-        and the word "congruent" is mentioned as synonymous.<a href="#section-2.1-2.6" class="pilcrow">¶</a>
+        and the word "congruent" is mentioned as synonymous.<a href="#section-2.1-3.6" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.7">Active, Passive, Hybrid, and In-Packet OAM</dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.8"></dd>
+<dt id="section-2.1-3.7">Active, Passive, Hybrid, and In-Packet OAM</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.8"></dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.9"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.10">
-            <p id="section-2.1-2.10.1"><span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> provides clear definitions for active and passive
+<dt id="section-2.1-3.9"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.10">
+            <p id="section-2.1-3.10.1"><span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> provides clear definitions for active and passive
                performance assessment such that the construction of metrics and
                methods can be described as either "Active" or "Passive".  Even
                though <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> does not include the specific terms "Active",
                "Passive", or "Hybrid" as modifiers of "OAM", the following terms
-               are used in many RFCs and are provided here for clarity.<a href="#section-2.1-2.10.1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2.1-2.10.2">
-              <dt id="section-2.1-2.10.2.1">Active OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.10.2.2">
-                <br> Depends on dedicated OAM packets.<a href="#section-2.1-2.10.2.2" class="pilcrow">¶</a>
+               are used in many RFCs and are provided here for clarity.<a href="#section-2.1-3.10.1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-2.1-3.10.2">
+              <dt id="section-2.1-3.10.2.1">Active OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.10.2.2">
+                <br> Depends on dedicated OAM packets.<a href="#section-2.1-3.10.2.2" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
-<dt id="section-2.1-2.10.2.3">Passive OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.10.2.4">
+<dt id="section-2.1-3.10.2.3">Passive OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.10.2.4">
                 <br> Depends solely on the observation of one
-      or more existing data packet streams and does not use dedicated OAM packets.<a href="#section-2.1-2.10.2.4" class="pilcrow">¶</a>
+      or more existing data packet streams and does not use dedicated OAM packets.<a href="#section-2.1-3.10.2.4" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
-<dt id="section-2.1-2.10.2.5">Hybrid OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.10.2.6">
+<dt id="section-2.1-3.10.2.5">Hybrid OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.10.2.6">
                 <br> Uses instrumentation or modification of the data 
                  stream. Examples of protocols classified as "Hybrid OAM" 
                  include <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>, <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>, and <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>. Hybrid 
@@ -1479,78 +1480,78 @@ li > p:last-of-type:only-child {
                  as proposed in <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>. Direct loss measurment <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
           is an example of "Hybrid OAM" in which user packets are not modified by the protocol. Instead,
           OAM packets are used to exchange information about user packet counters, allowing for
-          packet loss computation.<a href="#section-2.1-2.10.2.6" class="pilcrow">¶</a>
+          packet loss computation.<a href="#section-2.1-3.10.2.6" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 </dl>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.11"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.12">This document defines the term In-Packet OAM, which is a special case of Hybrid OAM:<a href="#section-2.1-2.12" class="pilcrow">¶</a>
+<dt id="section-2.1-3.11"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.12">This document defines the term In-Packet OAM, which is a special case of Hybrid OAM:<a href="#section-2.1-3.12" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.13"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.14">
-            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.14.1">
-              <dt id="section-2.1-2.14.1.1">In-Packet OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.14.1.2">
-                <br>The OAM information is carried in the packets that also carry the data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-2.14.1.2" class="pilcrow">¶</a>
+<dt id="section-2.1-3.13"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.14">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-3.14.1">
+              <dt id="section-2.1-3.14.1.1">In-Packet OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.14.1.2">
+                <br>The OAM information is carried in the packets that also carry the data traffic. This was sometimes referred to as "in-band".<a href="#section-2.1-3.14.1.2" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 </dl>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.15"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.16">
-  The MPLS echo request/reply messages <span>[<a href="#RFC8029" class="cite xref">RFC8029</a>]</span> are an example of "Active OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".<a href="#section-2.1-2.16" class="pilcrow">¶</a>
+<dt id="section-2.1-3.15"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.16">
+  The MPLS echo request/reply messages <span>[<a href="#RFC8029" class="cite xref">RFC8029</a>]</span> are an example of "Active OAM", since they are described as "An MPLS echo request/reply is a (possibly MPLS-labeled) IPv4 or IPv6 UDP packet".<a href="#section-2.1-3.16" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.17"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.18">In situ OAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is an example of "In-Packet OAM", given that it: '...records OAM information
+<dt id="section-2.1-3.17"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.18">In situ OAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is an example of "In-Packet OAM", given that it: '...records OAM information
   within the packet while the packet traverses a particular network
   domain.  The term "in situ" refers to the fact that the OAM data is
   added to the data packets rather than being sent within packets
   specifically dedicated to OAM.' On the other hand, direct loss measurement <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
-  is an example of "Hybrid OAM" which is not classified as "In-Packet OAM".<a href="#section-2.1-2.18" class="pilcrow">¶</a>
+  is an example of "Hybrid OAM" which is not classified as "In-Packet OAM".<a href="#section-2.1-3.18" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.19"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.20">
-  Initially, "In situ OAM" <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> was also referred to as "In-band OAM" <span>[<a href="#I-D.brockners-inband-oam-data" class="cite xref">I-D.brockners-inband-oam-data</a>]</span>, but was renamed due to the overloaded meaning of "In-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2.1-2.20" class="pilcrow">¶</a>
+<dt id="section-2.1-3.19"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.20">
+  Initially, "In situ OAM" <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> was also referred to as "In-band OAM" <span>[<a href="#I-D.brockners-inband-oam-data" class="cite xref">I-D.brockners-inband-oam-data</a>]</span>, but was renamed due to the overloaded meaning of "In-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ". Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in band", or "inband".<a href="#section-2.1-3.20" class="pilcrow">¶</a>
 </dd>
-          <dd class="break"></dd><dt id="section-2.1-2.21">Packet Forwarding Treatment OAM:</dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.22"> OAM in relation to the forwarding treatment of user data packets, as for example QoS treatment.<a href="#section-2.1-2.22" class="pilcrow">¶</a>
+          <dd class="break"></dd><dt id="section-2.1-3.21">Packet Forwarding Treatment OAM:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.22"> OAM in relation to the forwarding treatment of user data packets, as for example QoS treatment.<a href="#section-2.1-3.22" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.23"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.24">
-            <span class="break"></span><dl class="dlParallel" id="section-2.1-2.24.1">
-              <dt id="section-2.1-2.24.1.1">Equal-Forwarding-Treatment OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.24.1.2">
-                <br>The OAM packets receive the same forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "in-band".<a href="#section-2.1-2.24.1.2" class="pilcrow">¶</a>
+<dt id="section-2.1-3.23"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.24">
+            <span class="break"></span><dl class="dlParallel" id="section-2.1-3.24.1">
+              <dt id="section-2.1-3.24.1.1">Equal-Forwarding-Treatment OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.24.1.2">
+                <br>The OAM packets receive the same forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "in-band".<a href="#section-2.1-3.24.1.2" class="pilcrow">¶</a>
 </dd>
               <dd class="break"></dd>
-<dt id="section-2.1-2.24.1.3">Different-Forwarding-Treatment OAM:</dt>
-              <dd style="margin-left: 1.5em" id="section-2.1-2.24.1.4">
-                <br>The OAM packets receive different forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "out-of-band".<a href="#section-2.1-2.24.1.4" class="pilcrow">¶</a>
+<dt id="section-2.1-3.24.1.3">Different-Forwarding-Treatment OAM:</dt>
+              <dd style="margin-left: 1.5em" id="section-2.1-3.24.1.4">
+                <br>The OAM packets receive different forwarding (e.g., QoS) treatment as user data packets. This was sometimes referred to as "out-of-band".<a href="#section-2.1-3.24.1.4" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 </dl>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.25"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.26">
+<dt id="section-2.1-3.25"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.26">
 As an example, the behavior of "Equal-Forwarding-Treatment OAM" is described in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> as "it traverses the same set of links and interfaces receiving the same QoS and Packet Replication, Elimination, and Ordering Functions (PREOF) treatment as the monitored DetNet flow". This is classified in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> as "In-band OAM".
 Similarly, the property of "Different-Forwarding-Treatment OAM" can be found in the following definition in <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span>: 
 
 "Out-of-band OAM:
 an active OAM method whose path through the DetNet domain may not be topologically identical to the path of the monitored DetNet flow, its test packets may receive different QoS and/or PREOF treatment, or both."
-<span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2.1-2.26" class="pilcrow">¶</a>
+<span>[<a href="#I-D.ietf-raw-architecture" class="cite xref">I-D.ietf-raw-architecture</a>]</span> uses similar text.<a href="#section-2.1-3.26" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
-<dt id="section-2.1-2.27"></dt>
-          <dd style="margin-left: 1.5em" id="section-2.1-2.28">Note that OAM can be classified in relation to multiple criteria, e.g., relating to both topological congruence and packet treatment, as well as other criteria, such as active, passive or hybrid <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>. 
-For example, <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> classifies OAM both in terms of whether it is active or passive as well as in terms of whether it receives the same treatment as the user traffic.<a href="#section-2.1-2.28" class="pilcrow">¶</a>
+<dt id="section-2.1-3.27"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.1-3.28">Note that OAM can be classified in relation to multiple criteria, e.g., relating to both topological congruence and packet treatment, as well as other criteria, such as active, passive or hybrid <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>. 
+For example, <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> classifies OAM both in terms of whether it is active or passive as well as in terms of whether it receives the same treatment as the user traffic.<a href="#section-2.1-3.28" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
 </dl>
