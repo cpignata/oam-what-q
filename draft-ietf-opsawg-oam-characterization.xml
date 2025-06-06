@@ -144,7 +144,7 @@
           This document recommends avoiding the terms "in-band" and "out-of-band" when referring to OAM. Instead, it encourages the use of more fine-grained and descriptive terminology. The document also presents alternative terms and definitions for use in future IETF documents referencing OAM, without precluding the use of other precise, descriptive terms that do not rely on the "-band" convention.
         </t>
         <t>
-          In this document, the term “path-congruent” describes packets that follow the exact same path (i.e., traverse the same nodes and links) within a network. Note that this definition does not describe how the packets are treated in queues within the nodes on the path. A further concept, “equal-forwarding-treatment” describes how path-congruent packets receive the same forwarding (e.g., Quality of Service) treatment.
+          In this document, the term "path-congruent packets" describes packets that follow the exact same path (i.e., traverse the same nodes and links) within a network. Note that this definition does not describe how the packets are treated in queues within the nodes on the path. A further concept, "equal-forwarding-treatment" describes how path-congruent packets receive the same forwarding treatment (e.g., Quality of Service (QoS)) .
         </t>
         <t>
 
