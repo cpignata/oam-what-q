@@ -6,9 +6,9 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                      Blue Fern Consulting
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 8 December 2025                                      T. Mizrahi
+Expires: 10 December 2025                                     T. Mizrahi
                                                                   Huawei
-                                                             6 June 2025
+                                                             8 June 2025
 
 
                   Guidelines for Characterizing "OAM"
@@ -49,11 +49,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 December 2025.
+   This Internet-Draft will expire on 10 December 2025.
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 1]
+Pignataro, et al.       Expires 10 December 2025                [Page 1]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 2]
+Pignataro, et al.       Expires 10 December 2025                [Page 2]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -138,20 +138,20 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 2.1.  Terminology and Guidance
 
-   This document recommends avoiding the terms “in-band” and “out-of-
-   band” when referring to OAM.  Instead, it encourages the use of more
-   fine-grained and descriptive terminology.  It presents alternative
-   terms and definitions for use in future IETF documents referencing
-   OAM, without precluding the use of other precise, descriptive terms
-   that do not rely on the “-band” convention.
+   This document recommends avoiding the terms "in-band" and "out-of-
+   band" when referring to OAM.  Instead, it encourages the use of more
+   fine-grained and descriptive terminology.  The document also presents
+   alternative terms and definitions for use in future IETF documents
+   referencing OAM, without precluding the use of other precise,
+   descriptive terms that do not rely on the "-band" convention.
 
-   In this document, the term “path-congruent” describes packets that
-   follow the exact same path (i.e., traverse the same nodes and links)
-   within a network.  Note that this definition does not describe how
-   the packets are treated in queues within the nodes on the path.  A
-   further concept, “equal-forwarding-treatment” describes how path-
-   congruent packets receive the same forwarding (e.g., Quality of
-   Service) treatment.
+   In this document, the term "path-congruent packets" describes packets
+   that follow the exact same path (i.e., traverse the same nodes and
+   links) within a network.  Note that this definition does not describe
+   how the packets are treated in queues within the nodes on the path.
+   A further concept, "equal-forwarding-treatment" describes how path-
+   congruent packets receive the same forwarding treatment (e.g.,
+   Quality of Service (QoS)) .
 
    Path OAM:  OAM in relation to a path
 
@@ -165,7 +165,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 3]
+Pignataro, et al.       Expires 10 December 2025                [Page 3]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -221,7 +221,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 4]
+Pignataro, et al.       Expires 10 December 2025                [Page 4]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -277,7 +277,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 5]
+Pignataro, et al.       Expires 10 December 2025                [Page 5]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -333,7 +333,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 6]
+Pignataro, et al.       Expires 10 December 2025                [Page 6]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -343,9 +343,9 @@ Internet-Draft             Characterizing OAM                  June 2025
    The authors wish to thank, chronologically, Hesham Elbakoury, Michael
    Richardson, Stewart Bryant, Greg Mirsky, Med Boucadair, Loa
    Andersson, Thomas Graf, Alex Huang Feng, Xiao Min, Dhruv Dhody, Henk
-   Birkholz, Alex Huang Feng, Tom Petch, and Roni Even for their
-   thorough review and useful feedback comments that greatly improved
-   this document.
+   Birkholz, Alex Huang Feng, Tom Petch, Roni Even, and Tim Chown for
+   their thorough review and useful feedback comments that greatly
+   improved this document.
 
 6.  References
 
@@ -389,7 +389,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 7]
+Pignataro, et al.       Expires 10 December 2025                [Page 7]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -445,7 +445,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 8]
+Pignataro, et al.       Expires 10 December 2025                [Page 8]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -501,4 +501,4 @@ Authors' Addresses
 
 
 
-Pignataro, et al.        Expires 8 December 2025                [Page 9]
+Pignataro, et al.       Expires 10 December 2025                [Page 9]
