@@ -6,13 +6,13 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                      Blue Fern Consulting
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 12 December 2025                                     T. Mizrahi
+Expires: 13 December 2025                                     T. Mizrahi
                                                                   Huawei
-                                                            10 June 2025
+                                                            11 June 2025
 
 
                   Guidelines for Characterizing "OAM"
-               draft-ietf-opsawg-oam-characterization-06
+               draft-ietf-opsawg-oam-characterization-07
 
 Abstract
 
@@ -49,11 +49,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 December 2025.
+   This Internet-Draft will expire on 13 December 2025.
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 1]
+Pignataro, et al.       Expires 13 December 2025                [Page 1]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 2]
+Pignataro, et al.       Expires 13 December 2025                [Page 2]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -165,7 +165,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 3]
+Pignataro, et al.       Expires 13 December 2025                [Page 3]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -221,7 +221,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 4]
+Pignataro, et al.       Expires 13 December 2025                [Page 4]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -277,7 +277,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 5]
+Pignataro, et al.       Expires 13 December 2025                [Page 5]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -333,7 +333,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 6]
+Pignataro, et al.       Expires 13 December 2025                [Page 6]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -389,7 +389,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 7]
+Pignataro, et al.       Expires 13 December 2025                [Page 7]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -445,7 +445,7 @@ Internet-Draft             Characterizing OAM                  June 2025
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 8]
+Pignataro, et al.       Expires 13 December 2025                [Page 8]
 
 Internet-Draft             Characterizing OAM                  June 2025
 
@@ -501,4 +501,4 @@ Authors' Addresses
 
 
 
-Pignataro, et al.       Expires 12 December 2025                [Page 9]
+Pignataro, et al.       Expires 13 December 2025                [Page 9]
