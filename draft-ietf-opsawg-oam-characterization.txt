@@ -6,9 +6,9 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                      Blue Fern Consulting
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 31 January 2026                                      T. Mizrahi
+Expires: 11 February 2026                                     T. Mizrahi
                                                                   Huawei
-                                                            30 July 2025
+                                                          10 August 2025
 
 
                   Guidelines for Characterizing "OAM"
@@ -49,13 +49,13 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 January 2026.
+   This Internet-Draft will expire on 11 February 2026.
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 1]
+Pignataro, et al.       Expires 11 February 2026                [Page 1]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 2]
+Pignataro, et al.       Expires 11 February 2026                [Page 2]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    This document updates [RFC6291] by adding to the guidelines for the
@@ -165,9 +165,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 3]
+Pignataro, et al.       Expires 11 February 2026                [Page 3]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    The terminology presented in this section classifies OAM according to
@@ -221,22 +221,23 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 4]
+Pignataro, et al.       Expires 11 February 2026                [Page 4]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
-   *  IOAM [RFC9197] is an example of "Hybrid OAM" that is also "In-
-      Data-Packet OAM", given that it: '...records OAM information
+   *  An example of "Hybrid OAM" that is also "In-Data-Packet OAM", is
+      an IOAM [RFC9197] trace option that is incorporated into data
+      packets.  According to [RFC9197], IOAM '...records OAM information
       within the packet while the packet traverses a particular network
       domain.  The term "in situ" refers to the fact that the OAM data
       is added to the data packets rather than being sent within packets
       specifically dedicated to OAM.'
 
    *  Another example of "Hybrid OAM" that is also "In-Data-Packet OAM"
-      is Alternate Marking [RFC9341], in which a small number of bits in
-      the packet header is used for marking a subset of packets in a
-      flow.
+      is Alternate Marking [RFC9341], when applied to data packets.  In
+      this case a small number of bits in the packet header is used for
+      marking a subset of packets in a flow.
 
    *  An example of "Hybrid OAM" which is not classified as "In-Data-
       Packet OAM" is Direct loss measurement [RFC6374], in which user
@@ -253,12 +254,12 @@ Internet-Draft             Characterizing OAM                  July 2025
 
    Path-Congruent OAM:
       The OAM information follows the exact same path as the observed
-      data traffic.  This was sometimes referred to as "in-band".
+      data traffic.
 
    Non-Path-Congruent OAM:
       The OAM information does not follow the exact same path as the
       observed data traffic.  This can also be called Path-Incongruent
-      OAM, and was sometimes referred to as "out-of-band".
+      OAM.
 
    In this document, the term "path-congruent packets" describes packets
    that follow the exact same path (i.e., traverse the same nodes and
@@ -269,30 +270,27 @@ Internet-Draft             Characterizing OAM                  July 2025
    Quality of Service (QoS)).
 
    An example of "Path-Congruent OAM" is the Virtual Circuit
-   Connectivity Verification (VCCV), described is [RFC5085] as "The VCCV
-   message travels in-band with the Session and follows the exact same
-   path as the user data for the session".  The term "congruent" also
-   appears in [RFC6669] in the context of path sharing.
+   Connectivity Verification (VCCV) Type 1 [RFC5085], which was also
+   referred to as In-Band VCCV.  The term "congruent" also appears in
+   [RFC6669] in the context of path sharing.
 
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 5]
+Pignataro, et al.       Expires 11 February 2026                [Page 5]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 3.3.  Packet Forwarding Treatment OAM
 
    Equal-Forwarding-Treatment OAM:
       The OAM packets receive the same forwarding (e.g., QoS) treatment
-      as user data packets.  This was sometimes referred to as "in-
-      band".
+      as user data packets.
 
    Different-Forwarding-Treatment OAM:
       The OAM packets receive different forwarding (e.g., QoS) treatment
-      as user data packets.  This was sometimes referred to as "out-of-
-      band".
+      as user data packets.
 
    The motivation for Equal-Forwarding-Treatment OAM lies in the desire
    to ensure that OAM packets experience the same network conditions as
@@ -333,9 +331,11 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 6]
+
+
+Pignataro, et al.       Expires 11 February 2026                [Page 6]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    In some cases, certain criteria are not relevant, or not all
@@ -359,9 +359,9 @@ Internet-Draft             Characterizing OAM                  July 2025
       as Non-Path-Congruent and, consequently, as Different-Forwarding-
       Treatment.
 
-   *  When IOAM [RFC9197] is incorporated in data packets it can be
-      classified as In-Data-Packet, Path-Congruent and Equal-Forwarding-
-      Treatment.
+   *  When an IOAM trace option [RFC9197] is incorporated in data
+      packets it can be classified as In-Data-Packet, Path-Congruent and
+      Equal-Forwarding-Treatment.
 
    *  VCCV [RFC5085], as discussed above, is classified as Active, Path-
       Congruent and Different-Forwarding-Treatment.
@@ -389,9 +389,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 7]
+Pignataro, et al.       Expires 11 February 2026                [Page 7]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 4.  Security Considerations
@@ -445,9 +445,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 8]
+Pignataro, et al.       Expires 11 February 2026                [Page 8]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
               "Inband Flow Analyzer", Work in Progress, Internet-Draft,
@@ -501,9 +501,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 31 January 2026                [Page 9]
+Pignataro, et al.       Expires 11 February 2026                [Page 9]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    [RFC8029]  Kompella, K., Swallow, G., Pignataro, C., Ed., Kumar, N.,
@@ -540,6 +540,7 @@ Appendix A.  Examples of the Use of the Term In-Band
    These are intended to highlight the varying interpretations of the
    term across different contexts.
 
+   In-Data-Packet OAM was in some cases referred to as "in-band".
    Initially, "In situ OAM" [RFC9197] was also referred to as "In-band
    OAM", but was renamed due to the overloaded meaning of "In-band OAM".
    Further, [RFC9232] also intertwines the terms "in-band" with "in
@@ -548,19 +549,25 @@ Appendix A.  Examples of the Use of the Term In-Band
    [I-D.kumar-ippm-ifa], still use variations of "in-band", "in band",
    or "inband".
 
-   The term "in-band" in [RFC5085] refers to using the same path as the
-   user data.  This term is also used in Section 2 of [RFC6669] with the
-   same meaning.
 
 
 
 
 
 
-Pignataro, et al.        Expires 31 January 2026               [Page 10]
+
+
+Pignataro, et al.       Expires 11 February 2026               [Page 10]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
+
+   Path-Congruent OAM was sometimes referred to as "in-band".  As
+   described in [RFC5085], "The VCCV message travels in-band with the
+   Session and follows the exact same path as the user data for the
+   session".  The term "in-band" is also used in Section 2 of [RFC6669]
+   with the same meaning.  Non-Path-Congruent OAM was referred to in
+   [RFC5085] as Out-of-Band.
 
    The property of "Equal-Forwarding-Treatment" is referred to in
    [RFC9551] as "In-band OAM".  Similarly, the property of "Different-
@@ -606,11 +613,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-
-Pignataro, et al.        Expires 31 January 2026               [Page 11]
+Pignataro, et al.       Expires 11 February 2026               [Page 11]

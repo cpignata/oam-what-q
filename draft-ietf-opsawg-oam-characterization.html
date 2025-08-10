@@ -43,7 +43,7 @@
     wcwidth 0.2.13
     weasyprint 65.0
 -->
-<link href="draft-ietf-opsawg-oam-characterization-10.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-ietf-opsawg-oam-characterization.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">/*
 
@@ -1233,11 +1233,11 @@ li > p:last-of-type:only-child {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Characterizing OAM</td>
-<td class="right">July 2025</td>
+<td class="right">August 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Pignataro, et al.</td>
-<td class="center">Expires 31 January 2026</td>
+<td class="center">Expires 11 February 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1253,12 +1253,12 @@ li > p:last-of-type:only-child {
 <a href="https://www.rfc-editor.org/rfc/rfc6291" class="eref">6291</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-07-30" class="published">30 July 2025</time>
+<time datetime="2025-08-10" class="published">10 August 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-01-31">31 January 2026</time></dd>
+<dd class="expires"><time datetime="2026-02-11">11 February 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1314,7 +1314,7 @@ li > p:last-of-type:only-child {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 January 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 11 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1527,18 +1527,19 @@ li > p:last-of-type:only-child {
             packets within the stream is an example of "Passive OAM".<a href="#section-3.1-6.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-6.3">
-            <p id="section-3.1-6.3.1">IOAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is an example of "Hybrid OAM"
-           that is also "In-Data-Packet OAM", given that it: '...records OAM
-           information within the packet while the packet traverses a particular
-           network domain. The term "in situ" refers to the fact that the OAM
-           data is added to the data packets rather than being sent within
-           packets specifically dedicated to OAM.'<a href="#section-3.1-6.3.1" class="pilcrow">¶</a></p>
+            <p id="section-3.1-6.3.1">An example of "Hybrid OAM" that is also "In-Data-Packet OAM", is 
+           an IOAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> trace option that is incorporated
+           into data packets. According to <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span>, IOAM
+           '...records OAM information within the packet while the packet 
+           traverses a particular network domain. The term "in situ" refers 
+           to the fact that the OAM data is added to the data packets rather 
+           than being sent within packets specifically dedicated to OAM.'<a href="#section-3.1-6.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-6.4">
             <p id="section-3.1-6.4.1">Another example of "Hybrid OAM" that is also "In-Data-Packet 
-           OAM" is Alternate Marking <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>, in which a small 
-           number of bits in the packet header is used for marking a subset of 
-           packets in a flow.<a href="#section-3.1-6.4.1" class="pilcrow">¶</a></p>
+           OAM" is Alternate Marking <span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span>, when applied to
+           data packets. In this case a small number of bits in the packet 
+           header is used for marking a subset of packets in a flow.<a href="#section-3.1-6.4.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.1-6.5">
             <p id="section-3.1-6.5.1">An example of "Hybrid OAM" which is not classified as "In-Data-Packet
@@ -1564,16 +1565,14 @@ li > p:last-of-type:only-child {
           <dt id="section-3.2-1.1">Path-Congruent OAM:</dt>
           <dd style="margin-left: 1.5em" id="section-3.2-1.2">
             <br>The OAM information follows
-            the exact same path as the observed data traffic. This was
-            sometimes referred to as "in-band".<a href="#section-3.2-1.2" class="pilcrow">¶</a>
+            the exact same path as the observed data traffic.<a href="#section-3.2-1.2" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 <dt id="section-3.2-1.3">Non-Path-Congruent OAM:</dt>
           <dd style="margin-left: 1.5em" id="section-3.2-1.4">
             <br>The OAM information
             does not follow the exact same path as the observed data traffic.
-            This can also be called Path-Incongruent OAM, and was sometimes
-            referred to as "out-of-band".<a href="#section-3.2-1.4" class="pilcrow">¶</a>
+            This can also be called Path-Incongruent OAM.<a href="#section-3.2-1.4" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1585,10 +1584,9 @@ li > p:last-of-type:only-child {
         path-congruent packets receive the same forwarding treatment (e.g.,
         Quality of Service (QoS)).<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 <p id="section-3.2-3">An example of "Path-Congruent OAM" is the Virtual Circuit
-        Connectivity Verification (VCCV), described is <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> as "The VCCV message travels in-band with the
-        Session and follows the exact same path as the user data for the
-        session". The term "congruent" also appears in 
-        <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> in the context of path sharing.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+        Connectivity Verification (VCCV) Type 1 <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span>,
+        which was also referred to as In-Band VCCV. The term "congruent" also 
+        appears in <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> in the context of path sharing.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
 </section>
 <section id="section-3.3">
         <h3 id="name-packet-forwarding-treatment">
@@ -1599,14 +1597,14 @@ li > p:last-of-type:only-child {
           <dd style="margin-left: 1.5em" id="section-3.3-1.2">
             <br>The OAM packets
             receive the same forwarding (e.g., QoS) treatment as user data
-            packets. This was sometimes referred to as "in-band".<a href="#section-3.3-1.2" class="pilcrow">¶</a>
+            packets.<a href="#section-3.3-1.2" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 <dt id="section-3.3-1.3">Different-Forwarding-Treatment OAM:</dt>
           <dd style="margin-left: 1.5em" id="section-3.3-1.4">
             <br>The OAM
             packets receive different forwarding (e.g., QoS) treatment as user
-            data packets. This was sometimes referred to as "out-of-band".<a href="#section-3.3-1.4" class="pilcrow">¶</a>
+            data packets.<a href="#section-3.3-1.4" class="pilcrow">¶</a>
 </dd>
         <dd class="break"></dd>
 </dl>
@@ -1673,9 +1671,9 @@ li > p:last-of-type:only-child {
             as Different-Forwarding-Treatment.<a href="#section-3.4-6.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-6.2">
-            <p id="section-3.4-6.2.1">When IOAM <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is incorporated in data
-            packets it can be classified as In-Data-Packet, Path-Congruent and
-            Equal-Forwarding-Treatment.<a href="#section-3.4-6.2.1" class="pilcrow">¶</a></p>
+            <p id="section-3.4-6.2.1">When an IOAM trace option <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> is 
+            incorporated in data packets it can be classified as 
+            In-Data-Packet, Path-Congruent and Equal-Forwarding-Treatment.<a href="#section-3.4-6.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.4-6.3">
             <p id="section-3.4-6.3.1">VCCV <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span>, as discussed above, is
@@ -1828,15 +1826,20 @@ li > p:last-of-type:only-child {
       throughout the document, this appendix provides additional examples. 
       These are intended to highlight the varying interpretations of the term 
       across different contexts.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
-<p id="appendix-A-2">Initially, "In situ OAM" <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> was also referred
+<p id="appendix-A-2">In-Data-Packet OAM was in some cases referred to as "in-band".
+      Initially, "In situ OAM" <span>[<a href="#RFC9197" class="cite xref">RFC9197</a>]</span> was also referred
       to as "In-band OAM", but was renamed due to the overloaded meaning of
       "In-band OAM". Further, <span>[<a href="#RFC9232" class="cite xref">RFC9232</a>]</span> also intertwines the
       terms "in-band" with "in situ", though <span>[<a href="#I-D.song-opsawg-ifit-framework" class="cite xref">I-D.song-opsawg-ifit-framework</a>]</span> settled on using "in Situ".
       Other similar uses, including <span>[<a href="#P4-INT-2.1" class="cite xref">P4-INT-2.1</a>]</span> and <span>[<a href="#I-D.kumar-ippm-ifa" class="cite xref">I-D.kumar-ippm-ifa</a>]</span>, still use variations of "in-band", "in
       band", or "inband".<a href="#appendix-A-2" class="pilcrow">¶</a></p>
-<p id="appendix-A-3">The term "in-band" in <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span> refers
-      to using the same path as the user data. This term is also used in
-      Section 2 of <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> with the same meaning.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
+<p id="appendix-A-3">Path-Congruent OAM was sometimes referred to as "in-band".
+      As described in <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span>, "The VCCV message travels 
+      in-band with the Session and follows the exact same path as the user 
+      data for the session". The term "in-band" is also used in
+      Section 2 of <span>[<a href="#RFC6669" class="cite xref">RFC6669</a>]</span> with the same meaning.
+      Non-Path-Congruent OAM was referred to in <span>[<a href="#RFC5085" class="cite xref">RFC5085</a>]</span>
+      as Out-of-Band.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
 <p id="appendix-A-4">The property of "Equal-Forwarding-Treatment" is referred to in 
       <span>[<a href="#RFC9551" class="cite xref">RFC9551</a>]</span> as "In-band OAM". Similarly, the property of 
       "Different-Forwarding-Treatment OAM" can be found in the following 
