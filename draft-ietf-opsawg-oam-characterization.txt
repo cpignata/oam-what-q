@@ -6,9 +6,9 @@ OPS Area Working Group                                      C. Pignataro
 Internet-Draft                                      Blue Fern Consulting
 Updates: 6291 (if approved)                                    A. Farrel
 Intended status: Best Current Practice                Old Dog Consulting
-Expires: 3 January 2026                                       T. Mizrahi
+Expires: 1 March 2026                                         T. Mizrahi
                                                                   Huawei
-                                                             2 July 2025
+                                                          28 August 2025
 
 
                   Guidelines for Characterizing "OAM"
@@ -49,13 +49,13 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2026.
+   This Internet-Draft will expire on 1 March 2026.
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 1]
+Pignataro, et al.         Expires 1 March 2026                  [Page 1]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 2]
+Pignataro, et al.         Expires 1 March 2026                  [Page 2]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    This document updates [RFC6291] by adding to the guidelines for the
@@ -165,9 +165,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 3]
+Pignataro, et al.         Expires 1 March 2026                  [Page 3]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    The terminology presented in this section classifies OAM according to
@@ -221,9 +221,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 4]
+Pignataro, et al.         Expires 1 March 2026                  [Page 4]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    IOAM [RFC9197] is an example of "Hybrid OAM" that is also "In-Packet
@@ -277,9 +277,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 5]
+Pignataro, et al.         Expires 1 March 2026                  [Page 5]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 3.3.  Packet Forwarding Treatment OAM
@@ -333,9 +333,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 6]
+Pignataro, et al.         Expires 1 March 2026                  [Page 6]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    When defining a new OAM protocol or analyzing an existing one, it is
@@ -358,7 +358,7 @@ Internet-Draft             Characterizing OAM                  July 2025
    *  Non-Path-Congruent OAM, by nature, cannot be Equal-Forwarding-
       Treatment.
 
-   A few example of OAM classification according to the three criteria
+   A few examples of OAM classification according to the three criteria
    are presented below:
 
    *  IP Ping, which uses ICMP Echo messages, can be classified as
@@ -389,9 +389,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 7]
+Pignataro, et al.         Expires 1 March 2026                  [Page 7]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
 4.  Security Considerations
@@ -435,9 +435,9 @@ Internet-Draft             Characterizing OAM                  July 2025
    [I-D.ietf-raw-architecture]
               Thubert, P., "Reliable and Available Wireless
               Architecture", Work in Progress, Internet-Draft, draft-
-              ietf-raw-architecture-25, 10 June 2025,
+              ietf-raw-architecture-30, 25 July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-raw-
-              architecture-25>.
+              architecture-30>.
 
    [I-D.kumar-ippm-ifa]
               Kumar, J., Anubolu, S., Lemon, J., Manur, R., Holbrook,
@@ -445,9 +445,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 8]
+Pignataro, et al.         Expires 1 March 2026                  [Page 8]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
               "Inband Flow Analyzer", Work in Progress, Internet-Draft,
@@ -501,9 +501,9 @@ Internet-Draft             Characterizing OAM                  July 2025
 
 
 
-Pignataro, et al.        Expires 3 January 2026                 [Page 9]
+Pignataro, et al.         Expires 1 March 2026                  [Page 9]
 
-Internet-Draft             Characterizing OAM                  July 2025
+Internet-Draft             Characterizing OAM                August 2025
 
 
    [RFC8029]  Kompella, K., Swallow, G., Pignataro, C., Ed., Kumar, N.,
@@ -557,4 +557,4 @@ Authors' Addresses
 
 
 
-Pignataro, et al.        Expires 3 January 2026                [Page 10]
+Pignataro, et al.         Expires 1 March 2026                 [Page 10]
